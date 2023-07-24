@@ -1,0 +1,192 @@
+/* 
+Font for complete website:  
+font-family: 'Poppins', sans-serif;
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+
+
+/* 
+Font for articles:
+font-family: 'Open Sans', sans-serif;
+Line-height for articles:
+line-height: 3rem; 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Navigation bar starts */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+
+nav .logo a {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+nav .logo a img {
+    width: 60px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    padding: 0px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 4px 22px;
+}
+
+.nav-links a:hover {
+    color: #285cf8;
+}
+
+
+/* Navigation bar ends */
+
+/* Footer Section starts */
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #285cf8;
+    color: white;
+    padding: 50px 100px;
+}
+
+.copyright {
+    width: 50%;
+}
+
+.resources {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    width: 50%;
+}
+
+.links-box ol {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.links li {
+    padding: 10px;
+    margin: 40px 0px;
+    list-style: none;
+}
+
+.links a {
+    background-color: white;
+    box-shadow: 0px 0px 20px 0px #285cf8;
+    color: #285cf8;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 18px;
+    border: solid transparent;
+}
+
+.links a:hover {
+    background-color: #285cf8;
+    color: white;
+    border: solid white;
+}
+
+/* Footer Section ends */
+
+/* Scroll Bar CSS */
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #285cf8;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #285cf8;
+}
+
+
+/* Mobile View  */
+@media screen and (max-width:768px) {
+
+    /* Nav Mobile CSS */
+    nav {
+        /* justify-content: center;
+        align-items: center; */
+        display: none;
+    }
+
+
+    .nav-links a {
+        color: grey;
+        font-weight: bold;
+        font-size: 15px;
+        padding: 4px 22px;
+        transition: 0.5s ease-in-out;
+    }
+
+    .nav-links a:hover {
+        background-color: black;
+        color: whitesmoke;
+    }
+
+
+    /* Footer Section starts */
+    .footer {
+        flex-direction: column;
+        padding: 50px 0px;
+    }
+
+    .copyright {
+        width: 90%;
+    }
+
+    .resources {
+        width: 90%;
+        display: none;
+    }
+
+    /* Footer Section ends */
+}
