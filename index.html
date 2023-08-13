@@ -38,7 +38,7 @@
     <!-- Home Section starts  -->
     <div class="home">
         <div class="info">
-            <p>Hi, my name is <span class="color">Atul</span> and I am a</p>
+            <p>Hi, my name is<br><span class="color">Atul</span> and I'm</p>
 
             <!-- Element to contain animated typing -->
             <span class="color" id="element"></span>
@@ -80,12 +80,43 @@
             </div>
 
             <div class="skills-section">
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Java</li>
-                    <li>C Programming</li>
-                </ul>
+                <div class="card">
+                    <div class="card-info">
+                        <p><i class="fa-brands fa-html5"></i> HTML</p>
+                        <p>80%</p>
+                    </div>
+                    <div class="skill-box-container">
+                        <div class="skill-box-1"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <p><i class="fa-brands fa-css3"></i> CSS</p>
+                        <p>40%</p>
+                    </div>
+                    <div class="skill-box-container">
+                        <div class="skill-box-2"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <p><i class="fa-brands fa-java"></i> Java</p>
+                        <p>10%</p>
+                    </div>
+                    <div class="skill-box-container">
+                        <div class="skill-box-3"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-info">
+                        <p>C Programming</p>
+                        <p>80%</p>
+                    </div>
+                    <div class="skill-box-container">
+                        <div class="skill-box-4"></div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -106,7 +137,7 @@
                     <img src="/assets/images/college.jpg" alt="">
                     <div class="information">
                         <h2>Kalinga Institute of Industrial Technology</h2>
-                        <p>Grade: 7.1 CGPA</p>
+                        <p>Grade: 7.1 CGPA(till 2nd semester)</p>
                         <p>Graduation Year: 2026</p>
                     </div>
                 </div>
@@ -217,7 +248,7 @@
     <!-- Setup and start animation! -->
     <script>
         var typed = new Typed('#element', {
-            strings: ['Student at KIIT', 'Majoring in', 'Electronics', 'and', 'Computer Science', 'Engineering', 'Front-end Developer', 'learner'],
+            strings: ['a BTech student', 'a programmer', 'a learner'],
             typeSpeed: 80, loop: true,
         });
     </script>
