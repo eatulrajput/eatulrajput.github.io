@@ -131,12 +131,60 @@
 }
 
 .skills-section {
+    font-size: 1.2rem;
     display: flex;
     justify-content: space-evenly;
-    flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
     height: 600px;
-    font-size: 1.5rem;
+}
+
+.skills-section .card{
+    margin: 8px;
+    padding: 10px;
+    /* width: 40%; */
+    width: 50%;
+    height: 70px;
+    box-shadow: 2px 2px 2px #777;
+    border-radius: 18px;
+}
+
+.card-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-box-container{
+    width: 100%;
+    background-color: grey;
+    height: 6px;
+    border-radius: 18px;
+}
+
+.skill-box-1{
+    width: 80%;
+    background-color: #285cf8;
+    height: 6px;
+    border-radius: 18px;
+}
+.skill-box-2{
+    width: 40%;
+    background-color: #285cf8;
+    height: 6px;
+    border-radius: 18px;
+}
+.skill-box-3{
+    width: 10%;
+    background-color: #285cf8;
+    height: 6px;
+    border-radius: 18px;
+}
+.skill-box-4{
+    width: 80%;
+    background-color: #285cf8;
+    height: 6px;
+    border-radius: 18px;
 }
 
 /* Skills Section ends */
@@ -271,7 +319,7 @@
     .home {
         height: auto;
         flex-direction: column-reverse;
-        display: none;
+        /* display: none; */
     }
 
     .info {
@@ -301,6 +349,16 @@
 
     .about-section p {
         width: 100%;
+    }
+
+    /* Skills Mobile CSS */
+    .skills-section .card{
+        margin: 8px;
+        padding: 10px;
+        width: 90%;
+        height: auto;
+        box-shadow: 2px 2px 2px #777;
+        border-radius: 18px;
     }
 
     /* Education Mobile CSS */
