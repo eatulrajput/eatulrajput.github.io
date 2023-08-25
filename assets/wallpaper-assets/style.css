@@ -1,0 +1,62 @@
+/* Wallpaper Section starts */
+.wallpaper {
+    letter-spacing: 3px;
+    margin: 20px;
+    height: auto;
+}
+
+.box-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    text-transform: uppercase;
+    color: #285cf8;
+}
+
+.wallpaper-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.posts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.posts img{
+    width:40%;
+    margin: 1%;
+    cursor: pointer;
+    box-shadow: 0px 0px 40px 1px #777;
+    border-radius: 8px;
+}
+
+
+
+
+/* Mobile View  */
+@media screen and (max-width:768px) {
+    * {
+        font-family: 'Poppins', sans-serif;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    /* Wallpaper Mobile CSS */
+    .posts img{
+        width:100%;
+        
+     
+    }
+
+
+}
