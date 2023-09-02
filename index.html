@@ -16,6 +16,9 @@
 <!-- Body starts -->
 
 <body>
+     <!-- Preloader starts-->
+    <div id="preloader"></div>
+    <!-- Preloader ends-->
 
     <nav id="nav">
         <div class="logo">
@@ -258,6 +261,16 @@
 
     </div>
     <!-- Footer Section ends -->
+
+    <!-- Preloader starts-->
+    <script>
+        var loader = document.getElementById("preloader");
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+
+        })
+    </script>
+    <!-- Preloader ends-->
 
     <!-- JavaScript for curtain menu starts-->
     <script>
