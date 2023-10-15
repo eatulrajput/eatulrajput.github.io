@@ -21,6 +21,8 @@ The website is organized into different sections:
 - **Home**: The landing page with a brief introduction.
 - **Portfolio**: Showcasing my projects and work.
 - **About Me**: Providing information about my background, skills, and interests.
+- **Projects**: Providing information about my projects I am working on.
+- **Contact Me**: Providing information about how you can contact me.
 
 ## Usage
 
