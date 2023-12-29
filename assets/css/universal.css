@@ -136,12 +136,22 @@ nav .logo a img {
 
 /* Footer Section starts */
 .footer {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     background-color: #285cf8;
     color: white;
     padding: 50px 100px;
+}
+
+.footer-section1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 100px;
+}
+.footer-section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .copyright {
@@ -149,6 +159,14 @@ nav .logo a img {
 }
 
 .resources {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    width: 50%;
+}
+
+.footmessage{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
