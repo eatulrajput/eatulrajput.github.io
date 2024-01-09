@@ -1,0 +1,66 @@
+/* Blog Section starts */
+.blog {
+    letter-spacing: 3px;
+    margin: 20px;
+    height: auto;
+}
+
+.box-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    text-transform: uppercase;
+    color: #285cf8;
+}
+
+.blog-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.blogcard {
+    height: 300px;
+    width: 25%;
+    border-radius: 18px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #222;
+    background-blend-mode: overlay;
+    margin: 10px;
+}
+
+.blogcard:hover {
+    background-color: none;
+    color: transparent;
+    background-blend-mode: normal;
+}
+
+/* Blog Section ends */
+
+
+
+/* Mobile View  */
+@media screen and (max-width:768px) {
+    * {
+        font-family: 'Poppins', sans-serif;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    /* Project Mobile CSS */
+    .blogcard {
+        width: 90%;
+    }
+
+
+}

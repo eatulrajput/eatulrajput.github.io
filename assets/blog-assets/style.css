@@ -24,7 +24,8 @@
 
 .blogcard {
     height: 300px;
-    width: 25%;
+    /* width: 25%; */
+    width: 100%;
     border-radius: 18px;
     background-size: cover;
     background-position: center;
