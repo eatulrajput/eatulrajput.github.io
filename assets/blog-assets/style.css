@@ -35,6 +35,7 @@
     background-color: #222;
     background-blend-mode: overlay;
     margin: 10px;
+    cursor: pointer;
 }
 
 .blogcard:hover {

@@ -13,10 +13,7 @@
     <script src="https://kit.fontawesome.com/388a1f26e9.js" crossorigin="anonymous"></script>
 </head>
 
-<!-- Body starts -->
-
 <body>
-
     <nav id="nav">
         <div class="logo">
             <a href="index.html" target="_blank" rel="noopener noreferrer">
@@ -50,47 +47,37 @@
         <div class="menu">
             <span class="curtain-menu" onclick="openNav()">&#9776; Menu</span>
         </div>
-
     </nav>
-    <!-- Navigation bar ends  -->
 
-
-
-    <!-- Projects Section starts -->
     <div id="blog">
         <div class="blog">
             <div class="box-name">
                 <h2>My Blogs</h2>
             </div>
             <div class="blog-section">
-
                 <!-- Blog 1 -->
-                <div class="blogcard"
+                <div class="blogcard" onclick="redirectToBlog('/assets/blog-assets/parasocial-relationship.html')"
                     style="background-image: url(/assets/blog-assets/images/parasocial-relationship-cover.jpg);">
                     <p>Parasocial Relationship</p>
                 </div>
-
                 <!-- Blog 2 -->
-                <div class="blogcard"
+                <div class="blogcard" onclick="redirectToBlog('/assets/blog-assets/global-warming.html')"
                     style="background-image: url(/assets/blog-assets/images/global-warming-cover.jpg);">
                     <p>Global Warming</p>
                 </div>
-
+                
+                <!-- Blog 3 -->
+                <div class="blogcard" onclick="redirectToBlog('/assets/blog-assets/post3/index.html')"
+                    style="background-image: url(/assets/blog-assets/post3/images/sound.jpg);">
+                    <p>My vocal sound seems me funny and disgusting</p>
+                </div>
             </div>
         </div>
-
-
     </div>
-    </div>
-    </div>
-    <!-- Projects Section ends  -->
 
-
-    <!-- Footer Section starts -->
     <div class="footer">
         <div class="copyright">
-            <p>
-                This website is created and designed by <strong>Atul Rajput</strong> with <i
+            <p>This website is created and designed by <strong>Atul Rajput</strong> with <i
                     class="fa-regular fa-heart"></i></p>
             <p>Copyright &copy; 2023 | All Rights Are Reserved.</p>
         </div>
@@ -102,23 +89,16 @@
                     <ol>
                         <li><a href="https://pages.github.com/"><i class="fa-brands fa-github"></i> GitHub Pages</a>
                         </li>
-
                         <li><a href="https://fontawesome.com/"><i class="fa-regular fa-font-awesome"></i> Font
                                 Awesome</a></li>
-
                         <li><a href="https://herodesign.io/"><i class="fa-solid fa-link"></i> Hero Design</a></li>
-
                         <li><a href="https://unsplash.com/"><i class="fa-brands fa-unsplash"></i> Unsplash</a></li>
                     </ol>
                 </div>
             </div>
         </div>
-
-
     </div>
-    <!-- Footer Section ends -->
 
-    <!-- JavaScript for curtain menu starts-->
     <script>
         function openNav() {
             document.getElementById("myNav").style.width = "100%";
@@ -127,22 +107,25 @@
         function closeNav() {
             document.getElementById("myNav").style.width = "0%";
         }
+
+        function redirectToBlog(blogLink) {
+            window.location.href = blogLink;
+        }
     </script>
-    <!-- JavaScript for curtain menu ends-->
 
-
-    <!-- Load library from the CDN -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-    <!-- Setup and start animation! -->
     <script>
         var typed = new Typed('#element', {
             strings: ['a BTech student', 'a programmer', 'a learner'],
-            typeSpeed: 80, loop: true,
+            typeSpeed: 80,
+            loop: true,
         });
     </script>
+
     <script>
-        window.onscroll = function () { myFunction() };
+        window.onscroll = function () {
+            myFunction()
+        };
 
         var header = document.getElementById("nav");
         var sticky = header.offsetTop;
@@ -155,6 +138,7 @@
             }
         }
     </script>
+
     <script type="text/javascript" src="/assets/javascript/vanilla-tilt.js"></script>
     <script>
         VanillaTilt.init(document.querySelectorAll(".logo,.hero, .projectcard"), {
@@ -164,8 +148,6 @@
             "max-glare": 1,
         });
     </script>
-
-
 </body>
 
 </html>
