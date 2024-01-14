@@ -215,10 +215,14 @@
     justify-content: start;
     align-items: center;
     margin: 10px;
+    transition: transform 0.3s ease-in-out;
+
+
 }
 
 .education-card:hover {
     box-shadow: 2px 2px 2px #222;
+    transform: translateY(-10px); /* Adjust the value based on how much you want the image to move up */
 }
 
 .education-card img {

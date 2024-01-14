@@ -37,12 +37,14 @@
     background-blend-mode: overlay;
     margin: 10px;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
 .blogcard:hover {
     background-color: none;
     color: transparent;
     background-blend-mode: normal;
+    transform: translateY(-10px); /* Adjust the value based on how much you want the image to move up */
 }
 
 /* Blog Section ends */
