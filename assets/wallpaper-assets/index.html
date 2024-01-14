@@ -84,7 +84,9 @@
 
                 <div class="pc">
                     <div class="posts">
-
+                        <div>
+                            <h2>My Wallpapers</h2>
+                        </div>
                         <img src="/assets/wallpaper-assets/images/w (1).png" alt="" class="myImage">
                         <img src="/assets/wallpaper-assets/images/w (2).png" alt="" class="myImage">
                         <img src="/assets/wallpaper-assets/images/w (3).png" alt="" class="myImage">
@@ -122,79 +124,127 @@
             <span class="close">&times;</span>
             <img class="modal-content" id="modalImage">
         </div>
-        <!-- Footer Section starts -->
-        <div class="footer">
-            <div class="copyright">
-                <p>
-                    This website is created and designed by <strong>Atul Rajput</strong> with <i
-                        class="fa-regular fa-heart"></i></p>
-                <p>Copyright &copy; 2023 | All Rights Are Reserved.</p>
-            </div>
+        <div class="book-box">
+            <h1>My Favourite Books</h1>
 
-            <div class="resources">
-                <p>List of Resources used in creating the website:</p>
-                <div class="links-box">
-                    <div class="links">
-                        <ol>
-                            <li><a href="https://pages.github.com/"><i class="fa-brands fa-github"></i> GitHub Pages</a>
-                            </li>
-
-                            <li><a href="https://fontawesome.com/"><i class="fa-regular fa-font-awesome"></i> Font
-                                    Awesome</a></li>
-
-                            <li><a href="https://herodesign.io/"><i class="fa-solid fa-link"></i> Hero Design</a></li>
-
-                            <li><a href="https://unsplash.com/"><i class="fa-brands fa-unsplash"></i> Unsplash</a></li>
-                        </ol>
+            <div class="book-self">
+                <div class="book">
+                    <div class="book-info">
+                        <h1>Why I am an Atheist</h1>
+                        <p>Author : Bhagat Singh</p>
                     </div>
+                    <img src="https://m.media-amazon.com/images/I/41KjA2iNXvL._SY445_SX342_.jpg" alt="">
                 </div>
             </div>
 
+            <div class="book-self">
+                <div class="book">
+                    <div class="book-info">
+                        <h1>The Rudest Book Ever</h1>
+                        <p>Author : Shwetabh Gangwar</p>
+                    </div>
+                    <img src="https://m.media-amazon.com/images/I/71iUJLYyM8L._SY522_.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="book-self">
+                <div class="book">
+                    <div class="book-info">
+                        <h1>Prem Sikhna Padhta Hai</h1>
+                        <p>Author : Acharya Prashant</p>
+                    </div>
+                    <img src="https://m.media-amazon.com/images/I/7195kPS7drL._SY522_.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="book-self">
+                <div class="book">
+                    <div class="book-info">
+                        <h1>Deep Work</h1>
+                        <p>Author : Cal Newport</p>
+                    </div>
+                    <img src="https://m.media-amazon.com/images/I/31PBdo581fL._SY445_SX342_.jpg" alt="">
+                </div>
+            </div>
 
         </div>
-        <!-- Footer Section ends -->
 
-        <!-- JavaScript for curtain menu starts-->
-        <script>
-            function openNav() {
-                document.getElementById("myNav").style.width = "100%";
+    </div>
+    </section>
+
+    <!-- Footer Section starts -->
+    <div class="footer">
+        <div class="copyright">
+            <p>
+                This website is created and designed by <strong>Atul Rajput</strong> with <i
+                    class="fa-regular fa-heart"></i></p>
+            <p>Copyright &copy; 2023 | All Rights Are Reserved.</p>
+        </div>
+
+        <div class="resources">
+            <p>List of Resources used in creating the website:</p>
+            <div class="links-box">
+                <div class="links">
+                    <ol>
+                        <li><a href="https://pages.github.com/"><i class="fa-brands fa-github"></i> GitHub Pages</a>
+                        </li>
+
+                        <li><a href="https://fontawesome.com/"><i class="fa-regular fa-font-awesome"></i> Font
+                                Awesome</a></li>
+
+                        <li><a href="https://herodesign.io/"><i class="fa-solid fa-link"></i> Hero Design</a></li>
+
+                        <li><a href="https://unsplash.com/"><i class="fa-brands fa-unsplash"></i> Unsplash</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Footer Section ends -->
+
+    <!-- JavaScript for curtain menu starts-->
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <!-- JavaScript for curtain menu ends-->
+    <!-- Pop out JS -->
+    <script>
+        // script.js
+        const modal = document.getElementById('myModal');
+        const modalImage = document.getElementById('modalImage');
+        const originalImages = document.querySelectorAll('.myImage');
+        const closeButton = document.querySelector('.close');
+
+        originalImages.forEach(image => {
+            image.addEventListener('click', openModal);
+        });
+
+        closeButton.addEventListener('click', closeModal);
+        window.addEventListener('click', outsideClick);
+
+        function openModal(e) {
+            modal.style.display = 'block';
+            modalImage.src = e.target.src;
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        function outsideClick(e) {
+            if (e.target === modal) {
+                closeModal();
             }
-
-            function closeNav() {
-                document.getElementById("myNav").style.width = "0%";
-            }
-        </script>
-        <!-- JavaScript for curtain menu ends-->
-        <!-- Pop out JS -->
-        <script>
-            // script.js
-            const modal = document.getElementById('myModal');
-            const modalImage = document.getElementById('modalImage');
-            const originalImages = document.querySelectorAll('.myImage');
-            const closeButton = document.querySelector('.close');
-
-            originalImages.forEach(image => {
-                image.addEventListener('click', openModal);
-            });
-
-            closeButton.addEventListener('click', closeModal);
-            window.addEventListener('click', outsideClick);
-
-            function openModal(e) {
-                modal.style.display = 'block';
-                modalImage.src = e.target.src;
-            }
-
-            function closeModal() {
-                modal.style.display = 'none';
-            }
-
-            function outsideClick(e) {
-                if (e.target === modal) {
-                    closeModal();
-                }
-            }
-        </script>
+        }
+    </script>
 
 </body>
 
