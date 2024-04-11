@@ -75,10 +75,14 @@ nav .logo a img {
     font-weight: bold;
     font-size: 15px;
     padding: 4px 22px;
+    border-top: transparent;
+    border-bottom: transparent;
 }
 
 .nav-links a:hover {
-    color: #285cf8;
+    /* color: #285cf8; */
+    /* border-top: 2px solid #285cf8; */
+    border-bottom: 2px solid #285cf8;
 }
 
 .overlay {

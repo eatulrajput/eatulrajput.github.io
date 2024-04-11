@@ -35,6 +35,14 @@
     animation: blink 0.7s infinite;
 }
 
+.button-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+}
+
+
 .info a {
     font-size: 20px;
     text-decoration: none;
@@ -118,6 +126,13 @@
     color: white;
     padding: 20px;
     border-radius: 18px 0px 18px 0px;
+    transition: 1s ease-in-out;
+}
+
+.about-section p:hover{
+    background-color: white;
+    box-shadow: 0px 0px 20px 0px #285cf8;
+    color: #285cf8;
 }
 
 
@@ -221,7 +236,9 @@
 }
 
 .education-card:hover {
-    box-shadow: 2px 2px 2px #222;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%);
+    color: white;
+    /* box-shadow: 2px 2px 2px #222; */
     transform: translateY(-10px); /* Adjust the value based on how much you want the image to move up */
 }
 
@@ -265,6 +282,7 @@
     background-color: #222;
     background-blend-mode: overlay;
     margin: 10px;
+    min-width: 60%;
 }
 
 .projectcard:hover {
