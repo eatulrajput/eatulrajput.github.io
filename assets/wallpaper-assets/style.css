@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 /* Wallpaper Section starts */
 .wallpaper {
     letter-spacing: 3px;
@@ -68,50 +72,48 @@
     font-weight: bold;
     cursor: pointer;
 }
-
-.book-box {
-    margin: 20px 120px;
+/* Quote Section */
+.quote-section{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.book-self {
-    box-shadow: 0px 0px 40px 1px #c7c7c7;
-    border-radius: 18px;
-    margin: 20px;
-    height: auto;
-    width: 40%;
-}
-
-.book {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column-reverse;
-    align-items: center;
-}
-
-.book img {
-    margin: 50px;
-    width: 200px;
-}
-
-.book h1 {
-    font-size: 30px;
-}
-
-.book p {
-    font-size: 16px;
-}
-
-.book-info {
-    display: flex;
+    text-align: center;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 50px;
 }
+
+.quote-section h1{
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    margin: 40px 0px;
+    transition: 1s ease-in-out;
+}
+
+.quote-section h1:hover{
+    transform: scale(1.4);
+}
+
+.quote-box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    font-family: "Lato", sans-serif;
+}
+
+.quote-box p{
+    padding: 20px 0px;
+}
+
+.quote-box hr{
+    width: 400px;
+    height: 2px;
+}
+
+.speaker{
+    font-style: italic;
+}
+
 
 /* Mobile View  */
 @media screen and (max-width:768px) {
