@@ -1,3 +1,29 @@
+.cover{
+    background: url('/assets/images/blog-cover.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    padding: 40px;
+    background-color: #22262900;
+    margin: 40px;
+    color: white;
+    font-size: 3rem;
+    backdrop-filter: blur(20px);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 28px;
+}
+
 /* Blog Section starts */
 .blog {
     letter-spacing: 3px;
