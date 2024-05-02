@@ -29,7 +29,7 @@ body {
 /* Preloader starts */
 #preloader{
     background: #000011 url(/assets/images/loader.gif) no-repeat center center;
-    background-size: 30%;
+    background-size: 50%;
     height: 100vh;
     width: 100%;
     position: fixed;
@@ -72,18 +72,25 @@ nav .logo a img {
 
 .nav-links a {
     text-decoration: none;
+    position: relative;
     color: black;
     font-weight: bold;
     font-size: 15px;
     padding: 4px 22px;
-    border-top: transparent;
-    border-bottom: transparent;
+}
+.nav-links a::after{
+    content: "";
+    position: absolute;
+    background-color: #285cf8;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
 }
 
-.nav-links a:hover {
-    /* color: #285cf8; */
-    /* border-top: 2px solid #285cf8; */
-    border-bottom: 2px solid #285cf8;
+.nav-links a:hover::after{
+    width: 100%;
 }
 
 .overlay {
@@ -239,7 +246,7 @@ nav .logo a img {
 
     /* Preloader mobile css */
     #preloader{
-        background: #000011 url(/assets/images/loader8.gif) no-repeat center center;
+        background: #000000 url(/assets/images/loader8.gif) no-repeat center center;
         background-size: 100%;
         height: 100vh;
         width: 100%;
