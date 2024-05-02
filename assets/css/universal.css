@@ -22,6 +22,8 @@ line-height: 3rem;
 body {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    max-width: 1240px;
+    margin: 0 auto; /* Center the container */
 }
 
 /* Preloader starts */

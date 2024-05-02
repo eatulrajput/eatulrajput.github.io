@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 500px;
+    min-height: 500px;
 }
 
 .info {
@@ -79,7 +79,8 @@
 .about {
     letter-spacing: 3px;
     margin: 20px;
-    height: auto;
+    min-height: 500px;
+    min-width: 80%;
 }
 
 .box-name {
@@ -252,6 +253,7 @@
     background-blend-mode: overlay;
     margin: 10px;
     min-width: 60%;
+    flex-direction: column;
 }
 
 .projectcard:hover {
@@ -288,6 +290,34 @@
 }
 
 /* Project Section ends */
+.design {
+    letter-spacing: 3px;
+    margin: 20px;
+    height: auto;
+}
+
+.design-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.frame-container {
+    position: relative;
+    width: 90%;
+    padding-top: 56.25%; /* 16:9 aspect ratio (height:width) */
+  }
+  
+  .frame-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    width: 100%;
+    height: 100%;
+  }
 
 /* Contact Section starts */
 
@@ -397,6 +427,10 @@
     .projectcard {
         width: 90%;
     }
+
+    .frame-container {
+        padding-top: 100%; /* Adjust aspect ratio or any other styles as needed */
+      }
 
     /* Contact Mobile CSS */
     .contact {
