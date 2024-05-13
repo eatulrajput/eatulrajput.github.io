@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/universal.css">
     <link rel="shortcut icon" href="/assets/images/icon.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/388a1f26e9.js" 
-    crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/388a1f26e9.js" crossorigin="anonymous"></script>
 </head>
 
 <!-- Body starts -->
@@ -70,7 +69,8 @@
             <!-- Button -->
             <div class="button-box">
                 <div class="button"><a href="#contact"><i class="fa-solid fa-handshake"></i> Get In Touch</a></div>
-                <div class="button"><a target="_blank" href="/assets/Resume.pdf"><i class="fa-solid fa-circle-chevron-down"></i> Resume</a></div>
+                <div class="button"><a target="_blank" href="/assets/Resume.pdf"><i
+                            class="fa-solid fa-circle-chevron-down"></i> Resume</a></div>
             </div>
         </div>
         <div class="hero">
@@ -79,7 +79,7 @@
 
     </div>
     <!-- Home Section ends  -->
-
+    <img class="wave" src="/assets/images/wavesOpacity.svg" alt="">
     <!-- About Section starts  -->
     <div id="about">
         <div class="about">
@@ -88,12 +88,14 @@
             </div>
 
             <div class="about-section">
+                <img class="b-arrow" src="/assets/images/g1.png" alt="">
                 <div class="avatar">
                     <img src="/assets/images/profile-photo.png" alt="Profile Picture">
                 </div>
                 <p>Hello there! My name is Atul Rajput. I am a student, and I'm very passionate and dedicated to my
                     work. I am trying to aquire the skills and knowledge necessary to make the projects successful.
                 </p>
+                <img class="f-arrow" src="/assets/images/g1.png" alt="">
             </div>
         </div>
     </div>
@@ -106,19 +108,18 @@
             <div class="box-name">
                 <h2><i class="fa-solid fa-code"></i> My Skills</h2>
             </div>
-
             <div class="skills-section">
                 <p><i class="fa-brands fa-html5"></i> HTML</p>
                 <p><i class="fa-brands fa-css3"></i> CSS</p>
                 <p><i class="fa-brands fa-java"></i> Java</p>
                 <p>C Programming</p>
-
             </div>
+            <p class="message">Eager to Learn more...</p>
         </div>
     </div>
 
     <!-- Skills Section ends -->
-
+<img class="wave-2" src="/assets/images/waveskill.svg" alt="">
     <!-- Education Section starts -->
 
     <div id="education">
@@ -126,29 +127,27 @@
             <div class="box-name">
                 <h2><i class="fa-solid fa-book-open-reader"></i> My Education</h2>
             </div>
+                <div class="education-section">
 
-            <div class="education-section">
-
-                <div class="education-card">
-                    <img src="/assets/images/college.jpg" alt="">
-                    <div class="information">
-                        <p><strong>University:</strong> Kalinga Institute of Technology</p>
-                        <p><strong>Course:</strong> Bachelor of Technology</p>
-                        <p><strong>Specialization:</strong> Electronics and Computer Science</p>
-                        <p><strong>CGPA:</strong> 7 CGPA</p>
+                    <div class="education-card">
+                        <img src="/assets/images/college.jpg" alt="">
+                        <div class="information">
+                            <p><strong>University:</strong> Kalinga Institute of Technology</p>
+                            <p><strong>Course:</strong> Bachelor of Technology</p>
+                            <p><strong>Specialization:</strong> Electronics and Computer Science</p>
+                            <p><strong>CGPA:</strong> 7 CGPA</p>
+                        </div>
+                    </div>
+                    <div class="education-card">
+                        <img src="/assets/images/school.jpg" alt="">
+                        <div class="information">
+                            <p><strong>Class 12th:</strong>Gurukul Vidyapeeth(2021)</p>
+                            <p><strong>Percentage:</strong> 80.6%</p>
+                            <p><strong>Class 10th:</strong> Gurukul Vidyapeeth(2019)</p>
+                            <p><strong>Percentage:</strong> 77.2%</p>
+                        </div>
                     </div>
                 </div>
-                <div class="education-card">
-                    <img src="/assets/images/school.jpg" alt="">
-                    <div class="information">
-                        <p><strong>Class 12th:</strong>Gurukul Vidyapeeth(2021)</p>
-                        <p><strong>Percentage:</strong> 80.6%</p>
-                        <p><strong>Class 10th:</strong> Gurukul Vidyapeeth(2019)</p>
-                        <p><strong>Percentage:</strong> 77.2%</p>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </div>
     <!-- Education Section Starts -->
@@ -498,8 +497,8 @@
     </script>
     <script type="text/javascript" src="/assets/javascript/vanilla-tilt.js"></script>
     <script>
-        VanillaTilt.init(document.querySelectorAll(".logo,.hero, .projectcard"), {
-            max: 25,
+        VanillaTilt.init(document.querySelectorAll(".logo,.hero img, .projectcard"), {
+            max: 5,
             speed: 300,
             glare: true,
             "max-glare": 1,
@@ -509,36 +508,36 @@
     <script>
         // JS for Scroll Up Button Starts
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () { scrollFunction() };
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
 
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("goToTopBtn").style.display = "block";
-    } else {
-        document.getElementById("goToTopBtn").style.display = "none";
-    }
-}
-
-// When the user clicks on the button, scroll to the top of the document smoothly
-function topFunction() {
-    // Get the current scroll position
-    var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-
-    if (currentScroll > 0) {
-        // Calculate how far to scroll to get to the top
-        var scrollStep = -currentScroll / (300 / 15); // 300ms duration for the animation, adjust to suit
-
-        // Use a timer to scroll the page smoothly
-        var scrollInterval = setInterval(function () {
-            if (document.body.scrollTop !== 0 || document.documentElement.scrollTop !== 0) {
-                window.scrollBy(0, scrollStep);
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("goToTopBtn").style.display = "block";
             } else {
-                clearInterval(scrollInterval);
+                document.getElementById("goToTopBtn").style.display = "none";
             }
-        }, 15); // 15ms interval for smoother animation, adjust if needed
-    }
-}
+        }
+
+        // When the user clicks on the button, scroll to the top of the document smoothly
+        function topFunction() {
+            // Get the current scroll position
+            var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+
+            if (currentScroll > 0) {
+                // Calculate how far to scroll to get to the top
+                var scrollStep = -currentScroll / (300 / 15); // 300ms duration for the animation, adjust to suit
+
+                // Use a timer to scroll the page smoothly
+                var scrollInterval = setInterval(function () {
+                    if (document.body.scrollTop !== 0 || document.documentElement.scrollTop !== 0) {
+                        window.scrollBy(0, scrollStep);
+                    } else {
+                        clearInterval(scrollInterval);
+                    }
+                }, 15); // 15ms interval for smoother animation, adjust if needed
+            }
+        }
 
     </script>
 
