@@ -4,6 +4,42 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+/* Password Page */
+#login-form{
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    top: 200px;
+}
+
+input[type="password"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Password css ends */
+
 /* Wallpaper Section starts */
 .wallpaper {
     letter-spacing: 3px;
@@ -18,6 +54,7 @@
     margin: 20px;
     text-transform: uppercase;
     color: #285cf8;
+    margin-top: 120px;
 }
 
 .wallpaper-section {
@@ -28,6 +65,92 @@
     padding: 10px;
 }
 
+/* Quote Section */
+.quote-section{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.quote-section h1{
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    margin: 40px 0px;
+    transition: 1s ease-in-out;
+}
+
+.quote-section h1:hover{
+    transform: scale(1.4);
+}
+
+.quote-box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    font-family: "Lato", sans-serif;
+    min-height: 500px;
+}
+
+.quote-box p{
+    padding: 20px 0px;
+    font-size: larger;
+    color: #868686;
+    line-height: 2rem;
+}
+
+.quote-box hr{
+    width: 400px;
+    height: 2px;
+}
+
+.speaker{
+    font-style: italic;
+}
+
+/* Hobby Section */
+.hobby{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 500px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.hobby h1{
+    font-weight: 500;
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    margin: 40px 0px;
+}
+
+.hobby ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.hobby ul li{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 14px;
+    border: solid #007bff;
+    transition: 0.3s ease-in-out;
+}
+
+.hobby ul li:hover{
+    transform: scale(0.8);
+    cursor: pointer;
+}
+
+/* Wallpaper */
 
 .posts {
     display: flex;
@@ -42,6 +165,11 @@
     cursor: pointer;
     box-shadow: 0px 0px 40px 1px #777;
     border-radius: 8px;
+    transition: 0.4s ease-in-out;
+}
+
+.posts img:hover{
+    transform: scale(.9);
 }
 
 /* On Click Pop out Image */
@@ -72,47 +200,7 @@
     font-weight: bold;
     cursor: pointer;
 }
-/* Quote Section */
-.quote-section{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
-.quote-section h1{
-    font-family: "Dancing Script", cursive;
-    font-size: 3rem;
-    margin: 40px 0px;
-    transition: 1s ease-in-out;
-}
-
-.quote-section h1:hover{
-    transform: scale(1.4);
-}
-
-.quote-box{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    width: 50%;
-    font-family: "Lato", sans-serif;
-}
-
-.quote-box p{
-    padding: 20px 0px;
-}
-
-.quote-box hr{
-    width: 400px;
-    height: 2px;
-}
-
-.speaker{
-    font-style: italic;
-}
 
 /* CSS for Go to Top Button Starts */
 #goToTopBtn {
