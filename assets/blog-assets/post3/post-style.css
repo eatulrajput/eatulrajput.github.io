@@ -3,8 +3,6 @@
 .blog-section {
     margin: 50px 20%;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 20px;
-    line-height: 1.9;
     background-color: #fff;
 
 }
@@ -14,10 +12,24 @@
     width: 100%;
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem;
 }
 
-p {
+.blog-section p {
     margin: 0 0 26px;
+    font-size: 1rem;
+    letter-spacing: normal;
+    line-height: 2rem;
+}
+
+.blog-section ol {
+    font-size: 1rem;
+    letter-spacing: normal;
+    line-height: 2rem;
+}
+
+.blog-section li{
+    margin-top: 2rem;
 }
 
 @media screen and (max-width:768px) {
