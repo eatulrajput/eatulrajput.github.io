@@ -7,6 +7,10 @@
     margin: 0px;
 }
 
+::selection{
+    background-color: rgb(242, 191, 253);
+}
+
 body {
     font-family: "Open Sans", sans-serif;
     scroll-behavior: smooth;

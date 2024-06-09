@@ -34,12 +34,13 @@
 
 .blog-section h3{
     text-align: center;
+    font-size: 1.8rem;
 }
 
 .blog-section p {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    font-size: 1rem;
+    font-size: 1.3rem;
     letter-spacing: normal;
     line-height: 2rem;
 }
