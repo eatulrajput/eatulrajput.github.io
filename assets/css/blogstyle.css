@@ -55,6 +55,11 @@
     margin-top: 2rem;
 }
 
+#reading-time{
+    color: grey;
+    letter-spacing: normal;
+}
+
 @media screen and (max-width:768px) {
     .blog-section {
         margin: 50px 2%;    
