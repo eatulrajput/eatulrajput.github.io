@@ -292,6 +292,10 @@
     margin: 8px;
 }
 
+.information p{
+    line-height: 2rem;
+}
+
 
 /* Education Section ends */
 
@@ -396,6 +400,7 @@
 .contact {
     letter-spacing: 3px;
     margin: 20px;
+    min-height: 60vh;
 }
 
 .contact-section {
@@ -475,6 +480,16 @@
 
 /* CSS for Go to Top Button Ends */
 
+@media screen and (max-width:1130px) {
+    .button-box {
+        display: flex;
+        justify-content: space-around;
+        align-items:flex-start;
+        flex-direction: column-reverse;
+        width: auto;
+    }
+}
+
 /* Mobile View  */
 @media screen and (max-width:768px) {
     * {
@@ -515,8 +530,8 @@
     .button-box {
         display: flex;
         justify-content: space-around;
-        align-items:flex-start;
-        flex-direction: row;
+        align-items:center;
+        flex-direction: column-reverse;
         width: auto;
     }
     
@@ -557,16 +572,29 @@
 
     .education-section {
         height: auto;
+        align-items: center;
+        background: none;
     }
 
+    .education-card{
+        width: 100%;
+    }
     .education-card img {
         border-radius: 18px;
         width: 100%;
     }
 
     /* Project Mobile CSS */
+    .projects-section {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+}
+
+
     .projectcard {
-        width: 90%;
+        width: 100%;
     }
 
     .frame-container {
@@ -581,6 +609,7 @@
 
     .contact .section1 {
         width: 100%;
+        margin-top: 20vh;
     }
 
     .contact .section2 {
