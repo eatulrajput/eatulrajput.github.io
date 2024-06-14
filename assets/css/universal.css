@@ -47,6 +47,28 @@ nav {
     border-bottom: solid #285cf8;
 }
 
+/* Scroll Watcher */
+.scroll-watcher {
+    height: 8px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    /* background-color: #ff1de5; */
+    background-color: #7697fa;
+    width: 100%;
+    scale: 0 1;
+    transform-origin: left;
+    animation: scroll-watcher linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-watcher {
+    to {
+        scale: 1 1;
+    }
+
+}
+
 
 nav .logo a {
     display: flex;
