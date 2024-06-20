@@ -276,6 +276,21 @@ nav .logo a img {
         z-index: 1000;
     }
 
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 20px;
+        margin: 0px;
+        width: 100%;
+        top: 0px;
+        position: fixed;
+        background-color: white;
+        z-index: 200;
+        border-bottom: solid #285cf8;
+        flex-direction: row;
+    }
+
     /* Nav Mobile CSS */
     .nav-links {
         /* justify-content: center;
