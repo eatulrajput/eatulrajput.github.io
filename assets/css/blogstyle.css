@@ -33,8 +33,11 @@
 }
 
 .blog-section h3{
-    text-align: center;
-    font-size: 1.8rem;
+    margin-top: 2rem;
+}
+
+.blog-section h4{
+    margin-top: 2rem;
 }
 
 .blog-section p {
