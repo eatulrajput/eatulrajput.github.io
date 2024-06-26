@@ -316,7 +316,7 @@
 
 .projectcard {
     height: 400px;
-    width: 25%;
+    width: 400px;
     border-radius: 18px;
     background-size: cover;
     background-position: center;
@@ -327,8 +327,7 @@
     background-color: #222;
     background-blend-mode: overlay;
     margin: 10px;
-    min-width: 60%;
-    flex-direction: column;
+   flex-wrap: wrap;
 }
 
 .projectcard:hover {
