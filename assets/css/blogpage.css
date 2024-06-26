@@ -1,4 +1,8 @@
 /* Blog Section starts */
+*{
+    scroll-behavior: smooth;
+}
+
 .blog {
     letter-spacing: 3px;
     margin: 20px;

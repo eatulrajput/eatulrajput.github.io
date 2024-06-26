@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
+*{
+    scroll-behavior: smooth;
+}
+
 
 /* Blog Section starts */
 .blog {

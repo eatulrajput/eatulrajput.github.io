@@ -1,5 +1,9 @@
 /* Home Page CSS starts from here */
 /* Home Section starts */
+*{
+    scroll-behavior: smooth;
+}
+
 .home {
     display: flex;
     justify-content: space-evenly;
