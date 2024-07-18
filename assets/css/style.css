@@ -224,6 +224,8 @@
     box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
     transition: 0.2s ease-in-out;
     border: solid transparent;
+    background-color: white;
+    font-weight: 500;
 }
 
 .skills-section p:hover {
