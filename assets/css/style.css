@@ -437,53 +437,6 @@
 
 /* Contact Section ends */
 
-/* CSS for Go to Top Button Starts */
-#goToTopBtn {
-    display: none;
-    /* Initially hide the button */
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 99;
-    /* Make sure it's above other content */
-    background-color: #007bff;
-    /* Button background color */
-    color: white;
-    /* Button text color */
-    border: none;
-    border-radius: 50%;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 2rem;
-}
-
-#goToTopBtn:hover {
-    background-color: #007bff;
-    /* Button background color on hover */
-}
-
-#goToTopBtn span {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 58px;
-    height: 58px;
-    z-index: -4;
-    background: inherit;
-    border-radius: inherit;
-    opacity: 0.8;
-    animation: pulseAnimate 4s ease-out infinite;
-    animation-delay: calc(1s * (var(--i)));
-}
-
-@keyframes pulseAnimate {
-    100% {
-        opacity: 0;
-        transform: scale(2);
-    }
-}
-
-/* CSS for Go to Top Button Ends */
 
 @media screen and (max-width:1130px) {
     .button-box {
