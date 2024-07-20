@@ -61,6 +61,10 @@
                 <h2>My Blogs</h2>
             </div>
             <div class="blog-section">
+                <div class="blog-hero">
+                    <img  src="/assets/images/blogging-animate.svg" alt="">
+                </div>
+                
                 <!-- Blog 1 -->
                 <div class="blogcard" onclick="redirectToBlog('/assets/blog-assets/post1/index.html')"
                     style="background-image: url(/assets/images/posts/post1.jpg);">
@@ -158,29 +162,8 @@
     </button>
     <!-- HTML for Scroll Up Button Ends -->
 
-
-    <script>
-        function openNav() {
-            document.getElementById("myNav").style.width = "100%";
-        }
-
-        function closeNav() {
-            document.getElementById("myNav").style.width = "0%";
-        }
-
-        function redirectToBlog(blogLink) {
-            window.location.href = blogLink;
-        }
-    </script>
-
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['a BTech student', 'a programmer', 'a learner'],
-            typeSpeed: 80,
-            loop: true,
-        });
-    </script>
+    <!-- JavaScript for Curtain -->
+    <script src="/assets/javascript/curtain.js"></script>
 
     <script>
         window.onscroll = function () {
@@ -197,16 +180,6 @@
                 header.classList.remove("sticky");
             }
         }
-    </script>
-
-    <script type="text/javascript" src="/assets/javascript/vanilla-tilt.js"></script>
-    <script>
-        VanillaTilt.init(document.querySelectorAll(".logo,.hero, .projectcard"), {
-            max: 25,
-            speed: 300,
-            glare: true,
-            "max-glare": 1,
-        });
     </script>
 
     <!-- JS for Scrolling Up Button -->
