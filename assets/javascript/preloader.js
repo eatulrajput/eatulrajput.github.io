@@ -18,7 +18,7 @@ window.addEventListener('load', function () {
         var preloader = document.getElementById("preloader");
         preloader.style.display = "none";
         closeNav(); // Automatically close the curtain menu when the website loads
-    },  10000); // Change the time (in milliseconds) as needed
+    },  3000); // Change the time (in milliseconds) as needed
 });
 
 document.addEventListener("DOMContentLoaded", function () {
