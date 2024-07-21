@@ -1,9 +1,9 @@
-/* Home Page CSS starts from here */
-/* Home Section starts */
 *{
     scroll-behavior: smooth;
 }
 
+/* Home Page CSS starts from here */
+/* Home Section starts */
 .home {
     display: flex;
     justify-content: space-evenly;
@@ -84,7 +84,7 @@
 }
 
 
-/* Home Section starts */
+/* Home Section ends */
 
 /* About Section starts */
 .about {
@@ -182,7 +182,7 @@
 
 /* About Section ends */
 
-/* Education Section starts */
+/* Skills Section starts */
 .skills {
     letter-spacing: 3px;
     margin: 20px;
@@ -212,6 +212,7 @@
 
 .skills-section p {
     font-size: 20px;
+    margin: 6px;
     padding: 20px;
     border-radius: 18px;
     box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
@@ -248,7 +249,7 @@
     justify-content: space-evenly;
     flex-direction: column;
     align-items: flex-end;
-    height: 600px;
+    height: 800px;
     background: url('/assets/images/ed-bg.svg');
     background-position: left;
     background-repeat: no-repeat;
@@ -356,35 +357,6 @@
 }
 
 /* Project Section ends */
-.design {
-    letter-spacing: 3px;
-    margin: 20px;
-    height: auto;
-}
-
-.design-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-
-.frame-container {
-    position: relative;
-    width: 90%;
-    padding-top: 56.25%;
-    /* 16:9 aspect ratio (height:width) */
-}
-
-.frame-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 20px;
-    width: 100%;
-    height: 100%;
-}
 
 /* Contact Section starts */
 
@@ -398,32 +370,39 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
+}
+.contact-section .sectionA{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 100%;
 }
 
-.contact .section1 {
+.contact-section img{
     width: 50%;
-    margin: 20px;
+}
+
+.contact-section .sectionB{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
+    width: 100%;
 }
 
-
-.contact .section1 .icons a {
+.contact .sectionB .icons a {
     font-size: 3rem;
-    color: black;
+    color: #285cf8;
     font-weight: lighter;
 }
 
-.contact .section1 .icons a:hover {
-    color: #285cf8;
-}
-
+.contact .sectionB .icons a:hover {
+    color: black;
+} 
 
 /* Contact Section ends */
 
-
+/* CSS for For Responsive Screen */
 @media screen and (max-width:1130px) {
     .button-box {
         display: flex;
@@ -536,7 +515,6 @@
         align-items: center;
 }
 
-
     .projectcard {
         width: 100%;
     }
@@ -551,13 +529,12 @@
         height: auto;
     }
 
-    .contact .section1 {
+    .contact-section img{
         width: 100%;
-        margin-top: 20vh;
     }
 
-    .contact .section2 {
-        width: 100%;
+    .contact-section .sectionB{
+        flex-direction: column-reverse;
     }
 
 }
