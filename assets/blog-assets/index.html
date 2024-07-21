@@ -6,16 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="buLUOFNNr0jxlPAvaGwYK7CDt2__It5G44Iu8MJWDeM" />
-    <meta name="description" content="This is the blog page">
+    <meta name="description" content="This is the homepage of my personal website">
     <meta name="author" content="Atul Rajput">
-    <title>Blog | Atul Rajput</title>
+    <title>Home | Atul Rajput</title>
     <link rel="stylesheet" href="/assets/css/blogpage.css">
     <link rel="stylesheet" href="/assets/css/universal.css">
     <link rel="shortcut icon" href="/assets/images/icon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/388a1f26e9.js" crossorigin="anonymous"></script>
 </head>
 
+<!-- Body starts -->
+
 <body>
+    <!-- Preloader starts-->
+    <div id="preloader"></div>
+    <!-- Preloader ends-->
+
     <nav id="nav">
         <div class="scroll-watcher"></div>
         <div class="logo">
@@ -25,35 +31,40 @@
         </div>
         <ul class="nav-links">
             <li><a target="_blank" href="/index.html">Home</a></li>
-            <li><a href="/index.html#about">About</a></li>
-            <li><a href="/index.html#skills">Skills</a></li>
-            <li><a href="/index.html#education">Education</a></li>
-            <li><a href="/index.html#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a target="_blank" href="/assets/blog-assets/index.html">Blog</a></li>
-                <li><a target="_blank" href="/assets/myspace-assets/index.html">My Space</a></li>
-                <li><a target="_blank" href="https://eatulrajput.notion.site/My-Designs-6cd2b17ce61b40acb3da45abc6bf59e9">My Designs</a></li>
-            <li><a href="/index.html#contact">Contact</a></li>
+            <li><a target="_blank" href="/assets/myspace-assets/index.html">My Space</a></li>
+            <li><a target="_blank" href="https://eatulrajput.notion.site/My-Designs-6cd2b17ce61b40acb3da45abc6bf59e9">My
+                    Designs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a target="_blank" href="/assets/resource.html">Resources</a></li>
         </ul>
         <div id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="overlay-content">
                 <a href="/index.html">Home</a>
-                <a href="/index.html#about">About</a>
-                <a href="/index.html#skills">Skills</a>
-                <a href="/index.html#education">Education</a>
-                <a href="/index.html#projects">Projects</a>
-                <a target="_blank" href="/assets/blog-assets/index.html">Blog</a>
-                <a target="_blank" href="/assets/myspace-assets/index.html">My Space</a>
-                <a target="_blank" href="https://eatulrajput.notion.site/My-Designs-6cd2b17ce61b40acb3da45abc6bf59e9">My Designs</a>
-                <a href="/index.html#contact">Contact</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
+                <a href="/assets/blog-assets/index.html">Blog</a>
+                <a href="/assets/myspace-assets/index.html">My Space</a>
+                <a target="_blank" href="https://eatulrajput.notion.site/My-Designs-6cd2b17ce61b40acb3da45abc6bf59e9">My
+                    Designs</a>
+                <a href="#contact">Contact</a>
+                <a target="_blank" href="/assets/resource.html">Resources</a>
             </div>
         </div>
 
         <div class="menu">
             <span class="curtain-menu" onclick="openNav()">&#9776;</span>
         </div>
+
     </nav>
-   
+    <!-- Navigation bar ends  -->
 
     <div id="blog">
         <div class="blog">
@@ -121,25 +132,6 @@
                         src="https://s11.flagcounter.com/count2/o6Xp/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/"
                         alt="Flag Counter" border="0"></a>
             </div>
-
-            <div class="resources">
-                <p>List of Resources used in creating the website:</p>
-                <div class="links-box">
-                    <div class="links">
-                        <ol>
-                            <li><a href="https://pages.github.com/"><i class="fa-brands fa-github"></i> GitHub Pages</a>
-                            </li>
-
-                            <li><a href="https://fontawesome.com/"><i class="fa-regular fa-font-awesome"></i> Font
-                                    Awesome</a></li>
-
-                            <li><a href="https://herodesign.io/"><i class="fa-solid fa-link"></i> Hero Design</a></li>
-
-                            <li><a href="https://unsplash.com/"><i class="fa-brands fa-unsplash"></i> Unsplash</a></li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="footer-section2">
@@ -162,13 +154,30 @@
     </button>
     <!-- HTML for Scroll Up Button Ends -->
 
-    <!-- JavaScript for Curtain -->
+    <!-- JavaScript for Preloader Starts-->
+    <script src="/assets/javascript/preloader.js"></script>
+   <!-- JavaScript for Preloader ends-->
+
+    <!-- JavaScript for Curtain Starts-->
     <script src="/assets/javascript/curtain.js"></script>
+    <!-- JavaScript for Curtain ends-->
+
+    <!-- JavaScript for Typing Starts -->
+    <!-- Load library from the CDN -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['a BTech student', 'a programmer', 'a learner'],
+            typeSpeed: 80, loop: true,
+        });
+    </script>
+
+    <!-- JavaScript for Typing ends -->
 
     <script>
-        window.onscroll = function () {
-            myFunction()
-        };
+        window.onscroll = function () { myFunction() };
 
         var header = document.getElementById("nav");
         var sticky = header.offsetTop;
@@ -182,8 +191,25 @@
         }
     </script>
 
-    <!-- JS for Scrolling Up Button -->
-<script src="/assets/javascript/scrollupbutton.js"></script>
+    <!-- JavaScript for Tilting Starts -->
+    <script type="text/javascript" src="/assets/javascript/vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".logo,.hero img, .projectcard"), {
+            max: 5,
+            speed: 300,
+            glare: true,
+            "max-glare": 1,
+        });
+    </script>
+
+    <!-- JavaScript for Tilting ends -->
+
+    <!-- JavaScript for Scrolling Up Button Starts -->
+    <script src="/assets/javascript/scrollupbutton.js"></script>
+    <!-- JavaScript for Scrolling Up Button endss -->
+
+
+
 </body>
 
 </html>
