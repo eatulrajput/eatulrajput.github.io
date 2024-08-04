@@ -18,6 +18,10 @@
 
 <body>
 
+     <!-- Preloader starts-->
+     <div id="preloader"></div>
+     <!-- Preloader ends-->
+
     <nav id="nav">
         <div class="scroll-watcher"></div>
         <div class="logo">
@@ -149,36 +153,21 @@
 <!-- Footer Section ends -->
 
      <!-- HTML for Scroll Up Button Starts -->
-     <button onclick="topFunction()" id="goToTopBtn" title="Go to top">
+       <button onclick="topFunction()" id="goToTopBtn" title="Go to top">
         <span style="--i:0;"></span>
         <span style="--i:1;"></span>
         <i class="fa-solid fa-angles-up"></i>
     </button>
     <!-- HTML for Scroll Up Button Ends -->
 
-    <!-- JavaScript for curtain menu starts-->
-    <script>
-        function openNav() {
-            document.getElementById("myNav").style.width = "100%";
-        }
+    <!-- JavaScript for Preloader Starts-->
+    <script src="/assets/javascript/preloader.js"></script>
+    <!-- JavaScript for Preloader ends-->
 
-        function closeNav() {
-            document.getElementById("myNav").style.width = "0%";
-        }
-    </script>
-    <!-- JavaScript for curtain menu ends-->
+    <!-- JavaScript for Curtain Starts-->
+    <script src="/assets/javascript/curtain.js"></script>
+    <!-- JavaScript for Curtain ends-->
 
-
-    <!-- Load library from the CDN -->
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-
-    <!-- Setup and start animation! -->
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['a BTech student', 'a programmer', 'a learner'],
-            typeSpeed: 80, loop: true,
-        });
-    </script>
     <script>
         window.onscroll = function () { myFunction() };
 
@@ -193,11 +182,11 @@
             }
         }
     </script>
-    
-    <!-- JS for Scrolling Up Button -->
-<script src="/assets/javascript/scrollupbutton.js"></script>
 
-
+    <!-- JavaScript for Scrolling Up Button Starts -->
+    <script src="/assets/javascript/scrollupbutton.js"></script>
+    <!-- JavaScript for Scrolling Up Button endss -->
+     
 </body>
 
 </html>
