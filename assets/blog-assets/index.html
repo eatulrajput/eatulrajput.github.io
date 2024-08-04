@@ -77,10 +77,10 @@
                 </div>
                 
                 <!-- Blog 1 -->
-                <div class="blogcard" onclick="redirectToBlog('/assets/blog-assets/post1/index.html')"
+                <!-- <div class="blogcard" onclick="redirectToBlog('/assets/blog-assets/post1/index.html')"
                     style="background-image: url(/assets/images/posts/post1.jpg);">
                     <p>Parasocial Relationship</p>
-                </div>
+                </div> -->
                 <!-- Blog 2 -->
                 <div class="blogcard" onclick="redirectToBlog('/assets/blog-assets/post2/index.html')"
                     style="background-image: url(/assets/images/posts/post2.jpg);">
@@ -208,6 +208,12 @@
     <script src="/assets/javascript/scrollupbutton.js"></script>
     <!-- JavaScript for Scrolling Up Button endss -->
 
+
+    <script>
+        function redirectToBlog(url) {
+            window.location.href = url;
+        }
+    </script>
 
 
 </body>
