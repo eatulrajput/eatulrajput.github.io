@@ -19,6 +19,7 @@
 <!-- Body starts -->
 
 <body>
+    
     <div id="login-form">
         <h2>Please enter the password to view the content</h2>
         <input type="password" id="password" placeholder="Enter password">
@@ -254,48 +255,28 @@
     
     </section>
 
-     <!-- Footer Section starts -->
-    <div class="footer">
-        <div class="footer-section1">
-            <div class="visit">
-                <a href="https://info.flagcounter.com/o6Xp"><img
-                        src="https://s11.flagcounter.com/count2/o6Xp/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/"
-                        alt="Flag Counter" border="0"></a>
-            </div>
-
-            <div class="resources">
-                <p>List of Resources used in creating the website:</p>
-                <div class="links-box">
-                    <div class="links">
-                        <ol>
-                            <li><a href="https://pages.github.com/"><i class="fa-brands fa-github"></i> GitHub Pages</a>
-                            </li>
-
-                            <li><a href="https://fontawesome.com/"><i class="fa-regular fa-font-awesome"></i> Font
-                                    Awesome</a></li>
-
-                            <li><a href="https://herodesign.io/"><i class="fa-solid fa-link"></i> Hero Design</a></li>
-
-                            <li><a href="https://unsplash.com/"><i class="fa-brands fa-unsplash"></i> Unsplash</a></li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
+    <!-- Footer Section starts -->
+<div class="footer">
+    <div class="footer-section1">
+        <div class="visit">
+            <a href="https://info.flagcounter.com/o6Xp"><img
+                    src="https://s11.flagcounter.com/count2/o6Xp/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/"
+                    alt="Flag Counter" border="0"></a>
         </div>
-
-        <div class="footer-section2">
-            <p>
-                This website is created and designed by <strong>Atul Rajput</strong> with <i
-                    class="fa-regular fa-heart"></i><br>
-                Copyright &copy; 2024 | All Rights Are Reserved.</p>
-
-        </div>
-        <div id="wcb" class="carbonbadge"></div>
-        <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
     </div>
-    <!-- Footer Section ends -->
-     
+
+    <div class="footer-section2">
+        <p>
+            This website is created and designed by <strong>Atul Rajput</strong> with <i
+                class="fa-regular fa-heart"></i><br>
+            Copyright &copy; 2024 | All Rights Are Reserved.</p>
+
+    </div>
+    <div id="wcb" class="carbonbadge"></div>
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
 </div>
+<!-- Footer Section ends -->
+
     <!-- HTML for Scroll Up Button Starts -->
     <button onclick="topFunction()" id="goToTopBtn" title="Go to top">
         <span style="--i:0;"></span>
@@ -303,83 +284,34 @@
         <i class="fa-solid fa-angles-up"></i>
     </button>
     <!-- HTML for Scroll Up Button Ends -->
-    <!-- JavaScript for curtain menu starts-->
-    <script>
-        function openNav() {
-            document.getElementById("myNav").style.width = "100%";
-        }
 
-        function closeNav() {
-            document.getElementById("myNav").style.width = "0%";
-        }
-    </script>
-    <!-- JavaScript for curtain menu ends-->
-    <!-- Pop out JS -->
-    <script>
-        // script.js
-        const modal = document.getElementById('myModal');
-        const modalImage = document.getElementById('modalImage');
-        const originalImages = document.querySelectorAll('.myImage');
-        const closeButton = document.querySelector('.close');
+    <!-- JavaScript for Preloader Starts-->
+    <script src="/assets/javascript/preloader.js"></script>
+    <!-- JavaScript for Preloader ends-->
 
-        originalImages.forEach(image => {
-            image.addEventListener('click', openModal);
-        });
-
-        closeButton.addEventListener('click', closeModal);
-        window.addEventListener('click', outsideClick);
-
-        function openModal(e) {
-            modal.style.display = 'block';
-            modalImage.src = e.target.src;
-        }
-
-        function closeModal() {
-            modal.style.display = 'none';
-        }
-
-        function outsideClick(e) {
-            if (e.target === modal) {
-                closeModal();
-            }
-        }
-    </script>
+    <!-- JavaScript for Curtain Starts-->
+    <script src="/assets/javascript/curtain.js"></script>
+    <!-- JavaScript for Curtain ends-->
 
     <script>
-        // JS for Scroll Up Button Starts
+        window.onscroll = function () { myFunction() };
 
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function () { scrollFunction() };
+        var header = document.getElementById("nav");
+        var sticky = header.offsetTop;
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("goToTopBtn").style.display = "block";
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
             } else {
-                document.getElementById("goToTopBtn").style.display = "none";
+                header.classList.remove("sticky");
             }
         }
-
-        // When the user clicks on the button, scroll to the top of the document smoothly
-        function topFunction() {
-            // Get the current scroll position
-            var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-
-            if (currentScroll > 0) {
-                // Calculate how far to scroll to get to the top
-                var scrollStep = -currentScroll / (300 / 15); // 300ms duration for the animation, adjust to suit
-
-                // Use a timer to scroll the page smoothly
-                var scrollInterval = setInterval(function () {
-                    if (document.body.scrollTop !== 0 || document.documentElement.scrollTop !== 0) {
-                        window.scrollBy(0, scrollStep);
-                    } else {
-                        clearInterval(scrollInterval);
-                    }
-                }, 15); // 15ms interval for smoother animation, adjust if needed
-            }
-        }
-
     </script>
+
+    <!-- JavaScript for Scrolling Up Button Starts -->
+    <script src="/assets/javascript/scrollupbutton.js"></script>
+    <!-- JavaScript for Scrolling Up Button endss -->
+
 
 </body>
 
