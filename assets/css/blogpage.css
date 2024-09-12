@@ -1,0 +1,86 @@
+/* Blog Section starts */
+*{
+    scroll-behavior: smooth;
+}
+
+.blog {
+    letter-spacing: 3px;
+    margin: 20px;
+    margin-top: 150px;
+    height: auto;
+}
+
+.box-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    text-transform: uppercase;
+    color: #285cf8;
+}
+
+.blog-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.blog-hero{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blog-hero img{
+    width: 60%;
+}
+
+.blogcard {
+    height: 400px;
+    width: 400px;
+    border-radius: 18px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #222;
+    background-blend-mode: overlay;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+}
+
+.blogcard:hover {
+    background-color: none;
+    color: transparent;
+    background-blend-mode: normal;
+    transform: translateY(-10px); /* Adjust the value based on how much you want the image to move up */
+}
+
+/* Blog Section ends */
+
+
+
+/* Mobile View  */
+@media screen and (max-width:768px) {
+    * {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    /* Project Mobile CSS */
+    .blogcard {
+        width: 90%;
+    }
+
+
+}

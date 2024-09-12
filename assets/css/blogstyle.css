@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    scroll-behavior: smooth;
+}
+
+
+/* Blog Section starts */
+.blog {
+    letter-spacing: 3px;
+    margin: 20px;
+    margin-top: 150px;
+    height: auto;
+}
+
+.box-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    text-transform: uppercase;
+    color: #285cf8;
+}
+
+.blog-section {
+    padding: 10px;font-family: 'Ubuntu', sans-serif;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.blog-section img {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem;
+}
+
+.blog-section h3{
+    margin-top: 2rem;
+}
+
+.blog-section h4{
+    margin-top: 2rem;
+}
+
+.blog-section p {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+    letter-spacing: normal;
+    line-height: 2rem;
+}
+
+.blog-section ol {
+    font-size: 1rem;
+    letter-spacing: normal;
+    line-height: 2rem;
+}
+
+.blog-section li{
+    margin-top: 2rem;
+}
+
+#reading-time{
+    color: grey;
+    letter-spacing: normal;
+}
+
+@media screen and (max-width:768px) {
+    .blog-section {
+        margin: 50px 2%;    
+    }
+}
