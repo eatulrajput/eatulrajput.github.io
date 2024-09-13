@@ -82,5 +82,15 @@
         width: 90%;
     }
 
+    .blog-hero{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .blog-hero img{
+        width: 100%;
+    }
 
 }
