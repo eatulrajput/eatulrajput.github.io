@@ -6,7 +6,8 @@
 
 #login-form{
     text-align: center;
-    background-color: #fff;
+    background-color: #ffffff49;
+    backdrop-filter: 1000px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -16,6 +17,11 @@
     top: 200px;
 }
 
+#login-form p{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
 input[type="password"],
 input[type="text"] {
     padding: 10px;
@@ -23,6 +29,11 @@ input[type="text"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 80%;
+    font-size: 1.2rem;
+}
+
+input[type="text"]{
+    color: #285cf8;
 }
 
 button {
@@ -42,6 +53,7 @@ img {
     width: 30px;
     height: 30px;
     vertical-align: middle;
+    filter: contrast(30%);
 }
 
 /* Wallpaper Section starts */
