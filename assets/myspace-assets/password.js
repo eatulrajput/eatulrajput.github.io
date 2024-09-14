@@ -1,3 +1,18 @@
+function togglePasswordVisibility() {
+    const passwordField = document.getElementById("password");
+    const toggleIcon = document.getElementById("togglePasswordIcon");
+    
+    if (passwordField.type === "password") {
+        passwordField.type = "text";
+        toggleIcon.src = "/assets/images/v_off.svg"; // Change to hide icon
+        toggleIcon.alt = "Hide Password";
+    } else {
+        passwordField.type = "password";
+        toggleIcon.src = "/assets/images/v_on.svg"; // Change to show icon
+        toggleIcon.alt = "Show Password";
+    }
+}
+
 function checkPassword() {
     const correctPassword = "ChandanKumarJha@2022"; // Change this to your desired password
     const enteredPassword = document.getElementById("password").value;

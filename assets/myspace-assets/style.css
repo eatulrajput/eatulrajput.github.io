@@ -4,7 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-/* Password Page */
 #login-form{
     text-align: center;
     background-color: #fff;
@@ -17,7 +16,8 @@
     top: 200px;
 }
 
-input[type="password"] {
+input[type="password"],
+input[type="text"] {
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -38,7 +38,11 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Password css ends */
+img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
 
 /* Wallpaper Section starts */
 .wallpaper {
@@ -259,6 +263,10 @@ button:hover {
         justify-content: center;
         align-items: center;
 
+    }
+
+    #login-form{
+        width: 90%;
     }
 
     /* Wallpaper Mobile CSS */

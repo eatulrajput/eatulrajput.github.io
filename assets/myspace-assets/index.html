@@ -23,8 +23,11 @@
     <div id="login-form">
         <h2>Please enter the password to view the content</h2>
         <input type="password" id="password" placeholder="Enter password">
+        <img id="togglePasswordIcon" src="/assets/images/v_on.svg" alt="Show Password" onclick="togglePasswordVisibility()" style="cursor: pointer;">
+        <br><br>
         <button onclick="checkPassword()">Submit</button>
     </div>
+
     <div id="content" class="main" style="display:none;">
         <nav id="nav">
             <div class="scroll-watcher"></div>
