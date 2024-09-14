@@ -14,7 +14,7 @@ function togglePasswordVisibility() {
 }
 
 function checkPassword() {
-    const correctPassword = "ChandanKumarJha@2022"; // Change this to your desired password
+    const correctPassword = "Captain America"; // Change this to your desired password
     const enteredPassword = document.getElementById("password").value;
     
     if (enteredPassword === correctPassword) {
