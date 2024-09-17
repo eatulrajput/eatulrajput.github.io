@@ -79,7 +79,7 @@ nav .logo a {
 }
 
 nav .logo a img {
-    width: 60px;
+    width: 40px;
 }
 
 .nav-links {
@@ -96,7 +96,7 @@ nav .logo a img {
     text-decoration: none;
     position: relative;
     color: black;
-    font-size: 20px;
+    font-size: 16px;
     padding: 4px 22px;
 }
 
@@ -170,7 +170,7 @@ nav .logo a img {
 
 /* Footer Section starts */
 .footer {
-    background-color: #285cf8;
+    background-color: #263238;
     color: white;
     padding: 50px 100px;
 }

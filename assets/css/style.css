@@ -588,6 +588,21 @@
     color: black;
 }
 
+.parallax {
+    /* The image used */
+    background-image: url("/assets/images/quote.png");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+    height: 800px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position:top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 /* Contact Section ends */
 
 /* CSS for For Responsive Screen */
