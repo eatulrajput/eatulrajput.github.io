@@ -1,4 +1,4 @@
-*{
+* {
     scroll-behavior: smooth;
 }
 
@@ -42,12 +42,12 @@
 .button-box {
     display: flex;
     justify-content: space-around;
-    align-items:flex-start;
+    align-items: flex-start;
     /* flex-direction: column; */
     width: auto;
 }
 
-.button-box .button{
+.button-box .button {
     margin: 20px;
 }
 
@@ -103,7 +103,7 @@
     color: #285cf8;
 }
 
-.box-name i{
+.box-name i {
     font-size: 2.4rem;
 }
 
@@ -170,12 +170,12 @@
     color: #285cf8;
 }
 
-.b-arrow{
+.b-arrow {
     width: 200px;
     transform: rotate(180deg);
 }
 
-.f-arrow{
+.f-arrow {
     width: 200px;
 }
 
@@ -228,7 +228,7 @@
     border: solid #285cf8;
 }
 
-.message{
+.message {
     color: #557ef9;
     font-size: 30px;
     position: relative;
@@ -285,12 +285,117 @@
     margin: 8px;
 }
 
-.information p{
+.information p {
     line-height: 2rem;
 }
 
 
 /* Education Section ends */
+
+/* Experience Section starts */
+
+.experience {
+    letter-spacing: 3px;
+    margin: 20px;
+    height: auto;
+}
+
+
+.experience-section i {
+    font-size: 1.5rem;
+    color: #285cf8;
+}
+
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #285cf8;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.timeline-container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+.timeline-container.left {
+    left: 0%;
+}
+
+.timeline-container.right {
+    left: 50%;
+}
+
+.timeline-container::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #285cf8;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-container.right::after {
+    left: -16px;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-container.right .timeline-content {
+    margin-left: 20px;
+}
+
+.timeline-container.left .timeline-content {
+    margin-right: 0px;
+}
+
+.timeline-content h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #285cf8;
+}
+
+.timeline-content h4 {
+    font-weight: 500;
+    margin: 0;
+    font-size: 16px;
+    color: #285cf8;
+}
+
+.timeline-content p {
+    margin: 10px 0;
+}
+
+.timeline-content .date {
+    color: #888;
+    font-size: 14px;
+}
+
+/* Experience Section ends */
 
 /* Projects Section starts */
 .projects {
@@ -340,7 +445,7 @@
     border-radius: 14px;
     margin: 8px;
     backdrop-filter: blur(1000px);
-    
+
 }
 
 /* Hover state overlay */
@@ -380,6 +485,7 @@
 .projectcard .project-hover::-webkit-scrollbar {
     width: 5px;
 }
+
 .projectcard .project-hover::-webkit-scrollbar-thumb {
     background-color: #333;
     border-radius: 5px;
@@ -453,18 +559,19 @@
     align-items: center;
     flex-direction: column;
 }
-.contact-section .sectionA{
+
+.contact-section .sectionA {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
     width: 100%;
 }
 
-.contact-section img{
+.contact-section img {
     width: 50%;
 }
 
-.contact-section .sectionB{
+.contact-section .sectionB {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -479,7 +586,7 @@
 
 .contact .sectionB .icons a:hover {
     color: black;
-} 
+}
 
 /* Contact Section ends */
 
@@ -488,7 +595,7 @@
     .button-box {
         display: flex;
         justify-content: space-around;
-        align-items:flex-start;
+        align-items: flex-start;
         flex-direction: column-reverse;
         width: auto;
     }
@@ -534,12 +641,12 @@
     .button-box {
         display: flex;
         justify-content: space-around;
-        align-items:center;
+        align-items: center;
         flex-direction: column-reverse;
         width: auto;
     }
-    
-    .button-box .button{
+
+    .button-box .button {
         margin: 20px;
     }
 
@@ -552,12 +659,12 @@
         width: 100%;
     }
 
-    .b-arrow{
+    .b-arrow {
         width: 200px;
         transform: rotate(270deg);
     }
-    
-    .f-arrow{
+
+    .f-arrow {
         width: 200px;
         transform: rotate(90deg);
     }
@@ -580,9 +687,10 @@
         background: none;
     }
 
-    .education-card{
+    .education-card {
         width: 100%;
     }
+
     .education-card img {
         border-radius: 18px;
         width: 100%;
@@ -594,7 +702,7 @@
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
-}
+    }
 
     .projectcard {
         width: 100%;
@@ -610,11 +718,11 @@
         height: auto;
     }
 
-    .contact-section img{
+    .contact-section img {
         width: 100%;
     }
 
-    .contact-section .sectionB{
+    .contact-section .sectionB {
         flex-direction: column-reverse;
     }
 
