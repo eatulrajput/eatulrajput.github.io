@@ -189,28 +189,50 @@
     height: auto;
 }
 
-.skills-section {
-    font-size: 1.2rem;
+.skills-section  {
+    height: 700px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items:baseline;
+}
+
+.skills-set  {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-wrap: wrap;
-    height: 600px;
-    flex-direction: row;
-    align-content: flex-start;
-    background: url('/assets/images/skill-bg.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 20px;
+    border-bottom: solid rgba(0, 0, 0, 0.048);
+    width: 100%;
 }
 
-.skills-section i {
+.skills-set:last-child{
+    border: none;
+}
+
+.skills-set .label{
+    font-size: 1.4rem;
+    width: 30%;
+    padding: 10px;
+    color: #285cf8;
+}
+
+.skill-container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 70%;
+}
+
+.skill-container i {
     font-size: 1.5rem;
     color: #285cf8;
 }
 
-.skills-section p {
+.skill-container p {
     font-size: 20px;
     margin: 6px;
     padding: 20px;
@@ -222,18 +244,25 @@
     font-weight: 500;
 }
 
-.skills-section p:hover {
+.skill-container p:hover {
     transform: scale(1.2);
     cursor: pointer;
     border: solid #285cf8;
 }
 
-.message {
-    color: #557ef9;
-    font-size: 30px;
-    position: relative;
-    top: -100px;
-}
+.parallax1 {
+    /* The image used */
+    background-image: url('/assets/images/skill-bg.svg');
+  
+    /* Set a specific height */
+    min-height: 500px;   
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 
 /* Skills Section ends */
 
@@ -588,7 +617,7 @@
     color: black;
 }
 
-.parallax {
+.parallax2 {
     /* The image used */
     background-image: url("/assets/images/quote.png");
   
@@ -685,13 +714,22 @@
     }
 
     /* Skills Mobile CSS */
-    .skills-section .card {
-        margin: 8px;
-        padding: 10px;
-        width: 90%;
-        height: auto;
-        box-shadow: 2px 2px 2px #777;
-        border-radius: 18px;
+    .skills-section{
+        min-height: 1230px;
+    }
+
+    .skills-set  {
+        display: block;
+    }
+
+    
+    .skill-container{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
     }
 
     /* Education Mobile CSS */
@@ -711,6 +749,49 @@
         width: 100%;
     }
 
+    /* Experience CSS */
+    .timeline::after {
+        display: none;
+    }
+
+    .timeline-container {
+        width: 100%;
+        padding : 0px;
+        margin-bottom: 20px;
+    }
+
+    .timeline-container.left,
+    .timeline-container.right {
+        left: 0%;
+    }
+
+    .timeline-container::after {
+        display: none;
+    }
+
+
+    .timeline-content {
+        padding: 15px 20px;
+    }
+
+    .timeline-container.right .timeline-content,
+    .timeline-container.left .timeline-content {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .timeline-content h2 {
+        font-size: 16px;
+    }
+
+    .timeline-content h4 {
+        font-size: 14px;
+    }
+
+    .timeline-content .date {
+        font-size: 12px;
+    }
+
     /* Project Mobile CSS */
     .projects-section {
         display: flex;
@@ -724,7 +805,8 @@
     }
 
     .frame-container {
-        padding-top: 100%;
+        width: 100%;
+        min-height: 1300px;
         /* Adjust aspect ratio or any other styles as needed */
     }
 
