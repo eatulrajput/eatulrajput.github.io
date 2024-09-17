@@ -12,15 +12,26 @@
     <link rel="shortcut icon" href="/assets/images/icon.ico" type="image/x-icon">
     <script src="/assets/javascript/reading-time.js"></script>
     <script src="https://kit.fontawesome.com/388a1f26e9.js" crossorigin="anonymous"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9C3YK4FNWZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9C3YK4FNWZ');
+    </script>
+
 </head>
 
 <!-- Body starts -->
 
 <body>
 
-     <!-- Preloader starts-->
-     <div id="preloader"></div>
-     <!-- Preloader ends-->
+    <!-- Preloader starts-->
+    <div id="preloader"></div>
+    <!-- Preloader ends-->
 
     <nav id="nav">
         <div class="scroll-watcher"></div>
@@ -155,62 +166,62 @@
     </div>
     <!-- Projects Section ends  -->
 
-<!-- Footer Section starts -->
-<div class="footer">
-    <div class="footer-section1">
-        <div class="visit">
-            <a href="https://info.flagcounter.com/o6Xp"><img
-                    src="https://s11.flagcounter.com/count2/o6Xp/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/"
-                    alt="Flag Counter" border="0"></a>
+    <!-- Footer Section starts -->
+    <div class="footer">
+        <div class="footer-section1">
+            <div class="visit">
+                <a href="https://info.flagcounter.com/o6Xp"><img
+                        src="https://s11.flagcounter.com/count2/o6Xp/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/"
+                        alt="Flag Counter" border="0"></a>
+            </div>
         </div>
+
+        <div class="footer-section2">
+            <p>
+                This website is created and designed by <strong>Atul Rajput</strong> with <i
+                    class="fa-regular fa-heart"></i><br>
+                Copyright &copy; 2024 | All Rights Are Reserved.</p>
+
+        </div>
+        <div id="wcb" class="carbonbadge"></div>
+        <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
     </div>
+    <!-- Footer Section ends -->
 
-    <div class="footer-section2">
-        <p>
-            This website is created and designed by <strong>Atul Rajput</strong> with <i
-                class="fa-regular fa-heart"></i><br>
-            Copyright &copy; 2024 | All Rights Are Reserved.</p>
+    <!-- HTML for Scroll Up Button Starts -->
+    <button onclick="topFunction()" id="goToTopBtn" title="Go to top">
+        <span style="--i:0;"></span>
+        <span style="--i:1;"></span>
+        <i class="fa-solid fa-angles-up"></i>
+    </button>
+    <!-- HTML for Scroll Up Button Ends -->
 
-    </div>
-    <div id="wcb" class="carbonbadge"></div>
-    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
-</div>
-<!-- Footer Section ends -->
+    <!-- JavaScript for Preloader Starts-->
+    <script src="/assets/javascript/preloader.js"></script>
+    <!-- JavaScript for Preloader ends-->
 
-   <!-- HTML for Scroll Up Button Starts -->
-   <button onclick="topFunction()" id="goToTopBtn" title="Go to top">
-    <span style="--i:0;"></span>
-    <span style="--i:1;"></span>
-    <i class="fa-solid fa-angles-up"></i>
-</button>
-<!-- HTML for Scroll Up Button Ends -->
+    <!-- JavaScript for Curtain Starts-->
+    <script src="/assets/javascript/curtain.js"></script>
+    <!-- JavaScript for Curtain ends-->
 
-<!-- JavaScript for Preloader Starts-->
-<script src="/assets/javascript/preloader.js"></script>
-<!-- JavaScript for Preloader ends-->
+    <script>
+        window.onscroll = function () { myFunction() };
 
-<!-- JavaScript for Curtain Starts-->
-<script src="/assets/javascript/curtain.js"></script>
-<!-- JavaScript for Curtain ends-->
+        var header = document.getElementById("nav");
+        var sticky = header.offsetTop;
 
-<script>
-    window.onscroll = function () { myFunction() };
-
-    var header = document.getElementById("nav");
-    var sticky = header.offsetTop;
-
-    function myFunction() {
-        if (window.pageYOffset > sticky) {
-            header.classList.add("sticky");
-        } else {
-            header.classList.remove("sticky");
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
         }
-    }
-</script>
+    </script>
 
-<!-- JavaScript for Scrolling Up Button Starts -->
-<script src="/assets/javascript/scrollupbutton.js"></script>
-<!-- JavaScript for Scrolling Up Button endss -->
+    <!-- JavaScript for Scrolling Up Button Starts -->
+    <script src="/assets/javascript/scrollupbutton.js"></script>
+    <!-- JavaScript for Scrolling Up Button endss -->
 
 </body>
 
