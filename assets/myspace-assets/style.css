@@ -120,27 +120,79 @@ button:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
-    width: 50%;
+    flex-direction: row;
+    width: 100%;
     font-family: "Lato", sans-serif;
     min-height: 500px;
 }
 
-.quote-box p {
+.quote-box-reverse {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 100%;
+    font-family: "Lato", sans-serif;
+    min-height: 500px;
+}
+
+.quote-content{
+    width: 60%;
+    text-align: left;
+}
+
+.quote-content p {
     padding: 20px 0px;
     font-size: larger;
     color: #868686;
     line-height: 2rem;
+    
 }
 
-.quote-box hr {
-    width: 50%;
-    height: 2px;
-
+.sayer1{
+    width: 30%;
+    transition: .5s ease-in-out;
+    border-radius: 50px;
 }
+
+.sayer1 img{
+    width: 100%;
+    padding: 20px;
+    border-radius: 50px;
+    border: 10px solid #ff9500;
+    border-radius: 50px;
+    border-style: double;
+}
+
+.sayer1:hover{
+    transform: translateY(-2rem);
+    box-shadow: 0px 0px 23px 2px #ff9500;
+}
+
+.sayer2{
+    width: 30%;
+    transition: .5s ease-in-out;
+    border-radius: 50px;
+}
+
+.sayer2 img{
+    width: 100%;
+    padding: 20px;
+    border-radius: 50px;
+    border: 10px solid #57687d;
+    border-radius: 50px;
+    border-style: double;
+}
+
+.sayer2:hover{
+    transform: translateY(-2rem);
+    box-shadow: 0px 0px 23px 2px #57687d;
+}
+
 
 .speaker {
     font-style: italic;
+    text-align: right;
 }
 
 /* Hobby Section */
