@@ -30,16 +30,16 @@
 <!-- Body starts -->
 
 <body>
-
-    <div id="login-form">
-        <p>Please enter the password to view the content</p>
-        <input type="password" id="password" placeholder="Enter Password (Hint: Atul's Fav Superhero)">
-        <img id="togglePasswordIcon" src="/assets/images/v_on.svg" alt="Show Password"
-            onclick="togglePasswordVisibility()" style="cursor: pointer;">
-        <br><br>
-        <button onclick="checkPassword()">Submit</button>
+    <div class="form-container parallax-hero">
+        <div id="login-form">
+            <p>Please enter the password to view the content</p>
+            <input type="password" id="password" placeholder="Enter Password (Hint: Atul's Fav Superhero)">
+            <img id="togglePasswordIcon" src="/assets/images/v_on.svg" alt="Show Password"
+                onclick="togglePasswordVisibility()" style="cursor: pointer;">
+            <br><br>
+            <button onclick="checkPassword()">Submit</button>
+        </div>
     </div>
-
     <div id="content" class="main" style="display:none;">
         <nav id="nav">
             <div class="scroll-watcher"></div>
@@ -265,7 +265,7 @@
 
         <!-- Click on Pop out Wallpaper -->
         <div id="myModal" class="modal">
-            <span class="close">&times;</span>
+            <span class="close-button">&times;</span>
             <img class="modal-content" id="modalImage">
         </div>
 
@@ -329,8 +329,41 @@
 
         <!-- JavaScript for Scrolling Up Button Starts -->
         <script src="/assets/javascript/scrollupbutton.js"></script>
-        <!-- JavaScript for Scrolling Up Button endss -->
+        <!-- JavaScript for Scrolling Up Button ends -->
 
+        <script>
+            // Get the modal element
+            var modal = document.getElementById("myModal");
+
+            // Get the image and modal image element
+            var modalImg = document.getElementById("modalImage");
+
+            // Get all images in the posts container
+            var images = document.querySelectorAll(".posts img");
+
+            // Loop through images and add click event
+            images.forEach((img) => {
+                img.onclick = function () {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                };
+            });
+
+            // Get the close button element
+            var closeBtn = document.querySelector(".close-button");
+
+            // Close the modal when the close button is clicked
+            closeBtn.onclick = function () {
+                modal.style.display = "none";
+            };
+
+            // Close the modal when anywhere outside the modal image is clicked
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            };
+        </script>
 
 </body>
 

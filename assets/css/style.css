@@ -732,6 +732,11 @@
         width: 100%;
     }
 
+    .parallax1,
+     .parallax2{
+        display: none;
+      }
+
     /* Education Mobile CSS */
 
     .education-section {

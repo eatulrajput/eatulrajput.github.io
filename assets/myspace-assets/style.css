@@ -4,20 +4,40 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-#login-form{
+
+.form-container {
+    background: url('/assets/myspace-assets/bg.jpg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    /* Set a specific height */
+    min-height: 500px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    /* background-position:center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#login-form {
+    width: 100%;
     text-align: center;
     background-color: #ffffff49;
     backdrop-filter: 1000px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 50%;
     margin: 0 auto;
     position: relative;
     top: 200px;
+    backdrop-filter: blur(3000px);
 }
 
-#login-form p{
+#login-form p {
     font-size: 1.5rem;
     font-weight: 500;
 }
@@ -32,7 +52,7 @@ input[type="text"] {
     font-size: 1.2rem;
 }
 
-input[type="text"]{
+input[type="text"] {
     color: #285cf8;
 }
 
@@ -49,12 +69,7 @@ button:hover {
     background-color: #0056b3;
 }
 
-img {
-    width: 30px;
-    height: 30px;
-    vertical-align: middle;
-    filter: contrast(30%);
-}
+
 
 /* Wallpaper Section starts */
 .wallpaper {
@@ -82,7 +97,7 @@ img {
 }
 
 /* Quote Section */
-.quote-section{
+.quote-section {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -90,18 +105,18 @@ img {
     flex-direction: column;
 }
 
-.quote-section h1{
+.quote-section h1 {
     font-family: "Dancing Script", cursive;
     font-size: 3rem;
     margin: 40px 0px;
     transition: 1s ease-in-out;
 }
 
-.quote-section h1:hover{
+.quote-section h1:hover {
     transform: scale(1.4);
 }
 
-.quote-box{
+.quote-box {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -111,24 +126,25 @@ img {
     min-height: 500px;
 }
 
-.quote-box p{
+.quote-box p {
     padding: 20px 0px;
     font-size: larger;
     color: #868686;
     line-height: 2rem;
 }
 
-.quote-box hr{
-    width: 400px;
+.quote-box hr {
+    width: 50%;
     height: 2px;
+
 }
 
-.speaker{
+.speaker {
     font-style: italic;
 }
 
 /* Hobby Section */
-.hobby{
+.hobby {
     display: flex;
     text-align: center;
     justify-content: center;
@@ -139,21 +155,21 @@ img {
     margin: 0 auto;
 }
 
-.hobby h1{
+.hobby h1 {
     font-weight: 500;
     font-family: "Dancing Script", cursive;
     font-size: 3rem;
     margin: 40px 0px;
 }
 
-.hobby ul{
+.hobby ul {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.hobby ul li{
+.hobby ul li {
     padding: 10px;
     margin: 10px;
     border-radius: 14px;
@@ -161,7 +177,7 @@ img {
     transition: 0.3s ease-in-out;
 }
 
-.hobby ul li:hover{
+.hobby ul li:hover {
     transform: scale(0.8);
     cursor: pointer;
 }
@@ -182,10 +198,13 @@ img {
     box-shadow: 0px 0px 40px 1px #777;
     border-radius: 8px;
     transition: 0.4s ease-in-out;
+    height: 100%;
+    filter: blur(5px);
 }
 
-.posts img:hover{
+.posts img:hover {
     transform: scale(.9);
+    filter: blur(0);
 }
 
 /* On Click Pop out Image */
@@ -198,6 +217,25 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(1000px);
+}
+
+.close-button {
+    color: white;
+    position: absolute;
+    color: #ffffff;
+    z-index: 1000;
+    top: 92px;
+    right: 192px;
+    font-size: 3rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.close-button:hover{
+    font-weight: 600;
+    transform: rotate(90deg);
 }
 
 .modal-content {
@@ -205,16 +243,7 @@ img {
     display: block;
     max-width: 80%;
     max-height: 80%;
-}
-
-.close {
-    color: white;
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
+    margin-top: 100px;
 }
 
 
@@ -277,8 +306,20 @@ img {
 
     }
 
-    #login-form{
+    #login-form {
         width: 90%;
+        top: 150px;
+    }
+
+
+    .quote-box {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        width: 90%;
+        font-family: "Lato", sans-serif;
+        min-height: 500px;
     }
 
     /* Wallpaper Mobile CSS */
@@ -287,7 +328,7 @@ img {
 
 
     }
-    
+
     .book-box {
         margin: 20px 0px;
         display: flex;
@@ -295,6 +336,7 @@ img {
         align-items: center;
         flex-wrap: wrap;
     }
+
     .book img {
         margin: 41px;
         width: 100%;
