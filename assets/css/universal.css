@@ -161,7 +161,7 @@ nav .logo a img {
 }
 
 .curtain-menu {
-    font-size: 20px;
+    font-size: 36px;
     cursor: pointer;
 }
 
@@ -273,7 +273,7 @@ nav .logo a img {
 /* CSS for Go to Top Button Ends */
 
 /* Mobile View  */
-@media screen and (max-width:768px) {
+@media screen and (max-width:1118px) {
 
     /* Preloader mobile css */
     #preloader {
