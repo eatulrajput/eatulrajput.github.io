@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 .form-container {
@@ -122,7 +120,7 @@ button:hover {
     align-items: center;
     flex-direction: row;
     width: 100%;
-    font-family: "Lato", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     min-height: 500px;
 }
 
@@ -132,7 +130,7 @@ button:hover {
     align-items: center;
     flex-direction: row-reverse;
     width: 100%;
-    font-family: "Lato", sans-serif;
+    font-family: "Noto Sans", sans-serif;
     min-height: 500px;
 }
 
@@ -313,7 +311,7 @@ button:hover {
     transform: scale(1.4);
 }
 
-.wallpaper-container{
+.wallpaper-container {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -429,7 +427,6 @@ button:hover {
 /* Mobile View  */
 @media screen and (max-width:768px) {
     * {
-        font-family: 'Poppins', sans-serif;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -441,7 +438,7 @@ button:hover {
         top: 150px;
     }
 
-    .myspace-section p{
+    .myspace-section p {
         text-align: center;
     }
 
@@ -453,7 +450,7 @@ button:hover {
         align-items: center;
         flex-direction: column-reverse;
         width: 100%;
-        font-family: "Lato", sans-serif;
+        font-family: "Noto Sans", sans-serif;
         min-height: 500px;
     }
 
@@ -461,13 +458,13 @@ button:hover {
         width: 100%;
         text-align: left;
     }
-    
+
     .quote-content p {
         padding: 20px 0px;
-        font-size:medium;
+        font-size: medium;
         color: #868686;
         line-height: 2rem;
-    
+
     }
 
     .sayer1,
@@ -482,7 +479,7 @@ button:hover {
 
     /* Wallpaper Mobile CSS */
     .wallpaper-container img {
-       width: 100%;
+        width: 100%;
 
     }
 
