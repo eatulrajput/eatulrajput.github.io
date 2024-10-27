@@ -611,10 +611,57 @@
     font-size: 3rem;
     color: #285cf8;
     font-weight: lighter;
+    position: relative;
+    margin: 0 10px;
+    text-decoration: none;
 }
 
+/* Icon hover effect */
 .contact .sectionB .icons a:hover {
     color: black;
+}
+
+/* Tooltip styling */
+.contact .sectionB .icons a::after {
+    content: attr(data-tooltip); /* Tooltip text from data attribute */
+    position: absolute;
+    bottom: -40px; /* Adjusted tooltip position below the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 0.8rem;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1; /* Ensures tooltip displays above other content */
+}
+
+/* Tooltip arrow styling */
+.contact .sectionB .icons a::before {
+    content: "";
+    position: absolute;
+    bottom: -12px; /* Position arrow above tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #000000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+/* Show tooltip on hover */
+.contact .sectionB .icons a:hover::after,
+.contact .sectionB .icons a:hover::before {
+    opacity: 1;
+    visibility: visible;
 }
 
 .parallax2 {
