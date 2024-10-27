@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-*{
+* {
     scroll-behavior: smooth;
 }
 
@@ -23,7 +23,8 @@
 }
 
 .blog-section {
-    padding: 10px;font-family: 'Ubuntu', sans-serif;
+    padding: 10px;
+    font-family: 'Ubuntu', sans-serif;
     width: 80%;
     margin: 0 auto;
 }
@@ -34,13 +35,14 @@
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 2rem;
+    border-radius: 18px;
 }
 
-.blog-section h3{
+.blog-section h3 {
     margin-top: 2rem;
 }
 
-.blog-section h4{
+.blog-section h4 {
     margin-top: 2rem;
 }
 
@@ -58,27 +60,34 @@
     line-height: 2rem;
 }
 
-.blog-section li{
+.blog-section li {
     margin-top: 2rem;
 }
 
-.blog-section blockquote{
+.blog-section blockquote {
     font-family: monospace;
-    background-color: rgb(249, 249, 249);
-    font-size: 1rem;
+    background-color: rgb(255, 255, 255);
+    font-size: 1.2rem;
     border: 1px solid rgb(229, 229, 229);
     padding: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
+    color: #191b20;
+    border-radius: 20px;
 }
 
-#reading-time{
+.blog-section blockquote::selection{
+    background-color: rgb(240, 240, 240);
+    color: black;
+}
+
+#reading-time {
     color: grey;
     letter-spacing: normal;
 }
 
 @media screen and (max-width:768px) {
     .blog-section {
-        margin: 50px 2%;    
+        margin: 50px 2%;
     }
 }
