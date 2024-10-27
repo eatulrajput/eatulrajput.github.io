@@ -309,6 +309,54 @@ button:hover {
     cursor: pointer;
 }
 
+/* Photos */
+.gallery-container {
+    width: 1200px; /* Fixed width for the container */
+    overflow-x: scroll; /* Enable manual scrolling */
+    white-space: nowrap; /* Prevent images from wrapping */
+    border: 2px solid #ddd;
+    margin: 0 auto;
+    display: flex;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.photos h1 {
+    font-weight: 500;
+    font-family: "Dancing Script", cursive;
+    font-size: 3rem;
+    margin: 40px 0px;
+    transition: 1s ease-in-out;
+}
+
+.gallery {
+    display: flex;
+    animation: scrollGallery 50s linear infinite alternate; /* Auto scrolls back and forth */
+}
+
+.gallery img {
+    width: auto; /* Image width */
+    height: 300px;
+    margin-right: 20px; /* Space between images */
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Animation for automatic scroll */
+@keyframes scrollGallery {
+    0% { transform: translateX(0); } /* Start at first image */
+    100% { transform: translateX(calc(-100% + 700px)); } /* End at last image */
+}
+
+/* Optional: Style scrollbar for Chrome, Safari, and Edge */
+.gallery-container::-webkit-scrollbar {
+    height: 8px;
+}
+.gallery-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+
 /* Wallpaper */
 
 .posts {

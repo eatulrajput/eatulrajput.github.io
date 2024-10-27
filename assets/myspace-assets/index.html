@@ -152,7 +152,8 @@
 
                         <div class="quote-box">
                             <div class="quote-content">
-                                <p>“Music expresses what words cannot. It speaks directly to the soul and can evoke emotions that are often difficult to describe.”</p>
+                                <p>“Music expresses what words cannot. It speaks directly to the soul and can evoke
+                                    emotions that are often difficult to describe.”</p>
                                 <p class="speaker"> Florian Christl</p>
 
                             </div>
@@ -229,6 +230,31 @@
 
 
                     </div>
+                    <!-- Photos -->
+                     <div class="photos">
+                        <div>
+                            <h1>Photography</h1>
+                        </div>
+                     </div>
+                    <div class="gallery-container">
+                        
+                        <div class="gallery">
+                            <img src="/assets/images/photos/photo1.jpg" alt="Image 1">
+                            <img src="/assets/images/photos/photo2.jpg" alt="Image 2">
+                            <img src="/assets/images/photos/photo3.jpg" alt="Image 3">
+                            <img src="/assets/images/photos/photo4.jpg" alt="Image 4">
+                            <img src="/assets/images/photos/photo5.jpg" alt="Image 5">
+                            <img src="/assets/images/photos/photo6.jpg" alt="Image 6">
+                            <img src="/assets/images/photos/photo7.jpg" alt="Image 7">
+                            <img src="/assets/images/photos/photo8.jpg" alt="Image 8">
+                            <img src="/assets/images/photos/photo9.jpg" alt="Image 9">
+                            <img src="/assets/images/photos/photo10.jpg" alt="Image 10">
+                            <img src="/assets/images/photos/photo11.jpg" alt="Image 11">
+
+                            <!-- Add more images as needed -->
+                        </div>
+                    </div>
+
                 </div>
                 <div class="pc">
                     <div class="posts">
@@ -394,6 +420,25 @@
                     modal.style.display = "none";
                 }
             };
+        </script>
+
+        <!-- Photos JS -->
+        <script>
+            const galleryContainer = document.querySelector('.gallery-container');
+            let isAutoScrolling = true;
+
+            // Stop auto scroll when manually scrolled
+            galleryContainer.addEventListener('scroll', () => {
+                isAutoScrolling = false;
+            });
+
+            // Restart auto-scroll after 5 seconds of inactivity
+            setInterval(() => {
+                if (!isAutoScrolling) {
+                    isAutoScrolling = true;
+                    galleryContainer.scrollLeft = 0; // Reset position to start
+                }
+            }, 5000);
         </script>
 
 </body>
