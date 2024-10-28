@@ -572,6 +572,41 @@
     margin-top: 20px;
 }
 
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-out animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Class to apply fade-in animation */
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Class to apply fade-out animation */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+
 /* Project Section ends */
 
 /* Contact Section starts */
