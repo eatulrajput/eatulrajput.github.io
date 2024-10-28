@@ -10,6 +10,11 @@
     width: 50%;
 }
 
+.blog-container{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
  /* General card styling */
  .blogcard {
     position: relative;
