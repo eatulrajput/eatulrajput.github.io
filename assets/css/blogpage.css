@@ -16,6 +16,7 @@
 }
 
  /* General card styling */
+
  .blogcard {
     position: relative;
     display: flex;
@@ -29,13 +30,49 @@
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 1s ease; /* Transition for transform and opacity */
     overflow: hidden;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start offscreen */
 }
 
-.blogcard:hover {
-    transform: translateY(-5px);
+.blogcard.visible {
+    animation: fadeIn 1s forwards; /* Slower fade-in animation */
 }
+
+.blogcard.hidden {
+    animation: fadeOut 1s forwards; /* Slower fade-out animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px); /* Move down slightly */
+    }
+}
+
+/* Hover Effect */
+.blogcard:hover {
+    transform: scale(1.05) translateY(-5px); /* Scale up slightly */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
 
 .blogcard img {
     width: 40%;
