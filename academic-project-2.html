@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="buLUOFNNr0jxlPAvaGwYK7CDt2__It5G44Iu8MJWDeM" />
+    <meta name="description" content="This is the homepage of my personal website">
+    <meta name="author" content="Atul Rajput">
+    <title>Break-Out-Game | Atul Rajput</title>
+    <link rel="stylesheet" href="/assets/css/universal.css">
+    <link rel="stylesheet" href="academic-project.css">
+    <link rel="shortcut icon" href="/assets/images/icon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/388a1f26e9.js" crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9C3YK4FNWZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-9C3YK4FNWZ');
+    </script>
+</head>
+
+<body>
+    <div id="preloader"></div>
+    <nav id="nav">
+        <div class="scroll-watcher"></div>
+        <div class="logo">
+            <a href="index.html" target="_blank" rel="noopener noreferrer">
+                <img src="/assets/images/logo.png" alt="Logo of the website">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a target="_blank" href="/index.html">Home</a></li>
+            <li><a href="/index.html#about">About</a></li>
+            <li><a href="/index.html#skills">Skills</a></li>
+            <li><a href="/index.html#education">Education</a></li>
+            <li><a href="/index.html#projects">Projects</a></li>
+            <li><a target="_blank" href="/assets/blog-assets/index.html">Blog</a></li>
+            <li><a target="_blank" href="/assets/myspace-assets/index.html">My Space</a></li>
+            <li><a target="_blank" href="https://eatulrajput.notion.site/My-Designs-6cd2b17ce61b40acb3da45abc6bf59e9">My
+                    Designs</a></li>
+            <li><a href="/index.html#contact">Contact</a></li>
+            <li><a target="_blank" href="/assets/resource.html">Resources</a></li>
+        </ul>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="/index.html">Home</a>
+                <a href="/index.html#about">About</a>
+                <a href="/index.html#skills">Skills</a>
+                <a href="/index.html#education">Education</a>
+                <a href="/index.html#projects">Projects</a>
+                <a href="/assets/blog-assets/index.html">Blog</a>
+                <a href="/assets/myspace-assets/index.html">My Space</a>
+                <a target="_blank" href="https://eatulrajput.notion.site/My-Designs-6cd2b17ce61b40acb3da45abc6bf59e9">My
+                    Designs</a>
+                <a href="/index.html#contact">Contact</a>
+                <a target="_blank" href="/assets/resource.html">Resources</a>
+            </div>
+        </div>
+        <div class="menu">
+            <span class="curtain-menu" onclick="openNav()">&#9776;</span>
+        </div>
+    </nav>
+
+    <div id="academic-project">
+        <div class="academic-project">
+            <div class="box-name">
+                <h2>Break-Out-Game</h2>
+            </div>
+            <div class="project-section">
+                <div class="project-container">
+                    <div class="project-image">
+                        <img src="/assets/images/project-images/academic-project-2.webp" alt="Break-Out-Game">
+                        <div><a href="https://github.com/eatulrajput/Break-Out-Game" target="_blank"
+                                rel="noopener noreferrer">Code{}</a></div>
+                    </div>
+
+
+
+                    <div class="about-project">
+                        <p>Here's a detailed overview of the Breakout game based on the provided Python and Java code
+                            snippets. This game combines classic elements of the Breakout genre, where players control a
+                            paddle to bounce a ball and break bricks.</p>
+                        <hr>
+                        <h3>Breakout Game Overview</h3>
+                        <p><strong>Description: </strong>Breakout is a classic arcade-style game where the player
+                            controls a paddle to bounce a ball against a wall of bricks. The objective is to break all
+                            the bricks on the screen by hitting them with the ball, which bounces off the paddle and
+                            walls. The game requires quick reflexes and strategic positioning to score points while
+                            preventing the ball from falling below the paddle.</p>
+
+                        <p><strong>Game Mechanics:</strong></p>
+                        <p><strong>1. Paddle Control: </strong> player moves the paddle left and right using the arrow
+                            keys to intercept the ball.<br>
+                            <strong>2. Ball Movement: </strong> ball moves continuously, bouncing off the walls and the
+                            paddle. If it misses the paddle and falls below the screen, the player loses.<br>
+                            <strong>3. Bricks: </strong> grid of bricks is arranged at the top of the screen. When the
+                            ball hits a brick, the brick is removed, and the player scores points.<br>
+                            <strong>4. Scoring System: </strong> earn points for every brick they break. The score is
+                            displayed at the top of the screen. <br>
+                            <strong>5. Game Over Condition: </strong> game ends when the ball falls below the paddle.
+                            Players can restart or quit the game from the game over screen.
+                        </p>
+                        <h3>Code Explanation</h3>
+                        <p><strong>Python Implementation</strong></p>
+                        <p><strong>Setup: </strong>Initializes Pygame, creates the game window, and defines constants
+                            such as screen dimensions, paddle size, and brick configuration. <br>
+                            <strong>Loop: </strong> Continuously updates the game state, including handling events,
+                            moving the paddle and ball, checking for collisions, and rendering the game objects. <br>
+                            <strong>Collision Detection: </strong>Functions check for collisions between the ball and
+                            the paddle, and the ball and the bricks. When a collision occurs, appropriate actions are
+                            taken (e.g., reversing ball direction, updating the score). <br>
+                            <strong>Over Screen: </strong> Displays the game over screen with options to restart or quit
+                            the game.
+                        </p>
+
+                        <h3>Java Implementation</h3>
+                        <p><strong>Swing GUI: </strong>Utilizes Java's Swing library to create a GUI-based version of
+                            the Breakout game. The game state is managed using key listeners and action listeners for
+                            button events.<br>
+                            <strong>Game Components: </strong>The paddle, ball, and bricks are represented as
+                            rectangles, with their positions updated based on user input and game logic.<br>
+                            <strong>Graphics Rendering: </strong>Overrides the paintComponent method to render the game
+                            elements, including the paddle, ball, and bricks. Game over messages and player information
+                            are displayed when applicable.<br>
+                            <strong>Game Controls: </strong>The player can start the game, restart it, or quit using
+                            buttons, and the score is updated dynamically as bricks are broken.<br>
+                        </p>
+
+                        <h3>Features</h3>
+                        <p><strong>Visual Design: </strong>The game features a colorful aesthetic with distinct colors
+                            for the paddle, ball, and bricks, providing a visually engaging experience. <br>
+                            <strong>User Interaction: </strong>Players can input their names and see their scores
+                            displayed on the screen, adding a personalized touch to the gameplay.<br>
+                            <strong>Responsiveness: </strong> The game adapts to player inputs smoothly, providing an
+                            intuitive control experience. <br>
+                        </p>
+
+                        <h3>Conclusion</h3>
+                        <p>The Breakout game implementation showcases fundamental game development concepts, such as
+                            rendering, collision detection, and user input handling, in both Python with Pygame and Java
+                            with Swing. The gameplay is engaging, challenging, and reminiscent of the classic arcade
+                            experience, making it a fun project for aspiring game developers.</p>
+                    </div>
+                </div>
+
+                <div class="member-container">
+                    <h3>Team Members</h3>
+                    <div class="teams">
+                        <ul>
+                            <li>
+                                <a href="https://www.linkedin.com/in/arkajyoti-kundu-a46605278/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img src="https://media.licdn.com/dms/image/v2/D4E03AQHIcBbu0Zqf8Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1685028009157?e=1735776000&v=beta&t=U225Q0rOvXrU4-YJdoF3P51NKgi6IBalvhGp0BSmBmU"
+                                        alt="Arkajyoti Kundu">
+                                    <span>Arkajyoti Kundu</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/atulya-bihari-singh-0b3398248/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQEQjMU5A0b-6A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1725574180429?e=1735776000&v=beta&t=sRMUGBHU7UAEj05iuTGOUHjfOGqcteATxAPLLMXuDsc"
+                                        alt="Atulya Bihari Singh">
+                                    <span>Atulya Bihari Singh</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/arya-vats-530888275/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img src="https://media.licdn.com/dms/image/v2/D5603AQFRqyaD8ViHcg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1712064568058?e=1735776000&v=beta&t=_ZxSUecpAXp4USjEm7g-NZiNoDdgGb1mZ7HGvp7eCqY"
+                                        alt="Arya Vats">
+                                    <span>Arya Vats</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/eatulrajput" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img src="https://media.licdn.com/dms/image/v2/D5603AQESFCCjGmHFug/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1730054233105?e=1735776000&v=beta&t=05_3vFvmlfHJpNvOP0MJu8dQ_zccP4X1eKIFP2Vwqeo"
+                                        alt="Atul Rajput">
+                                    <span>Atul Rajput</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-section1">
+            <div class="visit">
+                <a href="https://info.flagcounter.com/o6Xp"><img
+                        src="https://s11.flagcounter.com/count2/o6Xp/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/"
+                        alt="Flag Counter" border="0"></a>
+            </div>
+        </div>
+        <div class="footer-section2">
+            <p>
+                This website is created and designed by <strong>Atul Rajput</strong> with <i
+                    class="fa-regular fa-heart"></i><br>
+                Copyright &copy; 2024 | All Rights Are Reserved.</p>
+        </div>
+        <div id="wcb" class="carbonbadge"></div>
+        <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
+    </div>
+
+    <button onclick="topFunction()" id="goToTopBtn" title="Go to top">
+        <span style="--i:0;"></span>
+        <span style="--i:1;"></span>
+        <i class="fa-solid fa-angles-up"></i>
+    </button>
+
+    <script src="/assets/javascript/preloader.js"></script>
+    <script src="/assets/javascript/scroll-to-top.js"></script>
+</body>
+
+</html>

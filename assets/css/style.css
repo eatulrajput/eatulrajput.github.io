@@ -433,17 +433,17 @@
     height: auto;
 }
 
+.projects h3{
+    font-weight: 500;
+    color: #285cf8;
+}
+
 .projects-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding: 10px;
-}
-
-.projects-section h3{
-    font-weight: 500;
-    color: #285cf8;
 }
 
 /* General Styles */
