@@ -441,6 +441,11 @@
     padding: 10px;
 }
 
+.projects-section h3{
+    font-weight: 500;
+    color: #285cf8;
+}
+
 /* General Styles */
 .projectcard {
     position: relative;
