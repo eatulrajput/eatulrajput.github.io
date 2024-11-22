@@ -17,8 +17,9 @@
 }
 
 .info p {
-    font-size: 36px;
+    font-size: 3rem;
     margin: 0px;
+    font-weight: 300;
 }
 
 .info .color {
@@ -27,12 +28,14 @@
 
 .info #element {
     cursor: pointer;
-    font-size: 36px;
+    font-size: 3rem;
     margin: 0px;
+    font-weight: 300;
 }
 
 .typed-cursor {
-    font-size: 36px;
+    font-size: 3rem;
+    font-weight: 300;
     opacity: 1;
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
@@ -79,7 +82,7 @@
 }
 
 .home .hero img {
-    width: 500px;
+    width: 600px;
     filter: drop-shadow(2px 2px 20px #a0bdff);
 }
 
@@ -190,16 +193,16 @@
     height: auto;
 }
 
-.skills-section  {
+.skills-section {
     height: 700px;
     padding: 20px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    align-items:baseline;
+    align-items: baseline;
 }
 
-.skills-set  {
+.skills-set {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -208,18 +211,18 @@
     width: 100%;
 }
 
-.skills-set:last-child{
+.skills-set:last-child {
     border: none;
 }
 
-.skills-set .label{
+.skills-set .label {
     font-size: 1.4rem;
     width: 30%;
     padding: 10px;
     color: #285cf8;
 }
 
-.skill-container{
+.skill-container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -254,15 +257,15 @@
 .parallax1 {
     /* The image used */
     background-image: url('/assets/images/skill-bg.svg');
-  
+
     /* Set a specific height */
-    min-height: 500px;   
+    min-height: 500px;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position:center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+}
 
 
 /* Skills Section ends */
@@ -434,7 +437,7 @@
     height: auto;
 }
 
-.projects h3{
+.projects h3 {
     font-weight: 500;
     color: #285cf8;
 }
@@ -462,7 +465,7 @@
 
 .projectcard:hover {
     transform: scale(1.05);
-    
+
 }
 
 /* Default state */
@@ -585,6 +588,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -597,6 +601,7 @@
         opacity: 1;
         transform: translateY(0);
     }
+
     to {
         opacity: 0;
         transform: translateY(20px);
@@ -665,9 +670,11 @@
 
 /* Tooltip styling */
 .contact .sectionB .icons a::after {
-    content: attr(data-tooltip); /* Tooltip text from data attribute */
+    content: attr(data-tooltip);
+    /* Tooltip text from data attribute */
     position: absolute;
-    bottom: -40px; /* Adjusted tooltip position below the icon */
+    bottom: -40px;
+    /* Adjusted tooltip position below the icon */
     left: 50%;
     transform: translateX(-50%);
     background-color: #000000;
@@ -681,14 +688,16 @@
     font-size: 0.8rem;
     transition: opacity 0.3s ease;
     pointer-events: none;
-    z-index: 1; /* Ensures tooltip displays above other content */
+    z-index: 1;
+    /* Ensures tooltip displays above other content */
 }
 
 /* Tooltip arrow styling */
 .contact .sectionB .icons a::before {
     content: "";
     position: absolute;
-    bottom: -12px; /* Position arrow above tooltip */
+    bottom: -12px;
+    /* Position arrow above tooltip */
     left: 50%;
     transform: translateX(-50%);
     border: 5px solid transparent;
@@ -709,17 +718,17 @@
 .parallax2 {
     /* The image used */
     background-image: url("/assets/images/quote.png");
-  
+
     /* Set a specific height */
-    min-height: 500px; 
+    min-height: 500px;
     height: 800px;
-  
+
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position:top;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+}
 
 /* Contact Section ends */
 
@@ -803,16 +812,16 @@
     }
 
     /* Skills Mobile CSS */
-    .skills-section{
+    .skills-section {
         min-height: 1230px;
     }
 
-    .skills-set  {
+    .skills-set {
         display: block;
     }
 
-    
-    .skill-container{
+
+    .skill-container {
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -822,9 +831,9 @@
     }
 
     .parallax1,
-     .parallax2{
+    .parallax2 {
         display: none;
-      }
+    }
 
     /* Education Mobile CSS */
 
@@ -850,7 +859,7 @@
 
     .timeline-container {
         width: 100%;
-        padding : 0px;
+        padding: 0px;
         margin-bottom: 20px;
     }
 
