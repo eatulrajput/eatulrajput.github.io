@@ -109,6 +109,7 @@
 
 .box-name h2 {
     position: relative;
+    margin-top: 20vh;
 }
 
 .box-name h2::after {

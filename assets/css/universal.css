@@ -13,7 +13,6 @@
 
 body {
     font-family: "Noto Sans", sans-serif;
-    max-width: 1280px;
     margin: 0 auto;
 }
 
@@ -43,7 +42,6 @@ nav {
     background-color: white;
     z-index: 200;
     border-bottom: solid #285cf8;
-    max-width: 1280px;
 }
 
 /* Scroll Watcher */
