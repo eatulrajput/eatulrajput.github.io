@@ -618,10 +618,15 @@
     color: #285cf8;
 }
 
-
-.projectcard .button {
-    margin-top: 20px;
+.project-button-box {
+    margin-top: 4vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Fade-in animation */
 @keyframes fadeIn {
@@ -778,16 +783,6 @@
 
 /* Contact Section ends */
 
-/* CSS for For Responsive Screen */
-@media screen and (max-width:1130px) {
-    .button-box {
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        flex-direction: column-reverse;
-        width: auto;
-    }
-}
 
 /* Mobile View  */
 @media screen and (max-width:768px) {
@@ -805,56 +800,108 @@
         flex-direction: column-reverse;
         /* display: none; */
     }
-
+    
+    .home .hero {
+        width: 100%;
+    }
+    
+    .home .hero img {
+        width: 100%;
+    }
+    
     .info {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        font-size: 30px;
+        font-size: 2rem;
+    }
+
+    .info p{
+        font-size: 2rem;
     }
 
     .info #element {
-        font-size: 30px;
+        font-size: 2rem;
     }
 
     .typed-cursor {
         font-size: 0px;
     }
 
-    .home .hero img {
-        width: 100%;
-    }
 
     .button-box {
-        display: flex;
+        margin-top: 10vh;
+        display: flow-root list-item;
         justify-content: space-around;
         align-items: center;
-        flex-direction: column-reverse;
-        width: auto;
+        height: fit-content;
+        border-radius: 30px;
+        overflow: hidden;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     }
-
+    
     .button-box .button {
-        margin: 20px;
+        flex: 1;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        /* Remove margin for seamless joining */
+        border-bottom: 1px solid white;
+        border-right: none;
+        /* Divider between buttons */
     }
+    
+    .button-box .button:last-child {
+        border-right: none;
+        /* Remove divider on the last button */
+    }
+    
+    .button-box a {
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: white;
+        display: block;
+        transition: 0.3s ease-in-out;
+        padding: 20px 0;
+    
+    }
+    
+    .button-box a:hover {
+        background-color: white;
+        color: #285cf8;
+        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+
 
     /* About Mobile CSS */
     .about {
         height: auto;
     }
 
+    .about-section .avatar {
+        width: 300px;
+        height: 300px;
+    }
+    
+
     .about-section p {
         width: 100%;
+        text-align: left;
+        box-shadow: none;
     }
 
     .b-arrow {
         width: 200px;
         transform: rotate(270deg);
+        display: none;
     }
 
     .f-arrow {
         width: 200px;
         transform: rotate(90deg);
+        display: none;
     }
 
     /* Skills Mobile CSS */
