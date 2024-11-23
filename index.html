@@ -85,10 +85,18 @@
             <span class="color" id="element"></span>
             <!-- Button -->
             <div class="button-box">
-                <div class="button"><a href="#contact"><i class="fa-solid fa-handshake"></i> Get In Touch</a></div>
-                <div class="button"><a target="_blank" href="/assets/Resume.pdf"><i
-                            class="fa-solid fa-circle-chevron-down"></i> Resume</a></div>
+                <div class="button">
+                    <a href="#contact">
+                        <i class="fa-solid fa-handshake"></i> Get In Touch
+                    </a>
+                </div>
+                <div class="button">
+                    <a target="_blank" href="/assets/Resume.pdf">
+                        <i class="fa-solid fa-circle-chevron-down"></i> Resume
+                    </a>
+                </div>
             </div>
+
         </div>
         <div class="hero">
             <img src="/assets/images/programming-animate.svg" alt="">
@@ -107,9 +115,15 @@
             <div class="about-section">
                 <img class="b-arrow" src="/assets/images/g1.png" alt="">
                 <div class="avatar">
-                    <img src="/assets/images/profile-photo.jpeg" alt="Profile Picture">
+                    <img class="default" id="profile-image" src="/assets/images/profile-photo.jpeg" alt="Profile Picture">
+                    <img class="hover" src="/assets/images/hover-profile-image.jpeg" alt="Hover Profile Picture">
                 </div>
-                <p>Hi, I’m Atul Rajput! I’m a passionate student exploring the world of technology and innovation. With a keen interest in learning and creating, I focus on acquiring the skills needed to transform ideas into impactful projects. I’m driven by curiosity and a commitment to excellence, always striving to grow personally and professionally.
+
+
+                <p>Hi, I’m Atul Rajput! I’m a passionate student exploring the world of technology and innovation. With
+                    a keen interest in learning and creating, I focus on acquiring the skills needed to transform ideas
+                    into impactful projects. I’m driven by curiosity and a commitment to excellence, always striving to
+                    grow personally and professionally.
                 </p>
                 <img class="f-arrow" src="/assets/images/g1.png" alt="">
             </div>
@@ -181,15 +195,19 @@
                         <p><strong>University:</strong> Kalinga Institute of Technology</p>
                         <p><strong>Course:</strong> Bachelor of Technology</p>
                         <p><strong>Specialization:</strong> Electronics and Computer Science</p>
-                        <p><strong>CGPA:</strong> 7 CGPA</p>
+                        <p><strong>Year:</strong> 2022 - 2026</p>
+
+                        <p><strong>CGPA:</strong> 7.06 CGPA</p>
                     </div>
                 </div>
                 <div class="education-card">
                     <img src="/assets/images/high-school.svg" alt="">
                     <div class="information">
-                        <p><strong>Class 12th:</strong>Gurukul Vidyapeeth(2021)</p>
+                        <p><strong>Class 12th:</strong>Gurukul Vidyapeeth</p>
+                        <p><strong>Year:</strong> 2021</p>
                         <p><strong>Percentage:</strong> 80.6%</p>
-                        <p><strong>Class 10th:</strong> Gurukul Vidyapeeth(2019)</p>
+                        <p><strong>Class 10th:</strong> Gurukul Vidyapeeth</p>
+                        <p><strong>Year:</strong> 2019</p>
                         <p><strong>Percentage:</strong> 77.2%</p>
                     </div>
                 </div>
@@ -510,8 +528,7 @@
                 <!-- Project 1 | IoT Project -->
                 <div class="projectcard fade-out"
                     style="background-image: url('/assets/images/project-images/academic-project-1.webp');"
-                    data-tech="C Programming, Arduino"
-                    data-desc="This is an IoT project">
+                    data-tech="C Programming, Arduino" data-desc="This is an IoT project">
                     <div class="project-default">
                         <p>IoT Project</p>
                     </div>
@@ -520,9 +537,10 @@
                         <p>Technologies: C, Arduino</p>
                         <p>This is an IoT Project, created during Cyber Physics in IIoT class.</p>
                         <div class="button-box">
-                            <a class="button" href="/academic-project-1.html" target="_blank" rel="noopener noreferrer">Live</a>
-                            <a class="button" href="https://github.com/eatulrajput/cyberphysics-in-iiot-project" target="_blank"
-                                rel="noopener noreferrer">Code</a>
+                            <a class="button" href="/academic-project-1.html" target="_blank"
+                                rel="noopener noreferrer">Live</a>
+                            <a class="button" href="https://github.com/eatulrajput/cyberphysics-in-iiot-project"
+                                target="_blank" rel="noopener noreferrer">Code</a>
                         </div>
                     </div>
                 </div>
@@ -530,8 +548,7 @@
                 <!-- Project 2 | Breakout Game -->
                 <div class="projectcard fade-out"
                     style="background-image: url('/assets/images/project-images/academic-project-2.webp');"
-                    data-tech="Python, Java"
-                    data-desc="This is a game based on python and java. ">
+                    data-tech="Python, Java" data-desc="This is a game based on python and java. ">
                     <div class="project-default">
                         <p>Break-Out-Game</p>
                     </div>
@@ -540,7 +557,8 @@
                         <p>Technologies: Python, Java</p>
                         <p>This is break-out game</p>
                         <div class="button-box">
-                            <a class="button" href="/academic-project-2.html" target="_blank" rel="noopener noreferrer">Live</a>
+                            <a class="button" href="/academic-project-2.html" target="_blank"
+                                rel="noopener noreferrer">Live</a>
                             <a class="button" href="https://github.com/eatulrajput/Break-Out-Game" target="_blank"
                                 rel="noopener noreferrer">Code</a>
                         </div>
@@ -697,6 +715,46 @@
 
     </script>
 
+<script>
+    function getDominantColor(image, callback) {
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        canvas.width = image.width;
+        canvas.height = image.height;
+
+        // Draw the image on the canvas
+        context.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+        // Get pixel data
+        const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+        const data = imageData.data;
+
+        let r = 0, g = 0, b = 0, count = 0;
+
+        // Iterate through every pixel to calculate the average color
+        for (let i = 0; i < data.length; i += 4) {
+            r += data[i];     // Red
+            g += data[i + 1]; // Green
+            b += data[i + 2]; // Blue
+            count++;
+        }
+
+        // Calculate average RGB values
+        r = Math.floor(r / count);
+        g = Math.floor(g / count);
+        b = Math.floor(b / count);
+
+        callback(`rgb(${r}, ${g}, ${b})`);
+    }
+
+    // Apply dominant color to box-shadow
+    const imageElement = document.getElementById('profile-image');
+    imageElement.addEventListener('load', () => {
+        getDominantColor(imageElement, (color) => {
+            imageElement.parentElement.style.boxShadow = `0px 0px 20px 0px ${color}`;
+        });
+    });
+</script>
 </body>
 
 </html>
