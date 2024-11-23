@@ -893,14 +893,14 @@
     }
 
     .b-arrow {
-        width: 200px;
-        transform: rotate(270deg);
+        /* width: 200px; */
+        /* transform: rotate(270deg); */
         display: none;
     }
 
     .f-arrow {
-        width: 200px;
-        transform: rotate(90deg);
+        /* width: 200px; */
+        /* transform: rotate(90deg); */
         display: none;
     }
 
@@ -999,6 +999,12 @@
     .projectcard {
         width: 100%;
     }
+
+
+    
+.project-button-box .button {
+    margin-bottom: 4vh;
+}
 
     .frame-container {
         width: 100%;
