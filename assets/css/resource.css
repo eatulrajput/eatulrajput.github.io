@@ -1,18 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
 
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-weight: 500;
+    font-family: "Hubballi", sans-serif;
+    font-size: larger;
 }
 
-body{
-    margin: 40px;
-    padding: 60px;
+body {
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 100px;
+    overflow: hidden; /* Prevent body scrolling */
+
+    /* Gradient background with wave animation */
+    background: linear-gradient(120deg, rgba(2, 0, 36, 1), rgba(9, 9, 121, 1) 50%, rgba(0, 212, 255, 1));
+    background-size: 200% 200%;
+    animation: water-wave 6s ease-in-out infinite;
 }
 
+/* Animation Keyframes */
+@keyframes water-wave {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 50% 60%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    75% {
+        background-position: 50% 40%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 
+.container {
+    max-height: calc(100vh - 200px); /* Height constraint for the container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.4); /* Semi-transparent white background */
+    padding: 30px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); /* Optional for style */
+}
+
+/* Hide Scrollbar for Webkit Browsers (Chrome, Edge, Safari) */
+.container::-webkit-scrollbar {
+    width: 0; /* Invisible scrollbar width */
+    height: 0; /* Invisible scrollbar height */
+}
+
+/* For Firefox */
+.container {
+    scrollbar-width: none; /* Firefox-specific property */
+}
+
+/* For Edge/Internet Explorer */
+.container {
+    -ms-overflow-style: none; /* Hides scrollbar for older Microsoft browsers */
+}
+
+/* Content inside the container */
 .img {
     display: flex;
     justify-content: center;
@@ -25,16 +78,17 @@ body{
 
 .details p {
     font-size: 1.6rem;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .list p {
     font-size: 1.2rem;
     line-height: 3rem;
-    font-family: "Kalam", cursive;
 }
 
 .list a {
-    color: #285cf8;
+    color: #ffffff;
     text-decoration: none;
     padding: 4px 14px;
     border-radius: 18px;
@@ -42,11 +96,21 @@ body{
 }
 
 .list a:hover {
-    color: #87a5ff;
+    color: #b9cbff;
+    font-weight: 700;
 }
 
-@media screen and (max-width:768px) {
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
     .img img {
         width: 100%;
+    }
+
+    .details p {
+        width: 90%;
+    }
+
+    .container {
+        max-height: calc(100vh - 150px); /* Adjusted for smaller screens */
     }
 }
