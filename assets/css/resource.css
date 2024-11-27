@@ -85,23 +85,43 @@ body {
 .list p {
     font-size: 1.2rem;
     line-height: 3rem;
+    color: white;
 }
 
 .list a {
     color: #ffffff;
-    text-decoration: none;
+    text-decoration: none; /* Remove default underline */
+    position: relative; /* Required for ::after to position correctly */
     padding: 4px 14px;
     border-radius: 18px;
     border: solid transparent;
+    font-weight: 500;
 }
 
-.list a:hover {
-    color: #b9cbff;
-    font-weight: 700;
+/* Hover Effect */
+.list a::after {
+    content: ''; /* Empty content to create the underline */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px; /* Thickness of the underline */
+    width: 0; /* Initially hidden */
+    background-color: #b9cbff; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth animation effect */
 }
+
+.list a:hover::after {
+    width: 100%; /* Underline spans the full width on hover */
+}
+
 
 /* Mobile View Adjustments */
 @media screen and (max-width: 768px) {
+
+    body{
+        padding: 10px;
+    }
+
     .img img {
         width: 100%;
     }
@@ -111,6 +131,7 @@ body {
     }
 
     .container {
+        margin-top: 50px;
         max-height: calc(100vh - 150px); /* Adjusted for smaller screens */
     }
 }
