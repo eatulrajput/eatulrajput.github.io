@@ -100,8 +100,7 @@
 .share-buttons .share-btn {
     margin: 5px;
     padding: 10px 15px;
-    font-size: 1rem;
-    color: #fff;
+    font-size: 2rem;
     text-decoration: none;
     border-radius: 5px;
     display: inline-flex;
@@ -110,21 +109,25 @@
 }
 
 .share-buttons .facebook {
-    background-color: #3b5998;
+    /* background-color: #3b5998; */
+    color: #191b20;
 }
 
 .share-buttons .twitter {
-    background-color: #1da1f2;
+    color: #191b20;
+    /* background-color: #1da1f2; */
 }
 
 .share-buttons .copy-link {
-    background-color: #555;
+    color: #191b20;
+    background-color: white;
     border: none;
     cursor: pointer;
 }
 
 .share-buttons .share-btn:hover {
     opacity: 0.9;
+    color: #285cf8;
 }
 
 
