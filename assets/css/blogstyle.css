@@ -86,6 +86,48 @@
     letter-spacing: normal;
 }
 
+
+.share-buttons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.share-buttons h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.share-buttons .share-btn {
+    margin: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.share-buttons .facebook {
+    background-color: #3b5998;
+}
+
+.share-buttons .twitter {
+    background-color: #1da1f2;
+}
+
+.share-buttons .copy-link {
+    background-color: #555;
+    border: none;
+    cursor: pointer;
+}
+
+.share-buttons .share-btn:hover {
+    opacity: 0.9;
+}
+
+
 @media screen and (max-width:768px) {
     .blog-section {
         margin: 50px 2%;

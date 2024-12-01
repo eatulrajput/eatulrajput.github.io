@@ -169,73 +169,99 @@
                     my life. If you're looking to streamline your productivity, I highly recommend giving Notion and
                     Google Keep a try.
                 </p>
+            </div>
 
+
+            <!-- Share button section -->
+            <div class="share-buttons">
+                <h3>Share this post:</h3>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://eatulrajput.github.io/assets/blog-assets/post9/index.html"
+                    target="_blank" rel="noopener noreferrer" class="share-btn facebook">
+                    <i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://eatulrajput.github.io/assets/blog-assets/post9/index.html&text=Check%20out%20this%20blog!"
+                    target="_blank" rel="noopener noreferrer" class="share-btn twitter">
+                    <i class="fa-brands fa-twitter"></i></a>
+
+                <button onclick="copyLink()" class="share-btn copy-link">
+                    <i class="fa-solid fa-link"></i></button>
             </div>
         </div>
 
 
-    </div>
-    </div>
-    </div>
-    <!-- Projects Section ends  -->
 
-    <!-- Footer Section starts -->
-    <div class="footer">
-        <div class="footer-section1">
-            <div class="visit">
-                <a href="https://info.flagcounter.com/o6Xp"><img
-                        src="https://s11.flagcounter.com/count2/o6Xp/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/"
-                        alt="Flag Counter" border="0"></a>
+
+        <!-- Footer Section starts -->
+        <div class="footer">
+            <div class="footer-section1">
+                <div class="visit">
+                    <a href="https://info.flagcounter.com/o6Xp"><img
+                            src="https://s11.flagcounter.com/count2/o6Xp/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/"
+                            alt="Flag Counter" border="0"></a>
+                </div>
             </div>
+
+            <div class="footer-section2">
+                <p>
+                    This website is created and designed by <strong>Atul Rajput</strong> with <i
+                        class="fa-regular fa-heart"></i><br>
+                    Copyright &copy; 2024 | All Rights Are Reserved.</p>
+
+            </div>
+            <div id="wcb" class="carbonbadge"></div>
+            <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
         </div>
-
-        <div class="footer-section2">
-            <p>
-                This website is created and designed by <strong>Atul Rajput</strong> with <i
-                    class="fa-regular fa-heart"></i><br>
-                Copyright &copy; 2024 | All Rights Are Reserved.</p>
-
-        </div>
-        <div id="wcb" class="carbonbadge"></div>
-        <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" defer></script>
-    </div>
-    <!-- Footer Section ends -->
+        <!-- Footer Section ends -->
 
 
-    <!-- HTML for Scroll Up Button Starts -->
-    <button onclick="topFunction()" id="goToTopBtn" title="Go to top">
-        <span style="--i:0;"></span>
-        <span style="--i:1;"></span>
-        <i class="fa-solid fa-angles-up"></i>
-    </button>
-    <!-- HTML for Scroll Up Button Ends -->
+        <!-- HTML for Scroll Up Button Starts -->
+        <button onclick="topFunction()" id="goToTopBtn" title="Go to top">
+            <span style="--i:0;"></span>
+            <span style="--i:1;"></span>
+            <i class="fa-solid fa-angles-up"></i>
+        </button>
+        <!-- HTML for Scroll Up Button Ends -->
 
-    <!-- JavaScript for Preloader Starts-->
-    <script src="/assets/javascript/preloader.js"></script>
-    <!-- JavaScript for Preloader ends-->
+        <!-- JavaScript for Preloader Starts-->
+        <script src="/assets/javascript/preloader.js"></script>
+        <!-- JavaScript for Preloader ends-->
 
-    <!-- JavaScript for Curtain Starts-->
-    <script src="/assets/javascript/curtain.js"></script>
-    <!-- JavaScript for Curtain ends-->
+        <!-- JavaScript for Curtain Starts-->
+        <script src="/assets/javascript/curtain.js"></script>
+        <!-- JavaScript for Curtain ends-->
 
-    <script>
-        window.onscroll = function () { myFunction() };
+        <script>
+            window.onscroll = function () { myFunction() };
 
-        var header = document.getElementById("nav");
-        var sticky = header.offsetTop;
+            var header = document.getElementById("nav");
+            var sticky = header.offsetTop;
 
-        function myFunction() {
-            if (window.pageYOffset > sticky) {
-                header.classList.add("sticky");
-            } else {
-                header.classList.remove("sticky");
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
             }
-        }
-    </script>
+        </script>
 
-    <!-- JavaScript for Scrolling Up Button Starts -->
-    <script src="/assets/javascript/scrollupbutton.js"></script>
-    <!-- JavaScript for Scrolling Up Button endss -->
+        <!-- JavaScript for Scrolling Up Button Starts -->
+        <script src="/assets/javascript/scrollupbutton.js"></script>
+        <!-- JavaScript for Scrolling Up Button ends -->
+
+
+        <!-- Script for sharing on social media -->
+        <script>
+            function copyLink() {
+                const dummyInput = document.createElement('input');
+                const blogUrl = window.location.href; // Current page URL
+                dummyInput.value = blogUrl;
+                document.body.appendChild(dummyInput);
+                dummyInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(dummyInput);
+                alert('Link copied to clipboard!');
+            }
+        </script>
 </body>
 
 </html>

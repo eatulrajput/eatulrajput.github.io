@@ -139,11 +139,21 @@
             </div>
         </div>
 
+        <!-- Share button section -->
+        <div class="share-buttons">
+            <h3>Share this post:</h3>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://eatulrajput.github.io/assets/blog-assets/post9/index.html"
+                target="_blank" rel="noopener noreferrer" class="share-btn facebook">
+                <i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://twitter.com/intent/tweet?url=https://eatulrajput.github.io/assets/blog-assets/post9/index.html&text=Check%20out%20this%20blog!"
+                target="_blank" rel="noopener noreferrer" class="share-btn twitter">
+                <i class="fa-brands fa-twitter"></i></a>
+
+            <button onclick="copyLink()" class="share-btn copy-link">
+                <i class="fa-solid fa-link"></i></button>
+        </div>
 
     </div>
-    </div>
-    </div>
-    <!-- Projects Section ends  -->
 
 
     <!-- Footer Section starts -->
@@ -203,7 +213,19 @@
     <script src="/assets/javascript/scrollupbutton.js"></script>
     <!-- JavaScript for Scrolling Up Button endss -->
 
-
+    <!-- Script for sharing on social media -->
+    <script>
+        function copyLink() {
+            const dummyInput = document.createElement('input');
+            const blogUrl = window.location.href; // Current page URL
+            dummyInput.value = blogUrl;
+            document.body.appendChild(dummyInput);
+            dummyInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummyInput);
+            alert('Link copied to clipboard!');
+        }
+    </script>
 
 </body>
 
