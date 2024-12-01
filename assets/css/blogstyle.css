@@ -93,8 +93,14 @@
 }
 
 .share-buttons h3 {
-    font-size: 1.2rem;
+    font-size: 2.4rem;
     margin-bottom: 10px;
+    font-weight: 300;
+    color: rgb(202, 202, 202);
+}
+
+.share-buttons h3::selection{
+    background-color: #191b20;
 }
 
 .share-buttons .share-btn {
