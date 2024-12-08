@@ -136,14 +136,14 @@ nav .logo a img:hover {
     z-index: 9999;
     top: 0;
     left: 0;
-    background-color: #171717;
+    background-color: #000000;
     overflow-x: hidden;
     transition: 0.5s;
 }
 
 .overlay-content {
     position: relative;
-    top: 25%;
+    top: 0%;
     width: 100%;
     text-align: center;
     margin-top: 30px;
@@ -287,10 +287,10 @@ nav .logo a img:hover {
 
 /* CSS for Go to Top Button Ends */
 
-/* Mobile View  */
-@media screen and (max-width:1118px) {
+/* Mobile View */
+@media screen and (max-width: 1118px) {
 
-    /* Preloader mobile css */
+    /* Preloader Mobile CSS */
     #preloader {
         background: white url(/assets/images/hand-coding-animate.svg) no-repeat center center;
         background-size: 100%;
@@ -300,6 +300,7 @@ nav .logo a img:hover {
         z-index: 1000;
     }
 
+    /* Navigation Bar Mobile CSS */
     nav {
         display: flex;
         justify-content: space-around;
@@ -317,10 +318,8 @@ nav .logo a img:hover {
         max-height: 100vh;
     }
 
-    /* Nav Mobile CSS */
+    /* Hide navigation links */
     .nav-links {
-        /* justify-content: center;
-        align-items: center; */
         display: none;
     }
 
@@ -329,7 +328,6 @@ nav .logo a img:hover {
         border-radius: 50%;
         filter: invert(100%);
     }
-
 
     .nav-links a {
         color: grey;
@@ -344,14 +342,49 @@ nav .logo a img:hover {
         color: whitesmoke;
     }
 
+    /* Overlay Mobile Fix */
+    .overlay {
+        height: 100vh; /* Full viewport height */
+        width: 100vw; /* Full viewport width */
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
+        z-index: 9999; /* Ensure it's above other content */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px; /* Add some padding */
+    }
+
     .overlay a {
-        font-size: 20px
+        font-size: 20px;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        margin: 10px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .overlay a:hover {
+        background-color: #285cf8;
+        color: white;
     }
 
     .overlay .closebtn {
         font-size: 40px;
+        color: white;
+        position: absolute;
         top: 15px;
         right: 35px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    .overlay .closebtn:hover {
+        color: #285cf8;
     }
 
     .menu {
@@ -359,8 +392,7 @@ nav .logo a img:hover {
         filter: invert(1);
     }
 
-
-    /* Footer Section starts */
+    /* Footer Section Mobile */
     .footer {
         flex-direction: column;
         padding: 50px 30px;
