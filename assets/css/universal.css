@@ -45,6 +45,7 @@ nav {
     background-color: white;
     z-index: 200;
     border-bottom: solid #285cf8;
+    max-height: 16vh;
 }
 
 /* Scroll Watcher */
@@ -79,7 +80,8 @@ nav .logo a {
 }
 
 nav .logo a img {
-    width: 40px;
+    width: 100px;
+    border-radius: 50%;
 }
 
 .nav-links {
