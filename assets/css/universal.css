@@ -130,15 +130,19 @@ nav .logo a img:hover {
 }
 
 .overlay {
-    height: 100%;
-    width: 100%;
+    min-height: 100vh; /* Ensure the overlay takes up at least the full height of the viewport */
+    width: 100%; /* Ensure it spans the entire width */
     position: fixed;
-    z-index: 9999;
     top: 0;
     left: 0;
-    background-color: #000000;
-    overflow-x: hidden;
-    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    z-index: 9999; /* Make sure it's on top of other content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0; /* Remove padding that might cause overflow */
+    overflow: hidden; /* Prevent vertical overflow */
 }
 
 .overlay-content {
@@ -165,9 +169,12 @@ nav .logo a img:hover {
 
 .overlay .closebtn {
     position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
 }
 
 .menu {
@@ -344,28 +351,11 @@ nav .logo a img:hover {
 
     /* Overlay Mobile Fix */
     .overlay {
-        height: 100vh; /* Full viewport height */
-        width: 100vw; /* Full viewport width */
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent background */
-        z-index: 9999; /* Ensure it's above other content */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 20px; /* Add some padding */
+        padding: 0;
     }
-
+    
     .overlay a {
-        font-size: 20px;
-        color: white;
-        padding: 10px 20px;
-        text-align: center;
-        text-decoration: none;
-        margin: 10px;
-        transition: background-color 0.3s ease, color 0.3s ease;
+        padding: 5px 10px;
     }
 
     .overlay a:hover {
@@ -399,4 +389,15 @@ nav .logo a img:hover {
     }
 
     /* Footer Section ends */
+}
+
+@media (max-width: 768px) {
+    .overlay {
+        min-height: 100vh; /* Ensure it takes up the full height */
+        padding: 0;
+    }
+    .overlay a {
+        font-size: 18px; /* Adjust font size for small screens */
+        padding: 10px 20px; /* Adjust padding if needed */
+    }
 }
