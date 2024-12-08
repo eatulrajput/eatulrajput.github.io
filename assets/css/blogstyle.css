@@ -2,15 +2,20 @@
 
 * {
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 3px;
+}
 
 /* Blog Section starts */
 .blog {
-    letter-spacing: 3px;
     margin: 20px;
     margin-top: 150px;
-    height: auto;
+    padding: 0 350px;
 }
 
 .box-name {
@@ -22,53 +27,49 @@
     color: #285cf8;
 }
 
+.box-name h2 {
+    font-size: 3rem;
+    font-weight: 250;
+}
+
 .blog-section {
-    padding: 10px;
-    font-family: 'Ubuntu', sans-serif;
-    width: 80%;
     margin: 0 auto;
+    font-weight: 250;
 }
 
 .blog-section img {
     background-size: cover;
-    width: 100%;
+    width: 80%;
     height: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 2rem;
     border-radius: 18px;
 }
 
-.blog-section h3 {
+.blog-section h2, .blog-section h3, .blog-section h4 {
     margin-top: 2rem;
+    font-weight: 250;
 }
 
-.blog-section h4 {
-    margin-top: 2rem;
-}
-
-.blog-section p {
+.blog-section p,
+.blog-section ol {
     margin-top: 2rem;
     margin-bottom: 2rem;
     font-size: 1.3rem;
     letter-spacing: normal;
     line-height: 2rem;
+    color: #171717;
 }
 
 .blog-section ol {
     font-size: 1rem;
-    letter-spacing: normal;
-    line-height: 2rem;
-}
-
-.blog-section li {
-    margin-top: 2rem;
 }
 
 .blog-section blockquote {
     font-family: monospace;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     font-size: 1.2rem;
-    border: 1px solid rgb(229, 229, 229);
+    border: 1px solid #e5e5e5;
     padding: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -76,16 +77,14 @@
     border-radius: 20px;
 }
 
-.blog-section blockquote::selection{
-    background-color: rgb(240, 240, 240);
+.blog-section blockquote::selection {
+    background-color: #f0f0f0;
     color: black;
 }
 
 #reading-time {
     color: grey;
-    letter-spacing: normal;
 }
-
 
 .share-buttons {
     margin-top: 20px;
@@ -96,10 +95,10 @@
     font-size: 2.4rem;
     margin-bottom: 10px;
     font-weight: 300;
-    color: rgb(202, 202, 202);
+    color: #cacaca;
 }
 
-.share-buttons h3::selection{
+.share-buttons h3::selection {
     background-color: #191b20;
 }
 
@@ -112,23 +111,19 @@
     display: inline-flex;
     align-items: center;
     gap: 5px;
-}
-
-.share-buttons .facebook {
-    /* background-color: #3b5998; */
     color: #191b20;
 }
 
+.share-buttons .facebook,
 .share-buttons .twitter {
     color: #191b20;
-    /* background-color: #1da1f2; */
 }
 
 .share-buttons .copy-link {
-    color: #191b20;
     background-color: white;
     border: none;
     cursor: pointer;
+    color: #191b20;
 }
 
 .share-buttons .share-btn:hover {
@@ -136,8 +131,7 @@
     color: #285cf8;
 }
 
-
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
     .blog-section {
         margin: 50px 2%;
     }
