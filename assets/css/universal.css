@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
 }
 
-::selection{
+::selection {
     background-color: rgb(242, 191, 253);
 }
 
@@ -16,8 +16,8 @@ body {
     margin: 0 auto;
     font-weight: 400;
 }
-  
-  
+
+
 
 /* Preloader starts */
 #preloader {
@@ -37,7 +37,8 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.848);
+    backdrop-filter: blur(10px);
     padding: 20px;
     margin: 0px;
     width: 100%;
@@ -81,9 +82,14 @@ nav .logo a {
 
 
 nav .logo a img {
-    width: 100px;
+    width: 60px;
     border-radius: 50%;
     filter: invert(100%);
+    transition: ease-in-out .5s;
+}
+
+nav .logo a img:hover {
+    filter: invert(0);
 }
 
 .nav-links {
@@ -104,7 +110,7 @@ nav .logo a img {
     padding: 4px 22px;
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
     color: white;
 }
 
@@ -178,7 +184,7 @@ nav .logo a img {
 
 /* Footer Section starts */
 .footer {
-    background-color: #263238;
+    background-color: #000000;
     color: white;
     padding: 50px 100px;
 }
@@ -208,6 +214,7 @@ nav .logo a img {
     align-items: start;
     width: 50%;
 }
+
 /* Footer Section ends */
 
 /* Scroll Bar CSS */
@@ -302,7 +309,8 @@ nav .logo a img {
         width: 100%;
         top: 0px;
         position: fixed;
-        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.848);
+        backdrop-filter: blur(10px);
         z-index: 200;
         border-bottom: solid #285cf8;
         flex-direction: row;
@@ -357,5 +365,6 @@ nav .logo a img {
         flex-direction: column;
         padding: 50px 30px;
     }
+
     /* Footer Section ends */
 }
