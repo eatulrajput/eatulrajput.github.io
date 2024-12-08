@@ -132,6 +132,13 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+
+    .blog {
+        margin: 20px;
+        margin-top: 150px;
+        padding: 0;
+    }
+
     .blog-section {
         margin: 50px 2%;
     }
