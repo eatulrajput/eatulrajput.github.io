@@ -381,9 +381,11 @@
 }
 
 .information p {
-    line-height: 2rem;
-    width: 100%;
-}
+        line-height: 2rem;
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: 250;
+    }
 
 
 /* Education Section ends */
@@ -847,14 +849,10 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        font-size: 2rem;
     }
 
     .info p {
-        line-height: 2rem;
-        width: 100%;
-        font-size: 1.2rem;
-        font-weight: lighter;
+        font-size: 2rem;
     }
 
     .info #element {
@@ -980,6 +978,8 @@
         border-radius: 18px;
         width: 100%;
     }
+
+    
 
     /* Experience CSS */
     .timeline::after {
