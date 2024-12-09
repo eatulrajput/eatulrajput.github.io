@@ -120,18 +120,24 @@
 /* Home Section ends */
 
 /* About Section starts */
+
 .about {
     letter-spacing: 3px;
-    margin: 20px;
+    margin: 0;
     min-height: 500px;
     min-width: 80%;
+    padding: 20px 0;
+    background: url('/assets/images/about-bg.svg');
+    background-position: center bottom 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
 
 .box-name {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
     text-transform: uppercase;
     color: #285cf8;
 }
@@ -235,29 +241,20 @@
     font-weight: 200;
 }
 
-
-.b-arrow {
-    width: 200px;
-    transform: rotate(180deg);
-}
-
-.f-arrow {
-    width: 200px;
-}
-
-
 /* About Section ends */
 
 /* Skills Section starts */
 .skills {
     letter-spacing: 3px;
-    margin: 20px;
+    margin: 0;
     height: auto;
+    background: url('/assets/images/skills-bg.svg');
+    background-position:center top;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .skills-section {
-    height: 700px;
-    padding: 20px;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -318,7 +315,7 @@
 
 .parallax1 {
     /* The image used */
-    background-image: url('/assets/images/skill-bg.svg');
+    background-image: url('/assets/images/parallax1.svg');
 
     /* Set a specific height */
     min-height: 500px;
@@ -327,6 +324,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    filter: contrast(10px);
 }
 
 
@@ -394,7 +392,6 @@
 
 .experience {
     letter-spacing: 3px;
-    margin: 20px;
     height: auto;
 }
 
@@ -799,7 +796,7 @@
 
 .parallax2 {
     /* The image used */
-    background-image: url("/assets/images/background.png");
+    background-image: url("/assets/images/parallax2.svg");
 
     /* Set a specific height */
     min-height: 500px;
