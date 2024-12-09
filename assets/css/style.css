@@ -9,7 +9,8 @@
     justify-content: space-evenly;
     align-items: center;
     margin-top: 100px;
-    position: relative; /* Required for the pseudo-element to work */
+    position: relative;
+    /* Required for the pseudo-element to work */
 }
 
 .home::after {
@@ -23,8 +24,10 @@
     background-position: center;
     background-repeat: repeat-x;
     background-size: contain;
-    opacity: 0.3; /* Adjust this value to control transparency */
-    z-index: -1; /* Places the pseudo-element behind the content */
+    opacity: 0.3;
+    /* Adjust this value to control transparency */
+    z-index: -1;
+    /* Places the pseudo-element behind the content */
 }
 
 
@@ -229,6 +232,7 @@
     border-radius: 18px;
     transition: 1s ease-in-out;
     font-size: 1.4rem;
+    font-weight: 200;
 }
 
 
@@ -481,9 +485,9 @@
 
 .timeline-content p {
     margin: 10px 0;
-  line-height: 3rem;
-  font-size: 1.4rem;
-  font-weight: 200;
+    line-height: 3rem;
+    font-size: 1.4rem;
+    font-weight: 200;
 }
 
 .timeline-content .date {
@@ -501,8 +505,11 @@
 }
 
 .projects h3 {
-    font-weight: 500;
-    color: #285cf8;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #285cf8c4;
+    text-align: center;
+    margin-top: 100px;
 }
 
 .projects-section {
@@ -826,15 +833,15 @@
     .home::after {
         background-repeat: repeat-y;
     }
-    
+
     .home .hero {
         width: 80%;
     }
-    
+
     .home .hero img {
         width: 100%;
     }
-    
+
     .info {
         display: flex;
         justify-content: center;
@@ -843,8 +850,11 @@
         font-size: 2rem;
     }
 
-    .info p{
-        font-size: 2rem;
+    .info p {
+        line-height: 2rem;
+        width: 100%;
+        font-size: 1.2rem;
+        font-weight: lighter;
     }
 
     .info #element {
@@ -866,7 +876,7 @@
         overflow: hidden;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     }
-    
+
     .button-box .button {
         flex: 1;
         text-align: center;
@@ -877,12 +887,12 @@
         border-right: none;
         /* Divider between buttons */
     }
-    
+
     .button-box .button:last-child {
         border-right: none;
         /* Remove divider on the last button */
     }
-    
+
     .button-box a {
         font-size: 1.2rem;
         text-decoration: none;
@@ -890,15 +900,15 @@
         display: block;
         transition: 0.3s ease-in-out;
         padding: 20px 0;
-    
+
     }
-    
+
     .button-box a:hover {
         background-color: white;
         color: #285cf8;
         box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
     }
-    
+
 
 
     /* About Mobile CSS */
@@ -910,7 +920,7 @@
         width: 300px;
         height: 300px;
     }
-    
+
 
     .about-section p {
         width: 100%;
@@ -1027,10 +1037,10 @@
     }
 
 
-    
-.project-button-box .button {
-    margin-bottom: 4vh;
-}
+
+    .project-button-box .button {
+        margin-bottom: 4vh;
+    }
 
     .frame-container {
         width: 100%;
