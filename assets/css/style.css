@@ -799,7 +799,7 @@
 
 .parallax2 {
     /* The image used */
-    background-image: url("/assets/images/quote.png");
+    background-image: url("/assets/images/background.png");
 
     /* Set a specific height */
     min-height: 500px;
