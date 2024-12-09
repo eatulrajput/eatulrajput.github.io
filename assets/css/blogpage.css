@@ -4,15 +4,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
 .blog-hero img{
     width: 50%;
+
 }
 
 .blog-container{
     display: flex;
     flex-direction: column-reverse;
+    padding: 0px 350px;
 }
 
  /* General card styling */
@@ -20,15 +23,13 @@
  .blogcard {
     position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
-    width: 80%;
-    margin: 20px auto;
+    width: 100%;
+    margin: 70px auto;
     padding: 20px;
-    background-color: #c6d8ff;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     transition: transform 0.3s ease, opacity 1s ease; /* Transition for transform and opacity */
     overflow: hidden;
@@ -66,39 +67,38 @@
     }
 }
 
-/* Hover Effect */
-.blogcard:hover {
-    transform: scale(1.05) translateY(-5px); /* Scale up slightly */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-}
-
-
 .blogcard img {
-    width: 40%;
+    width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 18px;
+    box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .blog-content {
-    width: 55%;
-    padding-right: 20px;
+    width: 100%;
+    padding-right: 40px;
 }
 
 .blog-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
+    font-size: 3rem;
+    color: #616161;
+    font-weight: 300;
+    transition: easease-in-out .5s;
+}
+
+.blog-title:hover{
+    color: black;
 }
 
 .blog-description {
-    font-size: 16px;
+    font-size: 1.4rem;
+    font-weight: 200;
     color: #555;
     margin: 10px 0;
 }
 
 .blog-date {
-    font-size: 14px;
+    font-size: 1.2rem;
     color: #888;
 }
 
@@ -114,6 +114,7 @@
     /* color: rgba(125, 125, 125, 0.721); Semi-transparent color */
     color: #6897fa;
     z-index: 0; /* Make sure it's below the content */
+    display: none;
 }
 
 /* Ensure content appears above the number */
