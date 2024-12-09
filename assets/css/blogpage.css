@@ -124,6 +124,11 @@
 }
 
 @media screen and (max-width:730px){
+
+    .blog-container{
+        padding: 0;
+    }
+
     .blogcard img {
         width: 100%;
     }
@@ -131,6 +136,7 @@
     .blogcard{
         display: flex;
         flex-direction: column-reverse;
+        font-size: medium;
     }
 
     .blog-content {
@@ -153,5 +159,9 @@
 
     .blog-hero img{
         width: 100%;
+    }
+
+    .blog-title{
+        font-size: 2rem;
     }
 }
