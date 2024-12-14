@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +25,8 @@
 
         h1 {
             font-size: 3em;
-            font-weight: 300; /* Adjusted font weight */
+            font-weight: 300;
+            /* Adjusted font weight */
             margin-bottom: 20px;
         }
 
@@ -38,14 +40,16 @@
             display: flex;
             align-items: center;
             position: relative;
-            z-index: 2; /* Ensure content appears above the image */
+            z-index: 2;
+            /* Ensure content appears above the image */
             width: 100%;
             max-width: 1000px;
         }
 
         .glass-container .text-content {
             flex: 1;
-            text-align: right; /* Align text and button to the right side */
+            text-align: right;
+            /* Align text and button to the right side */
         }
 
         .glass-button {
@@ -68,28 +72,40 @@
 
         .bg-image {
             flex: 1;
-            width: 60%;
-            max-width: 300px;
+            width: 100%;
+            max-width: 500px;
             position: absolute;
             left: 0;
             top: 50%;
             transform: translateY(-50%);
-            z-index: 1; /* Ensure image is above the gradient */
+            z-index: 1;
+            /* Ensure image is above the gradient */
         }
 
         @keyframes gradientBg {
             0% {
                 background-position: 0% 50%;
             }
+
             50% {
                 background-position: 100% 50%;
             }
+
             100% {
                 background-position: 0% 50%;
             }
         }
+
+        /* Media query for screen width <= 800px */
+        @media (max-width: 800px) {
+            .bg-image {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Custom background image -->
@@ -104,4 +120,5 @@
     </div>
 
 </body>
+
 </html>
