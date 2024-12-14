@@ -4,10 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 Not Found</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+            margin: 0;
+            height: 100vh;
+            position: relative;
+            background: linear-gradient(90deg, rgba(0, 198, 255, 0.9), rgba(0, 114, 255, 0.9), rgba(43, 134, 197, 0.9), rgba(0, 153, 204, 0.9));
+            background-size: 300% 300%;
+            animation: gradientBg 6s ease infinite;
+        }
+
+        h1 {
+            font-size: 3em;
+            font-weight: 300; /* Adjusted font weight */
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .glass-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 2; /* Ensure content appears above the image */
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .glass-container .text-content {
+            flex: 1;
+            text-align: right; /* Align text and button to the right side */
+        }
+
+        .glass-button {
+            font-size: 1em;
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            font-weight: 600;
+        }
+
+        .glass-button:hover {
+            background-color: white;
+            color: #007BFF;
+        }
+
+        .bg-image {
+            flex: 1;
+            width: 60%;
+            max-width: 300px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1; /* Ensure image is above the gradient */
+        }
+
+        @keyframes gradientBg {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Oops! Page Not Found</h1>
-    <p>The page you are looking for doesn't exist or has been moved.</p>
-    <a href="/">Go back to home</a>
+
+    <!-- Custom background image -->
+    <img src="/assets/images/binary-code-animate.svg" alt="404 Background" class="bg-image">
+
+    <div class="glass-container">
+        <div class="text-content">
+            <h1>Whoops! Looks like you're lost</h1>
+            <p>We couldn't find the page you're looking for.</p>
+            <a href="/index.html" class="glass-button">Return to Home</a>
+        </div>
+    </div>
+
 </body>
 </html>
