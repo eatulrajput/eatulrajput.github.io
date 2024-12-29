@@ -86,7 +86,7 @@
             <!-- Button -->
             <div class="button-box">
                 <div class="button">
-                    <a href="#contact">
+                    <a href="/index.html#contact">
                         <i class="fa-solid fa-handshake"></i> Get In Touch
                     </a>
                 </div>
@@ -114,7 +114,8 @@
 
             <div class="about-section">
                 <div class="avatar">
-                    <img class="default" id="profile-image" src="/assets/images/profile-photo.jpeg" alt="Profile Picture">
+                    <img class="default" id="profile-image" src="/assets/images/profile-photo.jpeg"
+                        alt="Profile Picture">
                     <img class="hover" src="/assets/images/hover-profile-image.jpeg" alt="Hover Profile Picture">
                 </div>
 
@@ -175,7 +176,6 @@
             </div>
         </div>
     </div>
-    <div class="parallax1"></div>
     <!-- Skills Section ends -->
 
     <!-- Education Section starts -->
@@ -713,46 +713,46 @@
 
     </script>
 
-<script>
-    function getDominantColor(image, callback) {
-        const canvas = document.createElement('canvas');
-        const context = canvas.getContext('2d');
-        canvas.width = image.width;
-        canvas.height = image.height;
+    <script>
+        function getDominantColor(image, callback) {
+            const canvas = document.createElement('canvas');
+            const context = canvas.getContext('2d');
+            canvas.width = image.width;
+            canvas.height = image.height;
 
-        // Draw the image on the canvas
-        context.drawImage(image, 0, 0, canvas.width, canvas.height);
+            // Draw the image on the canvas
+            context.drawImage(image, 0, 0, canvas.width, canvas.height);
 
-        // Get pixel data
-        const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-        const data = imageData.data;
+            // Get pixel data
+            const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+            const data = imageData.data;
 
-        let r = 0, g = 0, b = 0, count = 0;
+            let r = 0, g = 0, b = 0, count = 0;
 
-        // Iterate through every pixel to calculate the average color
-        for (let i = 0; i < data.length; i += 4) {
-            r += data[i];     // Red
-            g += data[i + 1]; // Green
-            b += data[i + 2]; // Blue
-            count++;
+            // Iterate through every pixel to calculate the average color
+            for (let i = 0; i < data.length; i += 4) {
+                r += data[i];     // Red
+                g += data[i + 1]; // Green
+                b += data[i + 2]; // Blue
+                count++;
+            }
+
+            // Calculate average RGB values
+            r = Math.floor(r / count);
+            g = Math.floor(g / count);
+            b = Math.floor(b / count);
+
+            callback(`rgb(${r}, ${g}, ${b})`);
         }
 
-        // Calculate average RGB values
-        r = Math.floor(r / count);
-        g = Math.floor(g / count);
-        b = Math.floor(b / count);
-
-        callback(`rgb(${r}, ${g}, ${b})`);
-    }
-
-    // Apply dominant color to box-shadow
-    const imageElement = document.getElementById('profile-image');
-    imageElement.addEventListener('load', () => {
-        getDominantColor(imageElement, (color) => {
-            imageElement.parentElement.style.boxShadow = `0px 0px 20px 0px ${color}`;
+        // Apply dominant color to box-shadow
+        const imageElement = document.getElementById('profile-image');
+        imageElement.addEventListener('load', () => {
+            getDominantColor(imageElement, (color) => {
+                imageElement.parentElement.style.boxShadow = `0px 0px 20px 0px ${color}`;
+            });
         });
-    });
-</script>
+    </script>
 </body>
 
 </html>

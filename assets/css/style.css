@@ -63,6 +63,7 @@ body{
     font-size: 3rem;
     font-weight: 300;
     opacity: 1;
+    color: var(--secondary-color);
     -webkit-animation: blink 0.7s infinite;
     -moz-animation: blink 0.7s infinite;
     animation: blink 0.7s infinite;
@@ -118,7 +119,7 @@ body{
 
 .home .hero img {
     width: 600px;
-    filter: drop-shadow(2px 2px 20px #a0bdff);
+    filter: drop-shadow(0px 0px 2px #a0bdff);
 }
 
 
@@ -309,21 +310,6 @@ body{
     cursor: pointer;
     border: solid var(--secondary-color);
 }
-
-.parallax1 {
-    /* The image used */
-    background-image: url('/assets/images/parallax1.svg');
-
-    /* Set a specific height */
-    min-height: 500px;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: contrast(10px);
-}
-
 
 /* Skills Section ends */
 
