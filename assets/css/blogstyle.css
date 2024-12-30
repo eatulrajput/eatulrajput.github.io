@@ -164,7 +164,7 @@ body {
     color: var(--secondary-color);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
 
     .blog {
         margin: 20px;
