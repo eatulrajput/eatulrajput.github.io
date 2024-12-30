@@ -77,9 +77,8 @@ body {
 
 .blog-section blockquote {
     font-family: monospace;
-    background-color: var(--neutral-light);
+    background-color: var(--neutral-dark);
     font-size: 1.2rem;
-    border: 1px solid var(--neutral-light);
     padding: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
