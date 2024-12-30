@@ -1,3 +1,18 @@
+
+:root{
+    --primary-color: #0D1117;
+    --secondary-color: #285cf8;
+    --link-color: #898989;
+    --neutral-light: white;
+    --neutral-dark: black;
+}
+
+body{
+    background-color: var(--primary-color);
+    color: var(--neutral-light);
+}
+
+
 .blog-hero{
     margin: 0 auto;
     width: 100%;
@@ -81,41 +96,27 @@
 
 .blog-title {
     font-size: 3rem;
-    color: #616161;
+    color: var(--link-color);
     font-weight: 300;
     transition: easease-in-out .5s;
 }
 
 .blog-title:hover{
-    color: black;
+    color: var(--neutral-light);
 }
 
 .blog-description {
     font-size: 1.4rem;
     font-weight: 200;
-    color: #555;
+    color: var(--link-color);
     margin: 10px 0;
 }
 
 .blog-date {
     font-size: 1.2rem;
-    color: #888;
+    color: var(--link-color);
 }
 
-/* Styling for the large number */
-.blogcard::before {
-    content: attr(data-number); /* Use the 'data-number' attribute for the blog number */
-    position: absolute;
-    bottom: 10px;
-    /* right: 15px; */
-    left: 15px;
-    font-size: 120px;
-    font-weight: bold;
-    /* color: rgba(125, 125, 125, 0.721); Semi-transparent color */
-    color: #6897fa;
-    z-index: 0; /* Make sure it's below the content */
-    display: none;
-}
 
 /* Ensure content appears above the number */
 .blog-content {
@@ -142,19 +143,6 @@
     .blog-content {
         width: 100%;
         padding-right: 20px;
-    }
-    .blogcard::before {
-        content: attr(data-number); /* Use the 'data-number' attribute for the blog number */
-        position: absolute;
-        /* bottom: 10px; */
-        top: 10px;
-        /* right: 15px; */
-        left: 20px;
-        font-size: 50px;
-        font-weight: bold;
-        /* color: rgba(125, 125, 125, 0.721); Semi-transparent color */
-        color: #6896fac6;
-        z-index: 0; /* Make sure it's below the content */
     }
 
     .blog-hero img{
