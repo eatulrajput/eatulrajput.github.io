@@ -6,9 +6,19 @@
     padding: 0;
 }
 
+:root{
+    --primary-color: #0D1117;
+    --secondary-color: #285cf8;
+    --link-color: #898989;
+    --neutral-light: white;
+    --neutral-dark: black;
+}
+
 body {
     font-family: 'Ubuntu', sans-serif;
     letter-spacing: 3px;
+    background-color: var(--primary-color);
+    color: var(--neutral-light);
 }
 
 /* Blog Section starts */
@@ -58,7 +68,7 @@ body {
     font-size: 1.3rem;
     letter-spacing: normal;
     line-height: 2rem;
-    color: #171717;
+    color: var(--neutral-light);
 }
 
 .blog-section ol {
@@ -67,13 +77,13 @@ body {
 
 .blog-section blockquote {
     font-family: monospace;
-    background-color: #fff;
+    background-color: var(--neutral-light);
     font-size: 1.2rem;
-    border: 1px solid #e5e5e5;
+    border: 1px solid var(--neutral-light);
     padding: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
-    color: #191b20;
+    color: var(--neutral-light);
     border-radius: 20px;
 }
 
@@ -93,7 +103,7 @@ body {
 .article-details img{
     width: 10%;
     border-radius: 50%;
-    border: solid #285cf8;
+    border: solid var(--secondary-color);
 }
 
 .article-sub-details{
@@ -107,7 +117,7 @@ body {
 }
 
 #reading-time {
-    color: grey;
+    color: var(--link-color);
 }
 
 .share-buttons {
@@ -119,11 +129,11 @@ body {
     font-size: 2.4rem;
     margin-bottom: 10px;
     font-weight: 300;
-    color: #cacaca;
+    color: var(--neutral-light);
 }
 
 .share-buttons h3::selection {
-    background-color: #191b20;
+    background-color: var(--neutral-dark);
 }
 
 .share-buttons .share-btn {
@@ -135,24 +145,24 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    color: #191b20;
+    color: var(--neutral-dark);
 }
 
 .share-buttons .facebook,
 .share-buttons .twitter {
-    color: #191b20;
+    color: var(--neutral-light);
 }
 
 .share-buttons .copy-link {
-    background-color: white;
+    background-color: var(--primary-color);
     border: none;
     cursor: pointer;
-    color: #191b20;
+    color: var(--neutral-light);
 }
 
 .share-buttons .share-btn:hover {
     opacity: 0.9;
-    color: #285cf8;
+    color: var(--secondary-color);
 }
 
 @media screen and (max-width: 768px) {
