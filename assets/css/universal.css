@@ -383,13 +383,9 @@ nav .logo a img:hover {
         transition: color 0.3s ease;
     }
 
-    .overlay .closebtn:hover {
-        color: var(--secondary-color);
-    }
 
     .menu {
         display: block;
-        filter: invert(1);
     }
 
     /* Footer Section Mobile */
