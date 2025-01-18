@@ -386,6 +386,16 @@ nav .logo a img:hover {
 
     .menu {
         display: block;
+        color: var(--neutral-light);
+        }
+
+    .menu:hover {
+        display: block;
+        color: var(--secondary-color);
+        }
+
+    .menu span {
+        font-size: 2rem;
     }
 
     /* Footer Section Mobile */
