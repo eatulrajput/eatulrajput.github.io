@@ -8,7 +8,9 @@
 }
 
 ::selection {
-    background-color: rgb(242, 191, 253);
+    background-color: var(--neutral-light);
+    color: var(--neutral-dark);
+    border-radius: 14px;
 }
 
 :root{
@@ -198,12 +200,14 @@ nav .logo a img:hover {
 /* Footer Section starts */
 .footer {
     background-color: var(--primary-color);
-    color: var(--neutral-light);
+    color: var(--link-color);
     padding: 50px 100px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    font-size: 1.4rem;
+    line-height: 3rem;
 }
 
 .footer-section1 {

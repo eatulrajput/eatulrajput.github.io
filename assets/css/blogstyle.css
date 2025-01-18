@@ -132,7 +132,7 @@ body {
 }
 
 .share-buttons h3::selection {
-    background-color: var(--neutral-dark);
+    background-color: var(--neutral-light);
 }
 
 .share-buttons .share-btn {

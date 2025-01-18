@@ -215,7 +215,7 @@
 
     <!-- Footer Section starts -->
     <div class="footer">
-        <p>Copyright &copy; 2024 | All Rights Are Reserved.</p>
+        <p>Copyright &copy; <span id="year"></span> | All Rights Are Reserved.</p>
     </div>
     <!-- Footer Section ends -->
 
@@ -274,30 +274,30 @@
         }
     </script>
 
-<script>
-    const blogCards = document.querySelectorAll('.blogcard');
+    <script>
+        const blogCards = document.querySelectorAll('.blogcard');
 
-const handleScroll = () => {
-    blogCards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
+        const handleScroll = () => {
+            blogCards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
 
-        // Check if the card is in the viewport
-        if (rect.top < windowHeight && rect.bottom > 0) {
-            card.classList.add('visible');
-            card.classList.remove('hidden'); // Ensure hidden class is removed
-        } else {
-            card.classList.remove('visible');
-            card.classList.add('hidden'); // Add hidden class when out of view
-        }
-    });
-};
+                // Check if the card is in the viewport
+                if (rect.top < windowHeight && rect.bottom > 0) {
+                    card.classList.add('visible');
+                    card.classList.remove('hidden'); // Ensure hidden class is removed
+                } else {
+                    card.classList.remove('visible');
+                    card.classList.add('hidden'); // Add hidden class when out of view
+                }
+            });
+        };
 
-window.addEventListener('scroll', handleScroll);
-handleScroll(); // Initial call to set the correct state on page load
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Initial call to set the correct state on page load
 
-</script>
-
+    </script>
+    <script src="/assets/javascript/copyright.js"></script>
 </body>
 
 </html>
