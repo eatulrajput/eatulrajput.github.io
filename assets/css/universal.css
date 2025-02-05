@@ -25,6 +25,7 @@ body {
     font-family: "Noto Sans", serif;
     margin: 0 auto;
     font-weight: 400;
+    max-width: 1400px;
 }
 
 
@@ -56,6 +57,8 @@ nav {
     position: fixed;
     z-index: 200;
     border-bottom: solid var(--secondary-color);
+    max-width: 1400px;
+
 }
 
 
