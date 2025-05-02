@@ -9,7 +9,7 @@ import GTagRouteTracker from './components/GTagRouteTracker';
 function App() {
     return (
 
-        <Router basename="/v2">  {/* <--- Add this */}
+        <Router basename="/">  {/* <--- Add this */}
             <GTagRouteTracker />
             <Navbar />
             <Routes>
