@@ -1,6 +1,6 @@
 # Personal Website Repository - Version 2.0
 
-Welcome to the repository for the second version of my personal website, rebuilt using modern web technologies for enhanced performance and maintainability. Please note that this project is not open-source.
+Welcome to the repository of my personal website, rebuilt using modern web technologies for enhanced performance and maintainability. Please note that this project is not open-source.
 
 ## Introduction
 
@@ -26,6 +26,6 @@ The website comprises several sections:
 
 ## Usage
 
-You can visit the live website at [https://eatulrajput.github.io/v2](https://eatulrajput.github.io/v2) to learn more about me and explore my work. This website is for personal use and is not open for contributions.
+You can visit the live website at [https://eatulrajput.github.io/](https://eatulrajput.github.io/) to learn more about me and explore my work. This website is for personal use and is not open for contributions.
 
 Thank you for visiting my personal website repository! 
