@@ -7,7 +7,7 @@ import { useEffect } from "react";
 const projects = [
     {
         id: 1,
-        title: "Profile Card 1",
+        title: "Profile Card Template",
         tech: "HTML, CSS, JavaScript",
         desc: "This project is a profile card showcasing the basics of frontend development.",
         liveLink: "https://eatulrajput-profile-card.netlify.app/",
@@ -16,26 +16,26 @@ const projects = [
     },
     {
         id: 2,
-        title: "Sync-Link",
+        title: "Stack Sync",
         tech: "HTML, CSS",
-        desc: "This project is a profile card showcasing the basics of frontend development.",
+        desc: "This project is where I kept my all profile links.",
         liveLink: "https://atulrajput.netlify.app/",
         codeLink: "https://github.com/eatulrajput/profile-card-2",
-        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image: "https://plus.unsplash.com/premium_photo-1720551256983-445d23d516b2?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
         id: 3,
         title: "Weather Website",
         tech: "HTML, CSS, JavaScript, Rapid API",
-        desc: "This project is a Weather website fetching data through weather API.",
+        desc: "Google Solution Challenge 2024 project: This project is a Weather website fetching data through weather API.",
         liveLink: "https://eatulrajput-weather.netlify.app/",
         codeLink: "https://github.com/eatulrajput/weather-website",
-        image: "https://images.unsplash.com/photo-1561484930-998b6a7b22e8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHdlYXRoZXJ8ZW58MHwwfDB8fHwy",
+        image: "https://media.istockphoto.com/id/1391882784/photo/lightning-strike-thunderstorm-weather-icon.jpg?s=612x612&w=0&k=20&c=6sea4Z53w5Uw0BitFm1bd8MjXErDpR7tAuLP7BFsC1I=",
     },
 
     {
         id: 4,
-        title: "College Project: IIoT Group Project",
+        title: "IIoT Group Project",
         tech: "NodeMCU(ESP8266), Ultrasonic Sensor, Arduino IDE",
         desc: "College project developed within team members.",
         liveLink: "https://team-project1.netlify.app/",
@@ -44,13 +44,43 @@ const projects = [
     },
 
     {
-        id: 4,
-        title: "College Project: Break Out Game",
+        id: 5,
+        title: "Break Out Game",
         tech: "Java, Python",
         desc: "College project developed within team members.",
         liveLink: "https://break-out-game-project.netlify.app/",
         codeLink: "https://github.com/eatulrajput/Break-Out-Game",
         image: "images/team_project_2.png",
+    },
+
+    {
+        id: 6,
+        title: "Face Track",
+        tech: "Python, OpenCV",
+        desc: "It is a face recognition attendance system  designed to track student attendance...",
+        // liveLink: "https://break-out-game-project.netlify.app/",
+        codeLink: "https://github.com/eatulrajput/face-track",
+        image: "https://images.unsplash.com/photo-1712904124115-92f9bf39072d?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    },
+
+    {
+        id: 7,
+        title: "Community Mapping for Resilience",
+        tech: "NASA Earth Observations, JavaScript, Google Maps API",
+        desc: "NASA Space Apps Challenge 2024 team project",
+        liveLink: "https://event-horizon-team.netlify.app/",
+        codeLink: "https://github.com/Sahi1l-Kumar/dharavi-web-map",
+        image: "https://scontent.fpat1-2.fna.fbcdn.net/v/t39.30808-6/495024863_1133277952162405_2878924209491315587_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=4PGCfbd5H1kQ7kNvwFSP9Cp&_nc_oc=AdkstjS6b2SftRNcdzxOafWysvX0coiM4dE70MQXWSj8mbFDEwpzvNH8Tp_L3TyavG3Egi3C50cy06kOHSerYWts&_nc_zt=23&_nc_ht=scontent.fpat1-2.fna&_nc_gid=WDx4D3ca7lozJVk5Q7gxaw&oh=00_AfKu5qpgo4rAUjoxLxBnXCukaYM6w_wck85QOcV0Wdc_xw&oe=6825BBA8",
+    },
+
+    {
+        id: 8,
+        title: "Calculator App",
+        tech: "Java, Android Studio",
+        desc: "A basic calculator app developed in Java",
+        liveLink: "#",
+        codeLink: "",
+        image: "https://developer.android.com/static/images/brand/android-head_3D.svg",
     },
 ];
 
@@ -82,10 +112,11 @@ const Projects = () => {
                             data-aos="fade-up"
                             data-aos-delay={index * 100} // Adds a staggered animation effect
                         >
+
                             {/* Project Image */}
                             <div className="overflow-hidden h-48">
                                 <div
-                                    className="h-full w-full bg-cover bg-center transform transition-transform duration-500 hover:scale-110 rounded-t-lg"
+                                    className="h-full w-full bg-cover bg-center transform transition-transform duration-500 hover:scale-110 rounded-t-lg hover:cursor-pointer"
                                     style={{ backgroundImage: `url(${project.image})` }}
                                 ></div>
                             </div>
@@ -93,9 +124,17 @@ const Projects = () => {
 
                             {/* Project Info */}
                             <div className="p-5">
-                                <h3 className="text-xl font-semibold text-gray-700">{project.title}</h3>
-                                <p className="text-gray-500 text-sm">{project.tech}</p>
-                                <p className="text-gray-600 mt-2">{project.desc}</p>
+
+
+                                {/* Showing No. of project */}
+
+                                {/* <p className="absolute text-blue-500 text-6xl font-extrabold opacity-60 z-10 select-none right-1">
+                                    {project.id}
+                                </p> */}
+
+                                <h3 className="text-xl font-semibold text-blue-600">{project.title}</h3>
+                                <p className="text-gray-500 text-lg">{project.tech}</p>
+                                <p className="text-black mt-2 text-lg">{project.desc}</p>
 
                                 {/* Buttons */}
                                 <div className="flex justify-between mt-4">
