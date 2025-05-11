@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import Logo from "../assets/images/logo.webp";
+import Logo from "/logo.gif";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
