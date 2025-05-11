@@ -1,4 +1,8 @@
 import React from "react";
+import AOS from "aos";
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
 
 const projects = [
     {
@@ -51,6 +55,14 @@ const projects = [
 ];
 
 const Projects = () => {
+
+    useEffect(() => {
+        AOS.init({
+            duration: 800, // animation duration
+            once: true, // animate only once
+        });
+    }, []);
+
     return (
         <div id="projects" className="py-16 px-6 bg-white text-gray-800">
             <div className="max-w-6xl mx-auto">
@@ -63,16 +75,21 @@ const Projects = () => {
 
                 {/* Projects Grid */}
                 <div className="grid md:grid-cols-3 gap-8">
-                    {projects.map((project) => (
-                        <div 
-                            key={project.id} 
+                    {projects.map((project, index) => (
+                        <div
+                            key={project.id}
                             className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition duration-300"
+                            data-aos="fade-up"
+                            data-aos-delay={index * 100} // Adds a staggered animation effect
                         >
                             {/* Project Image */}
-                            <div 
-                                className="h-48 bg-cover bg-center" 
-                                style={{ backgroundImage: `url(${project.image})` }}
-                            ></div>
+                            <div className="overflow-hidden h-48">
+                                <div
+                                    className="h-full w-full bg-cover bg-center transform transition-transform duration-500 hover:scale-110 rounded-t-lg"
+                                    style={{ backgroundImage: `url(${project.image})` }}
+                                ></div>
+                            </div>
+
 
                             {/* Project Info */}
                             <div className="p-5">
@@ -82,18 +99,18 @@ const Projects = () => {
 
                                 {/* Buttons */}
                                 <div className="flex justify-between mt-4">
-                                    <a 
-                                        href={project.liveLink} 
-                                        target="_blank" 
-                                        rel="noopener noreferrer" 
+                                    <a
+                                        href={project.liveLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
                                     >
                                         Live
                                     </a>
-                                    <a 
-                                        href={project.codeLink} 
-                                        target="_blank" 
-                                        rel="noopener noreferrer" 
+                                    <a
+                                        href={project.codeLink}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
                                         className="px-4 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-800 transition"
                                     >
                                         Code

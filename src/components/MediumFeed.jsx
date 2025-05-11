@@ -48,11 +48,13 @@ const MediumFeed = () => {
             key={article.link}
             className="bg-white shadow-md hover:shadow-xl transition rounded-2xl overflow-hidden"
           >
-            <img
-              src={article.imageUrl}
-              alt={article.title}
-              className="w-full h-56 object-cover"
-            />
+            <div className="overflow-hidden h-56">
+              <img
+                src={article.imageUrl}
+                alt={article.title}
+                className="h-full w-full object-cover transform transition-transform duration-500 hover:scale-110"
+              />
+            </div>
 
             <div className="p-6">
               <a
