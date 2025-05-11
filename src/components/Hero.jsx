@@ -17,30 +17,31 @@ const Hero = () => {
     }, []);
 
     return (
-        <div className="relative flex flex-col md:flex-row justify-evenly items-center mt-24 px-6">
+        <div className="w-full max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row justify-evenly items-center mt-24">
             {/* Info Section */}
             <div className="md:w-1/3 text-left">
-                <p className="text-3xl md:text-5xl leading-[1.8em] text-black">
+                <p className="text-3xl md:text-5xl leading-snug md:leading-tight text-black">
                     Hi, my name is <br />
                     <span className="text-blue-600 font-medium">Atul</span> and I'm
                 </p>
 
-                {/* Typing animation */}
-                <span id="element" className="text-3xl md:text-5xl font-medium text-blue-500"></span>
+                <span
+                    id="element"
+                    className="text-3xl md:text-5xl font-medium text-blue-500 inline-block"
+                ></span>
 
-                {/* Buttons */}
-                <div className="mt-10 w-[80%] h-14 flex justify-around items-center bg-blue-500 rounded-full shadow-md overflow-hidden">
-                    <div className="flex-1 text-center">
-                        <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href="https://docs.google.com/document/d/1qN5Bd--10xOymt5XGS53_213DgNddM9AfzNUIgNfxrI/edit?usp=sharing"
-                            className="text-xl text-white block transition duration-300 ease-in-out py-4 hover:bg-gray-100 hover:text-blue-500"
-                        >
-                            <i className="fa-solid fa-circle-chevron-down"></i> Download Resume
-                        </a>
-                    </div>
+
+                <div className="mt-10 w-fit h-14 px-6 flex items-center bg-blue-500 rounded-full shadow-md overflow-hidden">
+                    <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://docs.google.com/document/d/1qN5Bd--10xOymt5XGS53_213DgNddM9AfzNUIgNfxrI/edit?usp=sharing"
+                        className="text-base md:text-lg text-white flex items-center gap-2 hover:bg-white hover:text-blue-500 transition duration-300 ease-in-out"
+                    >
+                        <i className="fa-solid fa-circle-chevron-down"></i> Download Resume
+                    </a>
                 </div>
+
             </div>
 
             {/* Hero Image */}
@@ -48,10 +49,11 @@ const Hero = () => {
                 <img
                     src={heroImage}
                     alt="Programming Illustration"
-                    className="w-[600px] drop-shadow-md"
+                    className="w-full max-w-[600px] drop-shadow-md"
                 />
             </div>
         </div>
+
     );
 };
 
