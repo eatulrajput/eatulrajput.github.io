@@ -38,6 +38,7 @@ const Navbar = () => {
                         <img src={Logo} alt="Website Logo" className="h-16" />
                     </Link>
                 </div>
+                
 
                 {/* Desktop Navigation */}
                 <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">

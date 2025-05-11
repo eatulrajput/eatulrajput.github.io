@@ -31,16 +31,18 @@ const Hero = () => {
                 ></span>
 
 
-                <div className="mt-10 w-fit h-14 px-6 flex items-center bg-blue-500 rounded-full shadow-md overflow-hidden">
+                <div className="mt-10 w-fit flex items-center bg-blue-500 rounded-full shadow-md overflow-hidden">
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
                         href="https://docs.google.com/document/d/1qN5Bd--10xOymt5XGS53_213DgNddM9AfzNUIgNfxrI/edit?usp=sharing"
-                        className="text-base md:text-lg text-white flex items-center gap-2 hover:bg-white hover:text-blue-500 transition duration-300 ease-in-out"
+                        className="flex items-center gap-2 px-6 py-3 text-white text-base md:text-lg font-medium transition-all duration-300 ease-in-out hover:bg-white hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 rounded-full"
                     >
-                        <i className="fa-solid fa-circle-chevron-down"></i> Download Resume
+                        <i className="fa-solid fa-circle-chevron-down transition-transform duration-300 group-hover:translate-y-1"></i>
+                        Download Resume
                     </a>
                 </div>
+
 
             </div>
 
