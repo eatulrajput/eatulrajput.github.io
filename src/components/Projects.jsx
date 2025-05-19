@@ -60,7 +60,7 @@ const projects = [
         desc: "It is a face recognition attendance system  designed to track student attendance...",
         // liveLink: "https://break-out-game-project.netlify.app/",
         codeLink: "https://github.com/eatulrajput/face-track",
-        image: "https://images.unsplash.com/photo-1712904124115-92f9bf39072d?q=80&w=1631&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image: "https://images.pexels.com/photos/8090303/pexels-photo-8090303.jpeg",
     },
 
     {
@@ -70,7 +70,7 @@ const projects = [
         desc: "NASA Space Apps Challenge 2024 team project",
         liveLink: "https://event-horizon-team.netlify.app/",
         codeLink: "https://github.com/Sahi1l-Kumar/dharavi-web-map",
-        image: "https://scontent.fpat1-2.fna.fbcdn.net/v/t39.30808-6/495024863_1133277952162405_2878924209491315587_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=4PGCfbd5H1kQ7kNvwFSP9Cp&_nc_oc=AdkstjS6b2SftRNcdzxOafWysvX0coiM4dE70MQXWSj8mbFDEwpzvNH8Tp_L3TyavG3Egi3C50cy06kOHSerYWts&_nc_zt=23&_nc_ht=scontent.fpat1-2.fna&_nc_gid=WDx4D3ca7lozJVk5Q7gxaw&oh=00_AfKu5qpgo4rAUjoxLxBnXCukaYM6w_wck85QOcV0Wdc_xw&oe=6825BBA8",
+        image: "https://images.pexels.com/photos/2879841/pexels-photo-2879841.jpeg",
     },
 
     {
@@ -144,7 +144,7 @@ const Projects = () => {
                                         rel="noopener noreferrer"
                                         className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
                                     >
-                                        Live
+                                        Live <i class="fa-solid fa-arrow-up-right-from-square"></i>
                                     </a>
                                     <a
                                         href={project.codeLink}
@@ -152,7 +152,7 @@ const Projects = () => {
                                         rel="noopener noreferrer"
                                         className="px-4 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-800 transition"
                                     >
-                                        Code
+                                        Code <i class="fa-solid fa-code"></i>
                                     </a>
                                 </div>
                             </div>

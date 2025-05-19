@@ -25,12 +25,12 @@ const quotes = [
 // MySpace Component
 const MySpace = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-gray-100 text-gray-800">
+    <div className="min-h-screen flex flex-col bg-blue-50 text-gray-800">
       {/* Main Content */}
       <div className="flex-grow py-16">
         {/* Title */}
         <h2 className="text-3xl md:text-4xl font-semibold text-blue-600 text-center mt-32">
-          🚀 My Space
+          My Space
         </h2>
         <p className="text-lg text-gray-700 mt-4 text-center">
           Explore my favorite quotes from legendary minds.
@@ -41,13 +41,16 @@ const MySpace = () => {
           {quotes.map((item) => (
             <div
               key={item.id}
-              className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105"
+              className="bg-white shadow-lg rounded-2xl overflow-hidden transform transition duration-300 hover:scale-105"
             >
-              <img
-                src={item.image}
-                alt={item.author}
-                className="w-full h-60 object-cover"
-              />
+              <div className="overflow-hidden rounded-t-2xl">
+                <img
+                  src={item.image}
+                  alt={item.author}
+                  className="w-full h-60 object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
+                />
+              </div>
+
               <div className="p-6 text-center">
                 <p className="text-lg font-semibold italic text-gray-800">
                   "{item.quote}"
@@ -60,8 +63,8 @@ const MySpace = () => {
 
         {/* Spotify Playlist Section */}
         <div className="max-w-3xl mx-auto text-center mt-16 mb-14">
-          <h3 className="text-2xl font-semibold text-gray-700 mb-4">
-            🎵 My Spotify Playlist
+          <h3 className="text-2xl font-semibold text-blue-700 mb-4">
+            My Spotify Playlist
           </h3>
           <iframe
             style={{ borderRadius: "12px" }}
