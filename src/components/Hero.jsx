@@ -33,7 +33,7 @@ const Hero = () => {
                 {/* Resume Button */}
                 <div className="mt-8 flex justify-center md:justify-start">
                     <a
-                        href="https://docs.google.com/document/d/1qN5Bd--10xOymt5XGS53_213DgNddM9AfzNUIgNfxrI/edit?usp=sharing"
+                        href="https://drive.google.com/file/d/1n8qqVvLFb8JG5rjfwKGivNEM-Y_0o0Lt/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white text-base md:text-lg font-medium rounded-full shadow-md transition-all duration-300 hover:bg-white hover:text-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
