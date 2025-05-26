@@ -38,7 +38,12 @@ const Footer = () => {
         <p className="text-xs md:text-sm text-gray-500">
           &copy; {year} | All Rights Reserved.
         </p>
+        <h1 className="text-[clamp(2.5rem,10vw,9rem)] font-bold bg-gradient-to-b from-blue-300 to-gray-900 bg-clip-text text-transparent">
+  @eatulrajput
+</h1>
 
+
+        
       </div>
     </footer>
   );
