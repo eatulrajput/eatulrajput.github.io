@@ -57,7 +57,7 @@ const Experience = () => {
                 <h4 className="text-lg text-blue-600 mt-1">{exp.role}</h4>
                 <p className="text-gray-600 mt-2">{exp.description}</p>
                 <span className="block mt-3 text-lg text-gray-500">
-                  <i class="fa-regular fa-calendar"></i> {exp.date}
+                  <i className="fa-regular fa-calendar"></i> {exp.date}
                 </span>
               </div>
             </div>
