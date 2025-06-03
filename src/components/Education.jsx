@@ -1,6 +1,5 @@
-import React from "react";
-import University from "../assets/images/college.svg";
-import School from "../assets/images/school.svg";
+import University from "../../public/college.svg";
+import School from "../../public/school.svg";
 
 const Education = () => {
   return (

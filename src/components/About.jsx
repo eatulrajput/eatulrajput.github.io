@@ -1,6 +1,5 @@
-import React from "react";
-import profileImage from "../assets/images/profile.webp";
-import hoverProfileImage from "../assets/images/hover-profile.webp";
+import profileImage from "/profile.webp";
+import hoverProfileImage from "/hover-profile.webp";
 
 const About = () => {
     return (

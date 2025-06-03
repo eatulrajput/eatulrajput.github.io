@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Typed from "typed.js";
-import heroImage from "../assets/images/hero.svg";
+import heroImage from "/hero.svg";
 
 const Hero = () => {
     useEffect(() => {

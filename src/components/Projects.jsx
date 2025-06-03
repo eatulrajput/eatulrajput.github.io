@@ -40,7 +40,7 @@ const projects = [
         desc: "College project developed within team members.",
         liveLink: "https://team-project1.netlify.app/",
         codeLink: "https://github.com/eatulrajput/cyberphysics-in-iiot-project",
-        image: "images/team_project_1.webp",
+        image: "/team_project_1.webp",
     },
 
     {
@@ -50,7 +50,7 @@ const projects = [
         desc: "College project developed within team members.",
         liveLink: "https://break-out-game-project.netlify.app/",
         codeLink: "https://github.com/eatulrajput/Break-Out-Game",
-        image: "images/team_project_2.webp",
+        image: "/team_project_2.webp",
     },
 
     {
