@@ -1,5 +1,5 @@
-import University from "../../public/college.svg";
-import School from "../../public/school.svg";
+import University from "/college.svg";
+import School from "/school.svg";
 
 const Education = () => {
   return (

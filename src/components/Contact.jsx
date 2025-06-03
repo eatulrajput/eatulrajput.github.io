@@ -1,5 +1,5 @@
-import ContactSign from "../../public/contact.svg";
-import socialMedia from "../../public/social-media.svg";
+import ContactSign from "/contact.svg";
+import socialMedia from "/social-media.svg";
 const Contact = () => {
     return (
         <div id="contact" className="py-16 px-6 bg-blue-50 text-gray-800">
