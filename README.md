@@ -13,6 +13,10 @@ The website is built using:
 - **React**: A JavaScript library for building user interfaces.
 - **Vite**: A build tool that provides a faster and leaner development experience for modern web projects.
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **Illustrations**: Taken from Undraw.
+
+##### Color Coding
+Primary Color: #3c77fc
 
 ## Website Structure
 

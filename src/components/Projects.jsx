@@ -7,80 +7,121 @@ import { useEffect } from "react";
 const projects = [
     {
         id: 1,
+        category: 'Frontend',
         title: "Profile Card Template",
         tech: "HTML, CSS, JavaScript",
         desc: "This project is a profile card showcasing the basics of frontend development.",
         liveLink: "https://eatulrajput-profile-card.netlify.app/",
         codeLink: "https://github.com/eatulrajput/profile-card",
-        image: "https://images.unsplash.com/photo-1534308143481-c55f00be8bd7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHByb2ZpbGV8ZW58MHwwfDB8fHwy",
+        image: "card.webp",
     },
     {
         id: 2,
+        category: 'Frontend',
         title: "Stack Sync",
         tech: "HTML, CSS",
         desc: "This project is where I kept my all profile links.",
         liveLink: "https://atulrajput.netlify.app/",
         codeLink: "https://github.com/eatulrajput/profile-card-2",
-        image: "https://plus.unsplash.com/premium_photo-1720551256983-445d23d516b2?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        image: "card.webp",
     },
     {
         id: 3,
+        category: 'Frontend',
         title: "Weather Website",
         tech: "HTML, CSS, JavaScript, Rapid API",
         desc: "Google Solution Challenge 2024 project: This project is a Weather website fetching data through weather API.",
         liveLink: "https://eatulrajput-weather.netlify.app/",
         codeLink: "https://github.com/eatulrajput/weather-website",
-        image: "https://media.istockphoto.com/id/1391882784/photo/lightning-strike-thunderstorm-weather-icon.jpg?s=612x612&w=0&k=20&c=6sea4Z53w5Uw0BitFm1bd8MjXErDpR7tAuLP7BFsC1I=",
+        image: "weather.webp",
     },
 
     {
         id: 4,
+        category: 'IoT',
         title: "IIoT Group Project",
         tech: "NodeMCU(ESP8266), Ultrasonic Sensor, Arduino IDE",
         desc: "College project developed within team members.",
         liveLink: "https://team-project1.netlify.app/",
         codeLink: "https://github.com/eatulrajput/cyberphysics-in-iiot-project",
-        image: "/team_project_1.webp",
+        image: "card.webp",
     },
 
     {
         id: 5,
+        category: 'Game Development',
         title: "Break Out Game",
         tech: "Java, Python",
         desc: "College project developed within team members.",
         liveLink: "https://break-out-game-project.netlify.app/",
         codeLink: "https://github.com/eatulrajput/Break-Out-Game",
-        image: "/team_project_2.webp",
+        image: "card.webp",
     },
 
     {
         id: 6,
+        category: 'AI / ML',
         title: "Face Track",
         tech: "Python, OpenCV",
         desc: "It is a face recognition attendance system  designed to track student attendance...",
-        // liveLink: "https://break-out-game-project.netlify.app/",
+        liveLink: "#",
         codeLink: "https://github.com/eatulrajput/face-track",
-        image: "https://images.pexels.com/photos/8090303/pexels-photo-8090303.jpeg",
+        image: "card.webp",
     },
 
     {
         id: 7,
+        category: 'Hackathon',
         title: "Community Mapping for Resilience",
         tech: "NASA Earth Observations, JavaScript, Google Maps API",
         desc: "NASA Space Apps Challenge 2024 team project",
         liveLink: "https://event-horizon-team.netlify.app/",
         codeLink: "https://github.com/Sahi1l-Kumar/dharavi-web-map",
-        image: "https://images.pexels.com/photos/2879841/pexels-photo-2879841.jpeg",
+        image: "community.webp",
     },
 
     {
         id: 8,
-        title: "Calculator App",
-        tech: "Java, Android Studio",
-        desc: "A basic calculator app developed in Java",
-        liveLink: "#",
-        codeLink: "",
-        image: "https://developer.android.com/static/images/brand/android-head_3D.svg",
+        category: 'AI / ML',
+        title: "Coffee Chatbot",
+        tech: "Python, Streamlit, Gemini",
+        desc: "a conversational chatbot interface ",
+        liveLink: "https://coffeechatbot.streamlit.app/",
+        codeLink: "https://github.com/eatulrajput/coffee-chat-bot",
+        image: "coffeechatbot.webp",
+    },
+
+    {
+        id: 9,
+        category: 'Full Stack',
+        title: "Task Master",
+        tech: "Python, Django",
+        desc: "Taskmaster is a todo app made in Django",
+        liveLink: "",
+        codeLink: "https://github.com/eatulrajput/taskmaster",
+        image: "card.webp",
+    },
+    
+    {
+        id: 10,
+        category: 'AI / ML',
+        title: "Harmonybot",
+        tech: "Python, Streamlit, Perspective API",
+        desc: "An AI-powered tool developed to detect and mitigate offensive language",
+        liveLink: "https://offensive-lang-detection.streamlit.app/",
+        codeLink: "https://github.com/eatulrajput/offensive-lang-detection",
+        image: "harmonybot.webp",
+    },
+
+    {
+        id: 11,
+        category: 'AI / ML',
+        title: "Finfy",
+        tech: "Python, Flask, Logistic Regression",
+        desc: "Finfy is an AI-powered interface that checks the loan eligibility using machine learning",
+        liveLink: "https://finfy-app-04of.onrender.com/",
+        codeLink: "https://github.com/eatulrajput/finfy-app",
+        image: "minorproject.webp",
     },
 ];
 
@@ -96,6 +137,7 @@ const Projects = () => {
     return (
         <div id="projects" className="py-16 px-6 bg-white text-gray-800">
             <div className="max-w-6xl mx-auto">
+                
                 {/* Section Title */}
                 <div className="text-center mb-10">
                     <h2 className="text-3xl md:text-4xl font-semibold text-blue-600 flex items-center justify-center gap-3 mt-32">
@@ -104,7 +146,7 @@ const Projects = () => {
                 </div>
 
                 {/* Projects Grid */}
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 gap-8">
                     {projects.map((project, index) => (
                         <div
                             key={project.id}
@@ -114,7 +156,7 @@ const Projects = () => {
                         >
 
                             {/* Project Image */}
-                            <div className="overflow-hidden h-48">
+                            <div className="overflow-hidden h-100">
                                 <div
                                     className="h-full w-full bg-cover bg-center transform transition-transform duration-500 hover:scale-110 rounded-t-lg hover:cursor-pointer"
                                     style={{ backgroundImage: `url(${project.image})` }}
@@ -128,10 +170,11 @@ const Projects = () => {
 
                                 {/* Showing No. of project */}
 
-                                {/* <p className="absolute text-blue-500 text-6xl font-extrabold opacity-60 z-10 select-none right-1">
+                                {<p className="absolute text-blue-500 text-6xl font-extrabold opacity-60 z-10 select-none right-1">
                                     {project.id}
-                                </p> */}
-
+                                </p>}
+                                
+                                <h3 className="text-xl font-semibold text-zinc-500">{project.category}</h3>
                                 <h3 className="text-xl font-semibold text-blue-600">{project.title}</h3>
                                 <p className="text-gray-500 text-lg">{project.tech}</p>
                                 <p className="text-black mt-2 text-lg">{project.desc}</p>
