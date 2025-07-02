@@ -1,9 +1,10 @@
-import React from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import 'aos/dist/aos.css';
-import { useEffect } from "react";
+import Masonry from "react-masonry-css";
 
 
+// Project Information
 const projects = [
     {
         id: 1,
@@ -134,7 +135,13 @@ const Projects = () => {
         });
     }, []);
 
-    return (
+    const breakpointColumnsObj = {
+        default: 3,
+        1100: 2,
+        700: 1,
+    };
+
+return (
         <div id="projects" className="py-16 px-6 bg-white text-gray-800">
             <div className="max-w-6xl mx-auto">
                 
@@ -145,35 +152,33 @@ const Projects = () => {
                     </h2>
                 </div>
 
-                {/* Projects Grid */}
-                <div className="grid md:grid-cols-2 gap-8">
+                {/* Masonry Grid */}
+                <Masonry
+                    breakpointCols={breakpointColumnsObj}
+                    className="flex gap-6"
+                    columnClassName="masonry-column"
+                >
                     {projects.map((project, index) => (
                         <div
                             key={project.id}
-                            className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition duration-300"
+                            className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition duration-300 mb-6"
                             data-aos="fade-up"
-                            data-aos-delay={index * 100} // Adds a staggered animation effect
+                            data-aos-delay={index * 100}
                         >
 
                             {/* Project Image */}
-                            <div className="overflow-hidden h-100">
+                            <div className="overflow-hidden">
                                 <div
-                                    className="h-full w-full bg-cover bg-center transform transition-transform duration-500 hover:scale-110 rounded-t-lg hover:cursor-pointer"
+                                    className="h-64 w-full bg-cover bg-center transform transition-transform duration-500 hover:scale-110 rounded-t-lg cursor-pointer"
                                     style={{ backgroundImage: `url(${project.image})` }}
                                 ></div>
                             </div>
 
-
                             {/* Project Info */}
-                            <div className="p-5">
-
-
-                                {/* Showing No. of project */}
-
-                                {<p className="absolute text-blue-500 text-6xl font-extrabold opacity-60 z-10 select-none right-1">
+                            <div className="p-5 relative">
+                                <p className="absolute text-blue-500 text-6xl font-extrabold opacity-10 select-none right-2 top-2">
                                     {project.id}
-                                </p>}
-                                
+                                </p>
                                 <h3 className="text-xl font-semibold text-zinc-500">{project.category}</h3>
                                 <h3 className="text-xl font-semibold text-blue-600">{project.title}</h3>
                                 <p className="text-gray-500 text-lg">{project.tech}</p>
@@ -181,14 +186,16 @@ const Projects = () => {
 
                                 {/* Buttons */}
                                 <div className="flex justify-between mt-4">
-                                    <a
-                                        href={project.liveLink}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
-                                    >
-                                        Live <i className="fa-solid fa-arrow-up-right-from-square"></i>
-                                    </a>
+                                    {project.liveLink && (
+                                        <a
+                                            href={project.liveLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+                                        >
+                                            Live <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    )}
                                     <a
                                         href={project.codeLink}
                                         target="_blank"
@@ -201,7 +208,7 @@ const Projects = () => {
                             </div>
                         </div>
                     ))}
-                </div>
+                </Masonry>
             </div>
         </div>
     );
