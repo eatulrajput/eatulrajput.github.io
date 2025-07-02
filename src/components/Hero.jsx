@@ -5,10 +5,11 @@ import heroImage from "/hero.svg";
 const Hero = () => {
     useEffect(() => {
         const typed = new Typed("#typed-text", {
-            strings: ["a student developer", "learning about Tech"],
-            typeSpeed: 80,
-            backSpeed: 50,
+            strings: ["a Backend Developer", "into Machine Learning"],
+            typeSpeed: 40,
+            backSpeed: 40,
             loop: true,
+            showCursor: false,
         });
 
         return () => typed.destroy();
@@ -21,7 +22,7 @@ const Hero = () => {
             <div className="w-full md:w-1/2 text-center md:text-left">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-normal text-black leading-snug">
                     Hi, my name is <br />
-                    <span className="text-blue-600 font-bold">Atul</span> and I'm
+                    <span className="text-blue-600 font-semibold">Atul</span> and I'm
                 </h1>
 
                 <span
