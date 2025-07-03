@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Blog from "./components/Blog";
 import MySpace from "./components/MySpace";
+import NotFound from "./components/NotFound"
 import GTagRouteTracker from './components/GTagRouteTracker';
 import LoadingSpinner from "./components/LoadingSpinner";
 
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/my-space" element={<MySpace />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </Router>
     );
