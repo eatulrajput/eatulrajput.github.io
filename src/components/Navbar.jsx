@@ -42,7 +42,7 @@ const Navbar = () => {
 
                 {/* Desktop Navigation */}
                 <ul className="hidden md:flex space-x-6 text-gray-700 font-medium text-xl">
-                    <li><Link to="/" className="hover:text-blue-600 cursor-pointer">Home</Link></li>
+                    <li><button onClick={() => handleNavClick("hero")} className="hover:text-blue-600 cursor-pointer">Home</button></li>
                     <li><button onClick={() => handleNavClick("about")} className="hover:text-blue-600 cursor-pointer">About</button></li>
                     <li><button onClick={() => handleNavClick("skills")} className="hover:text-blue-600 cursor-pointer">Skills</button></li>
                     <li><button onClick={() => handleNavClick("education")} className="hover:text-blue-600 cursor-pointer">Education</button></li>

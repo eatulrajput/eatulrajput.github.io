@@ -8,9 +8,10 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 
 const Home = () => {
+
     return (
         <main>
-            <section id="home">
+            <section id="hero">
                 <Hero />
             </section>
             <section id="about">

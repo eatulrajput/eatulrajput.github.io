@@ -1,7 +1,13 @@
+import React, { useEffect } from "react";
 import Footer from "./Footer";
 import MediumFeed from "./MediumFeed"; // Import MediumFeed
 
 const Blog = () => {
+
+     useEffect(() => {
+        window.scrollTo(0, 0); // <-- This line ensures top scroll
+      }, []);
+
     return (
         <div className="min-h-screen flex flex-col bg-blue-50 text-black">
             {/* Main Content */}

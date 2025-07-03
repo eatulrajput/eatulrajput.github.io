@@ -27,6 +27,7 @@ const quotes = [
 
 const MySpace = () => {
   useEffect(() => {
+    window.scrollTo(0, 0); // <-- This line ensures top scroll
     AOS.init({
       duration: 800,
       once: true,
