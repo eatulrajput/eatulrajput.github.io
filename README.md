@@ -1,10 +1,7 @@
-# Personal Website Repository - Version 2.0
+# Personal Website Repository
 
-Welcome to the repository of my personal website, rebuilt using modern web technologies for enhanced performance and maintainability. Please note that this project is not open-source.
+I started this project in as a hobby in 2022, I wanted to keep an online presence through a website. It was developed using HTML, CSS initial. After a while tweaking many times in the website, I needed to manually update each components while using pure HTML, CSS, and little knowelege of JavaScript. Then I felt the urgency to learn a new stack React, to avoid the repetition of writing and copy pasting. This is how the website is React based at present.
 
-## Introduction
-
-This repository contains the source code and assets for the updated version of my personal website. The site has been redeveloped using React with Vite and styled with Tailwind CSS to provide a more dynamic and responsive user experience.
 
 ## Technologies Used
 
@@ -14,19 +11,22 @@ The website is built using:
 - **Vite**: A build tool that provides a faster and leaner development experience for modern web projects.
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 - **Illustrations**: Taken from Undraw.
-
-##### Color Coding
-Primary Color: #3c77fc
+- **Website Design**: Just made while taking inspiration from other websites.
+- **Color Coding**: Primary Color is #3c77fc
 
 ## Website Structure
 
-The website comprises several sections:
+The website comprises several pages:
 
-- **Home**: A brief introduction and welcome message.
-- **Portfolio**: A showcase of my projects and work.
-- **About Me**: Information about my background, skills, and interests.
-- **Projects**: Details about the projects I'm working on.
-- **Contact Me**: Ways to get in touch with me.
+- **Home**: A page contains different sections as different components: Hero, About, Skills, Education, Experience, Projects, Contact.
+- **Blog**: A page where I am fetching recently posted 10 blogs on my Medium of profile.
+- **My Space**: A page, where I put my inspiration, and my favourite spotify playlist.
+
+## Features to add:
+
+- [ ] Dark Mode
+- [ ] Optimise Code
+
 
 ## Usage
 
