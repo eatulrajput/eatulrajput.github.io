@@ -54,6 +54,7 @@ const Navbar = () => {
 
                     <li><Link to="/blog" className="hover:text-blue-600">Blog</Link></li>
                     <li><Link to="/my-space" className="hover:text-blue-600">My Space</Link></li>
+                    <li><button className="cursor-pointer"><i class="fa-solid fa-circle-half-stroke"></i></button></li>
                 </ul>
 
                 {/* Mobile Menu Button */}
