@@ -1,6 +1,7 @@
 import React from "react";
 
 const Skills = () => {
+
     return (
         <div id="skills" className="py-16 px-6 bg-gradient-to-br from-blue-100/60 to-blue-200/30 text-gray-800">
             <div className="max-w-5xl mx-auto">
@@ -14,8 +15,12 @@ const Skills = () => {
                 {/* Skills Section */}
                 <div className="grid md:grid-cols-3 gap-8">
                     {/* Languages */}
-                    <div className="p-6 rounded-2xl shadow-xl bg-white backdrop-blur-lg border border-zinc-50 transition duration-300 hover:scale-[1.02]">
+                    <div className="group relative p-6 rounded-2xl shadow-xl bg-white backdrop-blur-lg border border-zinc-50 transition duration-300 hover:scale-[1.02] cursor-pointer">
+                        {/* Animated Line */}
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-blue-600 rounded-full transition-all duration-500 group-hover:w-1/2"></div>
+
                         <h3 className="text-2xl font-semibold text-blue-600 mb-4">Languages</h3>
+
                         <div className="space-y-3 text-lg text-gray-800 font-medium">
                             <p><i className="fa-brands fa-html5 text-orange-500 mr-2"></i> HTML</p>
                             <p><i className="fa-brands fa-css3 text-blue-500 mr-2"></i> CSS</p>
@@ -27,8 +32,14 @@ const Skills = () => {
                         </div>
                     </div>
 
+
+
                     {/* Tools & Technologies */}
-                    <div className="p-6 rounded-2xl shadow-xl bg-white backdrop-blur-lg border border-zinc-50 transition duration-300 hover:scale-[1.02]">
+                    <div className="group relative p-6 rounded-2xl shadow-xl bg-white backdrop-blur-lg border border-zinc-50 transition duration-300 hover:scale-[1.02] cursor-pointer">
+
+                        {/* Animated Line */}
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-blue-600 rounded-full transition-all duration-500 group-hover:w-1/2"></div>
+
                         <h3 className="text-2xl font-semibold text-blue-600 mb-4">Tools & Technologies</h3>
                         <div className="space-y-3 text-lg text-gray-800 font-medium">
                             <p><i className="fa-brands fa-git text-red-500 mr-2"></i> Git</p>
@@ -39,7 +50,11 @@ const Skills = () => {
                     </div>
 
                     {/* Frameworks */}
-                    <div className="p-6 rounded-2xl shadow-xl bg-white backdrop-blur-lg border border-zinc-50 transition duration-300 hover:scale-[1.02]">
+                    <div className="group relative p-6 rounded-2xl shadow-xl bg-white backdrop-blur-lg border border-zinc-50 transition duration-300 hover:scale-[1.02] cursor-pointer">
+
+                        {/* Animated Line */}
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-blue-600 rounded-full transition-all duration-500 group-hover:w-1/2"></div>
+
                         <h3 className="text-2xl font-semibold text-blue-600 mb-4">Frameworks</h3>
                         <div className="space-y-3 text-lg text-gray-800 font-medium">
                             <p><i className="fa-brands fa-react text-blue-400 mr-2"></i> ReactJS</p>
