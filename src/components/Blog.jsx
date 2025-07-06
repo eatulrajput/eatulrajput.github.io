@@ -1,32 +1,48 @@
 import React, { useEffect } from "react";
 import Footer from "./Footer";
-import MediumFeed from "./MediumFeed"; // Import MediumFeed
+import MediumFeed from "./MediumFeed";
 
 const Blog = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-     useEffect(() => {
-        window.scrollTo(0, 0); // <-- This line ensures top scroll
-      }, []);
+  return (
+    <div className="min-h-screen flex flex-col text-black">
+      {/* Parallax Hero Section */}
+      <div className="relative h-[60vh] sm:h-[80vh] md:h-[100vh] overflow-hidden">
+        <div
+          className="absolute inset-0 bg-center bg-cover bg-fixed"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1498307833015-e7b400441eb8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80')",
+          }}
+        />
 
-    return (
-        <div className="min-h-screen flex flex-col bg-blue-50 text-black">
-            {/* Main Content */}
-            <div className="flex-grow py-16">
-                <h2 className="text-3xl md:text-4xl font-semibold text-blue-600 text-center mt-32">
-                Blogs
-                </h2>
-                <p className="text-lg text-gray-700 mt-4 text-center">
-                    Welcome to my blog where I share insights and tutorials.
-                </p>
+        {/* Optional dark overlay */}
+        <div className="absolute inset-0 bg-black/40" />
 
-                {/* Medium Blog Feed */}
-                <MediumFeed />
-            </div>
-
-            {/* Footer at the bottom */}
-            <Footer />
+        <div className="relative z-10 h-full flex items-center justify-center">
+          <h1 className="text-white text-4xl md:text-5xl font-bold text-center">
+            Blogs
+          </h1>
         </div>
-    );
+      </div>
+
+      {/* Main Content */}
+      <div className="flex-grow py-16 px-4 bg-blue-50">
+        <p className="text-lg text-gray-700 text-center max-w-2xl mx-auto mb-12">
+          Welcome to my blog where I share insights and tutorials.
+        </p>
+
+        {/* Medium Blog Feed */}
+        <MediumFeed />
+      </div>
+
+      {/* Footer */}
+      <Footer />
+    </div>
+  );
 };
 
 export default Blog;

@@ -1,6 +1,8 @@
 # Personal Website Repository
 
-I started this project in as a hobby in 2022, I wanted to keep an online presence through a website. It was developed using HTML, CSS initial. After a while tweaking many times in the website, I needed to manually update each components while using pure HTML, CSS, and little knowelege of JavaScript. Then I felt the urgency to learn a new stack React, to avoid the repetition of writing and copy pasting. This is how the website is React based at present.
+I began this project back in 2022 as a hobby, with the simple goal of establishing an online presence through a personal website. Initially, I built it using pure HTML and CSS, along with a bit of JavaScript. However, as I started to expand and maintain the site, I quickly ran into limitations — especially the repetitive work involved in managing similar sections across different pages. Every small update required manually editing multiple files, which was not scalable or efficient.
+
+That experience pushed me to explore better solutions, and that’s when I discovered React. It allowed me to break my site into reusable components and manage content more cleanly, without duplication. Since then, my website has been rebuilt using the React + Vite stack and Tailwind CSS for styling. It’s not just a portfolio — it’s been a personal learning journey in web development, and I continue to improve it as I grow as a developer.
 
 
 ## Technologies Used
@@ -26,6 +28,9 @@ The website comprises several pages:
 
 - [ ] Dark Mode
 - [ ] Optimise Code
+- [ ] Optimise Images
+- [ ] Sticky Navigation
+- [ ] Navigation Active
 
 
 ## Usage

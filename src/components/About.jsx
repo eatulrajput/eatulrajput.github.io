@@ -19,11 +19,11 @@ const About = () => {
                 {/* Glassmorphism Container */}
                 <div className="flex flex-col md:flex-row items-center md:items-start gap-10 p-8 rounded-3xl shadow-xl bg-white backdrop-blur-lg border border-white/30">
                     {/* Profile Image */}
-                    <div className="relative w-1/2 h-1/2 rounded-full overflow-hidden shadow-lg border-2 border-blue-500">
+                    <div className="relative w-1/2 h-1/2 rounded-full overflow-hidden shadow-lg border-2 border-blue-500 cursor-pointer">
                         <img
                             src={profileImage}
                             alt="Profile Picture"
-                            className="w-full h-full object-cover transition-all duration-1000 hover:opacity-0"
+                            className="w-full h-full object-cover transition-all duration-2000 hover:opacity-0"
                         />
                         <img
                             src={hoverProfileImage}

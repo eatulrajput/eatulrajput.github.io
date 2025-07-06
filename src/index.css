@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* Project cards */
 .masonry-column {
   display: flex;
   flex-direction: column;

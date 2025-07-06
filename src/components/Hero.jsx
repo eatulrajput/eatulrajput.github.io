@@ -15,9 +15,15 @@ const Hero = () => {
         return () => typed.destroy();
     }, []);
 
-    return (
-        <section className="w-full max-w-screen-xl mx-auto px-6 py-16 mt-16 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+    const scrollToAbout = () => {
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
+    return (
+        <section className="relative w-full max-w-screen-xl mx-auto px-6 py-16 mt-16 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
             {/* Text Section */}
             <div className="w-full md:w-1/2 text-center md:text-left">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-normal text-black leading-snug">
@@ -30,9 +36,8 @@ const Hero = () => {
                     className="block mt-2 text-3xl sm:text-4xl md:text-5xl font-semibold text-blue-600 leading-snug min-h-[3.5rem]"
                 ></span>
 
-
                 {/* Resume Button */}
-                <div className="mt-8 flex justify-center md:justify-start">
+                <div className="mt-8 mb-10 flex justify-center md:justify-start">
                     <a
                         href="https://drive.google.com/file/d/1n8qqVvLFb8JG5rjfwKGivNEM-Y_0o0Lt/view?usp=sharing"
                         target="_blank"
@@ -56,6 +61,15 @@ const Hero = () => {
                     }}
                 />
             </div>
+
+            {/* Chevron Button - Positioned at bottom center */}
+            <button
+                onClick={scrollToAbout}
+                className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-blue-600 text-4xl animate-bounce cursor-pointer"
+                aria-label="Scroll to About"
+            >
+                <i className="fa-solid fa-chevron-down"></i>
+            </button>
         </section>
     );
 };

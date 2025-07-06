@@ -49,7 +49,7 @@ const Footer = () => {
             className="hover:text-white transition"
             title="LinkedIn"
           >
-            <i className="fab fa-linkedin"></i>
+            <i className="fab fa-linkedin-in"></i>
           </a>
         </div>
 

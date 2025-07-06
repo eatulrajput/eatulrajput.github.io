@@ -53,7 +53,7 @@ const MySpace = () => {
               data-aos-delay={index * 100}
             >
               {/* Image with overlay */}
-              <div className="relative group overflow-hidden rounded-t-2xl h-60">
+              <div className="relative group overflow-hidden rounded-t-2xl h-60 cursor-pointer">
                 <img
                   src={item.image}
                   alt={item.author}

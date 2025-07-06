@@ -45,7 +45,7 @@ const Experience = () => {
                 <img
                   src={exp.image}
                   alt={exp.title}
-                  className="w-full rounded-lg"
+                  className="w-full rounded-lg cursor-pointer"
                 />
               </div>
 
