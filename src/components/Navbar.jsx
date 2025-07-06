@@ -8,26 +8,44 @@ const Navbar = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    // Function to handle navigation and scrolling
     const handleNavClick = (section) => {
         if (location.pathname !== "/") {
-            // Navigate to home first
             navigate("/");
-            setTimeout(() => {
-                scroll.scrollTo(document.getElementById(section).offsetTop, {
+
+            const waitForElement = () => {
+                const el = document.getElementById(section);
+                if (el) {
+                    scroll.scrollTo(el.offsetTop - 100, {
+                        duration: 500,
+                        smooth: "easeInOutQuad",
+                    });
+                } else {
+                    setTimeout(waitForElement, 100);
+                }
+            };
+
+            setTimeout(waitForElement, 300);
+        } else {
+            const el = document.getElementById(section);
+            if (el) {
+                scroll.scrollTo(el.offsetTop - 100, {
                     duration: 500,
                     smooth: "easeInOutQuad",
                 });
-            }, 100); // Delay to ensure the page has loaded
-        } else {
-            // Already on home, just scroll
-            scroll.scrollTo(document.getElementById(section).offsetTop, {
-                duration: 500,
-                smooth: "easeInOutQuad",
-            });
+            }
         }
-        setIsOpen(false); // Close mobile menu
+        setIsOpen(false);
     };
+
+    const sectionLinks = [
+        { label: "Home", section: "hero" },
+        { label: "About", section: "about" },
+        { label: "Skills", section: "skills" },
+        { label: "Education", section: "education" },
+        { label: "Experience", section: "experience" },
+        { label: "Projects", section: "projects" },
+        { label: "Contact", section: "contact" },
+    ];
 
     return (
         <nav className="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-xl shadow-md z-50 h-28">
@@ -39,33 +57,70 @@ const Navbar = () => {
                     </Link>
                 </div>
 
-
                 {/* Desktop Navigation */}
                 <ul className="hidden md:flex space-x-6 text-gray-700 font-medium text-xl">
-                    <li><button onClick={() => handleNavClick("hero")} className="hover:text-blue-600 cursor-pointer">Home</button></li>
-                    <li><button onClick={() => handleNavClick("about")} className="hover:text-blue-600 cursor-pointer">About</button></li>
-                    <li><button onClick={() => handleNavClick("skills")} className="hover:text-blue-600 cursor-pointer">Skills</button></li>
-                    <li><button onClick={() => handleNavClick("education")} className="hover:text-blue-600 cursor-pointer">Education</button></li>
-                    <li><button onClick={() => handleNavClick("experience")} className="hover:text-blue-600 cursor-pointer">Experience</button></li>
-                    <li><button onClick={() => handleNavClick("projects")} className="hover:text-blue-600 cursor-pointer">Projects</button></li>
-                    <li><button onClick={() => handleNavClick("contact")} className="hover:text-blue-600 cursor-pointer">Contact</button></li>
+                    {sectionLinks.map(({ label, section }) => (
+                        <li key={section}>
+                            {location.pathname === "/" ? (
+                                <ScrollLink
+                                    to={section}
+                                    spy={true}
+                                    smooth={true}
+                                    duration={500}
+                                    offset={-100}
+                                    activeClass="bg-blue-600 text-white font-semibold rounded-l px-4 py-2 border border-blue-600"
+                                    className="cursor-pointer px-4 py-2 transition-colors duration-300 rounded-l hover:bg-blue-600 hover:text-white hover:border hover:border-blue-600"
 
-                    {/* Routed Pages */}
+                                >
+                                    {label}
+                                </ScrollLink>
+                            ) : (
+                                <button
+                                    onClick={() => handleNavClick(section)}
+                                    className="cursor-pointer hover:text-blue-600"
+                                >
+                                    {label}
+                                </button>
+                            )}
+                        </li>
+                    ))}
+                    <li>
+                        <Link
+                            to="/blog"
+                            className={`px-4 py-2 rounded-l transition-colors duration-300 hover:bg-blue-600 hover:text-white hover:border hover:border-blue-600 ${location.pathname === "/blog"
+                                ? "bg-blue-600 text-white font-semibold border border-blue-600"
+                                : ""
+                                }`}
+                        >
+                            Blog
+                        </Link>
 
-                    <li><Link to="/blog" className="hover:text-blue-600">Blog</Link></li>
-                    <li><Link to="/my-space" className="hover:text-blue-600">My Space</Link></li>
+                    </li>
+                    <li>
+                        <Link
+                            to="/my-space"
+                            className={`px-4 py-2 rounded-l transition-colors duration-300 hover:bg-blue-600 hover:text-white hover:border hover:border-blue-600 ${location.pathname === "/my-space"
+                                ? "bg-blue-600 text-white font-semibold border border-blue-600"
+                                : ""
+                                }`}
+                        >
+                            My Space
+                        </Link>
+                    </li>
                 </ul>
 
                 {/* Mobile Menu Button */}
-                <button className="md:hidden text-3xl cursor-pointer p-2 hover:bg-zinc-200 rounded-full hover:rotate-90 transition-transform ease-in-out" onClick={() => setIsOpen(!isOpen)}>
+                <button
+                    className="md:hidden text-3xl cursor-pointer p-2 hover:bg-zinc-200 rounded-full hover:rotate-90 transition-transform ease-in-out"
+                    onClick={() => setIsOpen(!isOpen)}
+                >
                     &#9776;
                 </button>
             </div>
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="fixed top-0 left-0 w-full h-screen bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center text-white">
-
+                <div className="fixed top-0 left-0 w-full h-screen bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center text-white z-50">
                     {/* Close Button */}
                     <button
                         aria-label="Close"
@@ -75,61 +130,57 @@ const Navbar = () => {
                         &times;
                     </button>
 
-
-                    <ul className="space-y-4 text-xl">
-                        {/* Routed Links */}
-                        <li>
-                            <Link
-                                to="/"
-                                onClick={() => setIsOpen(false)}
-                                className="block w-full px-4 py-2 text-center rounded-md hover:bg-blue-600 hover:text-white transition-colors"
-                            >
-                                Home
-                            </Link>
-                        </li>
-
-                        <li>
-                            <Link
-                                to="/blog"
-                                onClick={() => setIsOpen(false)}
-                                className="block w-full px-4 py-2 text-center rounded-md hover:bg-blue-600 hover:text-white transition-colors"
-                            >
-                                Blog
-                            </Link>
-                        </li>
-
-                        <li>
-                            <Link
-                                to="/my-space"
-                                onClick={() => setIsOpen(false)}
-                                className="block w-full px-4 py-2 text-center rounded-md hover:bg-blue-600 hover:text-white transition-colors"
-                            >
-                                My Space
-                            </Link>
-                        </li>
-
-                        {/* Scroll-triggering Buttons */}
+                    <ul className="space-y-4 text-xl text-center">
+                        {/* Routed Pages */}
                         {[
-                            { label: "About", section: "about" },
-                            { label: "Skills", section: "skills" },
-                            { label: "Education", section: "education" },
-                            { label: "Experience", section: "experience" },
-                            { label: "Projects", section: "projects" },
-                            { label: "Contact", section: "contact" },
-                        ].map(({ label, section }) => (
-                            <li key={section}>
-                                <button
-                                    onClick={() => handleNavClick(section)}
-                                    className="block w-full text-center px-4 py-2 rounded-md hover:bg-blue-600 hover:text-white transition-colors"
+                            { label: "Home", path: "/" },
+                            { label: "Blog", path: "/blog" },
+                            { label: "My Space", path: "/my-space" },
+                        ].map(({ label, path }) => (
+                            <li key={path}>
+                                <Link
+                                    to={path}
+                                    onClick={() => setIsOpen(false)}
+                                    className={`block w-full px-4 py-2 rounded-md transition-colors duration-300 ${location.pathname === path
+                                            ? "bg-blue-600 text-white font-semibold border border-blue-600"
+                                            : "hover:bg-blue-600 hover:text-white hover:border hover:border-blue-600"
+                                        }`}
                                 >
                                     {label}
-                                </button>
+                                </Link>
+                            </li>
+                        ))}
+
+                        {/* Section Scroll Buttons */}
+                        {sectionLinks.map(({ label, section }) => (
+                            <li key={section}>
+                                {location.pathname === "/" ? (
+                                    <ScrollLink
+                                        to={section}
+                                        spy={true}
+                                        smooth={true}
+                                        duration={500}
+                                        offset={-100}
+                                        activeClass="bg-blue-600 text-white font-semibold border border-blue-600"
+                                        className="block w-full px-4 py-2 rounded-md transition-colors duration-300 hover:bg-blue-600 hover:text-white hover:border hover:border-blue-600 cursor-pointer"
+                                        onClick={() => setIsOpen(false)}
+                                    >
+                                        {label}
+                                    </ScrollLink>
+                                ) : (
+                                    <button
+                                        onClick={() => handleNavClick(section)}
+                                        className="block w-full px-4 py-2 rounded-md transition-colors duration-300 hover:bg-blue-600 hover:text-white hover:border hover:border-blue-600"
+                                    >
+                                        {label}
+                                    </button>
+                                )}
                             </li>
                         ))}
                     </ul>
-
                 </div>
             )}
+
         </nav>
     );
 };
