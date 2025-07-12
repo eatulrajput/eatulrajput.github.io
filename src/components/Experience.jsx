@@ -26,7 +26,11 @@ const Experience = () => {
         {/* Title Section */}
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-semibold text-blue-600 flex items-center justify-center gap-3 mt-32">
+<<<<<<< HEAD
             <i className="fa-solid fa-briefcase mr-2"></i> Work Experience
+=======
+            <i class="fa-solid fa-code-merge"></i> Open Source
+>>>>>>> dev
           </h2>
           <p className="text-gray-600 mt-2">
             A journey of continuous learning and contribution.
