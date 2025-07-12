@@ -5,14 +5,14 @@ const ArticleCard = ({ article }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <div className="bg-white shadow-md hover:shadow-xl transition rounded-2xl overflow-hidden">
-      <div className="overflow-hidden h-56 relative">
+    <div className="bg-white shadow-md hover:shadow-xl transition rounded-2xl overflow-hidden w-[100%]">
+      <div className="overflow-hidden h-80 relative">
         <img
           src={article.imageUrl}
           alt={article.title}
           loading="lazy"
           onLoad={() => setImageLoaded(true)}
-          className={`h-full w-full object-cover transform transition-transform duration-500 hover:scale-110 
+          className={`h-full w-full object-cover transform transition-transform duration-500 hover:scale-110 cursor-pointer
             ${imageLoaded ? "opacity-100" : "opacity-0"} transition-opacity duration-700 ease-in-out`}
         />
         {!imageLoaded && (
@@ -23,17 +23,18 @@ const ArticleCard = ({ article }) => {
       </div>
 
       <div className="p-6">
+        <p className="text-xl text-gray-500">
+          {new Date(article.pubDate).toDateString()} • {article.readingTime} min read
+        </p>
         <a
           href={article.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-lg font-semibold text-blue-600 hover:underline block mb-2"
+          className="font-sans text-3xl text-black hover:underline block mb-2 uppercase leading-12 "
         >
           {article.title}
         </a>
-        <p className="text-sm text-gray-500">
-          {new Date(article.pubDate).toDateString()} • {article.readingTime} min read
-        </p>
+
       </div>
     </div>
   );
