@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body {
+  @apply bg-black text-white;
+}
+
 /* Project cards */
 .masonry-column {
   display: flex;

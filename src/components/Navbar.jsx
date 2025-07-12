@@ -48,7 +48,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-xl shadow-md z-50 h-28">
+        <nav className="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-xl shadow-md z-50 h-28">
             <div className="container mx-auto flex justify-between items-center py-4 px-6">
                 {/* Logo */}
                 <div className="logo">
@@ -58,7 +58,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop Navigation */}
-                <ul className="hidden md:flex space-x-6 text-gray-700 font-medium text-xl">
+                <ul className="hidden xl:flex space-x-6 text-gray-300 font-medium text-xl">
                     {sectionLinks.map(({ label, section }) => (
                         <li key={section}>
                             {location.pathname === "/" ? (
@@ -111,11 +111,22 @@ const Navbar = () => {
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="md:hidden text-3xl cursor-pointer p-2 hover:bg-zinc-200 rounded-full hover:rotate-90 transition-transform ease-in-out"
+                    className="xl:hidden text-xl font-extralight cursor-pointer p-2 hover:bg-white/5 rounded-full transition-transform ease-in-out"
                     onClick={() => setIsOpen(!isOpen)}
                 >
-                    &#9776;
+                    {/* Custom SVG icon */}
+                    <svg
+                        className="w-6 h-6 transition-transform duration-300 ease-in-out hover:rotate-90"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
                 </button>
+
             </div>
 
             {/* Mobile Menu */}
@@ -124,32 +135,14 @@ const Navbar = () => {
                     {/* Close Button */}
                     <button
                         aria-label="Close"
-                        className="absolute top-5 right-5 text-4xl text-white bg-blue-600 hover:bg-blue-700 rounded-full p-3 transition-transform transform hover:rotate-90 cursor-pointer"
+                        className="absolute top-5 right-5 text-6xl text-white bg-black transition-transform transform hover:rotate-70 cursor-pointer duration-300"
                         onClick={() => setIsOpen(false)}
                     >
                         &times;
                     </button>
 
                     <ul className="space-y-4 text-xl text-center">
-                        {/* Routed Pages */}
-                        {[
-                            { label: "Home", path: "/" },
-                            { label: "Blog", path: "/blog" },
-                            { label: "My Space", path: "/my-space" },
-                        ].map(({ label, path }) => (
-                            <li key={path}>
-                                <Link
-                                    to={path}
-                                    onClick={() => setIsOpen(false)}
-                                    className={`block w-full px-4 py-2 rounded-md transition-colors duration-300 ${location.pathname === path
-                                            ? "bg-blue-600 text-white font-semibold border border-blue-600"
-                                            : "hover:bg-blue-600 hover:text-white hover:border hover:border-blue-600"
-                                        }`}
-                                >
-                                    {label}
-                                </Link>
-                            </li>
-                        ))}
+
 
                         {/* Section Scroll Buttons */}
                         {sectionLinks.map(({ label, section }) => (
@@ -175,6 +168,25 @@ const Navbar = () => {
                                         {label}
                                     </button>
                                 )}
+                            </li>
+                        ))}
+
+                        {/* Routed Pages */}
+                        {[
+                            { label: "Blog", path: "/blog" },
+                            { label: "My Space", path: "/my-space" },
+                        ].map(({ label, path }) => (
+                            <li key={path}>
+                                <Link
+                                    to={path}
+                                    onClick={() => setIsOpen(false)}
+                                    className={`block w-full px-4 py-2 rounded-md transition-colors duration-300 ${location.pathname === path
+                                        ? "bg-blue-600 text-white font-semibold border border-blue-600"
+                                        : "hover:bg-blue-600 hover:text-white hover:border hover:border-blue-600"
+                                        }`}
+                                >
+                                    {label}
+                                </Link>
                             </li>
                         ))}
                     </ul>

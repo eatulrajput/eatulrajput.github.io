@@ -57,7 +57,7 @@ const Footer = () => {
               href="https://linkedin.com/in/eatulrajput"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-white transition"
+              className="hover:text-g transition"
               title="LinkedIn"
             >
               <i className="fab fa-linkedin-in"></i>
@@ -83,7 +83,7 @@ const Footer = () => {
         </p>
 
         {/* Branding */}
-        <h1 className="text-[clamp(2.5rem,10vw,8rem)] font-bold bg-gradient-to-b from-blue-700 to-gray-950 bg-clip-text text-transparent text-center">
+        <h1 className="text-[clamp(2.5rem,10vw,8rem)] font-bold bg-gradient-to-b from-blue-700 to-gray-950 bg-clip-text text-transparent text-center ">
           @eatulrajput
         </h1>
       </div>
@@ -92,7 +92,7 @@ const Footer = () => {
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition duration-300"
+          className="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-gradient-to-tl from-black to-blue-900 cursor-pointer transition duration-300"
           title="Back to Top"
         >
           <i className="fas fa-chevron-up text-2xl"></i>

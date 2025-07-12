@@ -5,7 +5,7 @@ const experiences = [
     title: "GirlScript Summer of Code 2024",
     role: "Open Source Contributor",
     description:
-      "Contributed to open-source projects, enhancing their functionality and addressing real-world challenges. Collaborated with developers and mentors, improving coding skills and learning best practices. Gained hands-on experience with Git and GitHub. Earned a certificate of completion for contributions.",
+      "Contributed to open-source projects, enhancing functionality and solving real-world issues. Collaborated with mentors, gained experience with Git/GitHub, and earned a certificate of completion.",
     date: "May 2024 - Aug 2024",
     image: "https://raw.githubusercontent.com/girlscript/gssoc-assets/refs/heads/main/Logos/GS_logo_Black.png",
   },
@@ -13,7 +13,7 @@ const experiences = [
     title: "Hacktoberfest 2023",
     role: "Open Source Contributor",
     description:
-      "Worked as an open-source contributor during Hacktoberfest 2023. Created a portfolio website using ReactJS.",
+      "Worked on open-source during Hacktoberfest 2023. Built a portfolio website using ReactJS, improving collaboration skills and version control.",
     date: "Oct 2023 - Oct 2023",
     image: "https://cdn.bsky.app/img/avatar/plain/did:plc:5kc3hem3ybfs6uy4vamw44d5/bafkreidiofbkictqxvebxnzntkegq5wp5qxv7fa3djkmjui6nyiirmp73m@jpeg",
   },
@@ -21,44 +21,41 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-12 bg-blue-50">
-      <div className="max-w-4xl mx-auto px-6">
-        {/* Title Section */}
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-semibold text-blue-600 flex items-center justify-center gap-3 mt-32">
-            <i className="fa-solid fa-briefcase mr-2"></i> Work Experience
+    <section id="experience" className="py-20 px-6 bg-black text-white">
+      <div className="max-w-5xl mx-auto">
+        {/* Title */}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-500 flex items-center justify-center gap-3 mt-32">
+            <i className="fa-solid fa-briefcase"></i> Work Experience
           </h2>
-          <p className="text-gray-600 mt-2">
-            A journey of continuous learning and contribution.
+          <p className="text-gray-400 mt-2 text-base">
+            A journey of contribution, learning, and collaboration.
           </p>
         </div>
 
-        {/* Experience Timeline */}
-        <div className="space-y-8">
+        {/* Experience Cards */}
+        <div className="grid gap-10">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="flex flex-col md:flex-row items-center md:items-start bg-white shadow-lg rounded-lg p-6 transition-transform hover:scale-105 hover:shadow-xl"
+              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-blue-500/30 transition-all duration-300 group flex flex-col md:flex-row items-center md:items-start gap-6"
             >
-              {/* Image */}
-              <div className="md:w-1/3 flex-shrink-0">
-                <img
-                  src={exp.image}
-                  alt={exp.title}
-                  className="w-full rounded-lg cursor-pointer"
-                />
-              </div>
+              {/* Logo/Image */}
+              <img
+                src={exp.image}
+                alt={exp.title}
+                className="w-24 h-24 md:w-28 md:h-28 object-contain rounded-lg drop-shadow-lg group-hover:scale-105 transition-transform duration-300"
+              />
 
-              {/* Text Content */}
-              <div className="md:w-2/3 mt-4 md:mt-0 md:ml-6">
-                <h3 className="text-2xl font-semibold text-gray-800">
-                  {exp.title}
-                </h3>
-                <h4 className="text-lg text-blue-600 mt-1">{exp.role}</h4>
-                <p className="text-gray-600 mt-2">{exp.description}</p>
-                <span className="block mt-3 text-lg text-gray-500">
-                  <i className="fa-regular fa-calendar"></i> {exp.date}
-                </span>
+              {/* Content */}
+              <div className="text-center md:text-left">
+                <h3 className="text-2xl font-semibold text-white">{exp.title}</h3>
+                <p className="text-blue-400 font-medium mt-1">{exp.role}</p>
+                <p className="text-gray-300 mt-3 text-sm leading-relaxed">{exp.description}</p>
+                <p className="text-gray-400 text-sm mt-4 flex items-center gap-2">
+                  <i className="fa-regular fa-calendar text-blue-300"></i>
+                  {exp.date}
+                </p>
               </div>
             </div>
           ))}

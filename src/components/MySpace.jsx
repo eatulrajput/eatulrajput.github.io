@@ -35,7 +35,7 @@ const MySpace = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-900 via-gray-800 to-black text-gray-200 relative overflow-hidden">
+    <div className="min-h-screen flex flex-col bg-gradient-to-tl from-black to-blue-900 text-gray-200 relative overflow-hidden">
       {/* Main Content */}
       <div className="flex-grow py-16 px-4 sm:px-8 md:px-16">
         <h2 className="text-4xl font-bold text-blue-400 text-center mt-32">My Space</h2>
@@ -44,35 +44,36 @@ const MySpace = () => {
         </p>
 
         {/* Quotes Section */}
-        <div className="max-w-6xl mx-auto mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-7xl mx-auto mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-4">
           {quotes.map((item, index) => (
             <div
               key={item.id}
-              className="bg-gradient-to-br from-gray-800 to-gray-900 shadow-xl rounded-2xl overflow-hidden transform transition duration-300 hover:scale-105 border border-blue-900 hover:border-blue-600"
+              className="bg-gray-950 rounded-2xl border border-blue-900 hover:border-blue-500 shadow-xl transition-transform duration-300 hover:scale-[1.03] ease-in-out overflow-hidden group"
               data-aos="fade-up"
               data-aos-delay={index * 100}
             >
               {/* Image with overlay */}
-              <div className="relative group overflow-hidden rounded-t-2xl h-60 cursor-pointer">
+              <div className="relative h-60 overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.author}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-50 text-white opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-xl font-bold tracking-wide">
-                  {item.author}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-4">
+                  <p className="text-white text-lg font-semibold">{item.author}</p>
                 </div>
               </div>
 
               {/* Quote Text */}
               <div className="p-6 text-center">
-                <p className="text-lg font-semibold italic text-gray-300">"{item.quote}"</p>
-                <p className="mt-4 font-bold text-blue-400">{item.author}</p>
-                <p className="text-sm italic text-gray-500 mt-2">#inspiration #life</p>
+                <p className="text-lg text-gray-300 italic leading-relaxed">"{item.quote}"</p>
+                <p className="mt-4 text-blue-400 font-medium">{item.author}</p>
+                <p className="text-sm text-gray-500 italic mt-2">#inspiration #life</p>
               </div>
             </div>
           ))}
         </div>
+
 
         {/* Spotify Playlist Section */}
         <div className="max-w-3xl mx-auto text-center mt-20 mb-14 bg-gray-900 border border-blue-800 rounded-2xl p-6 shadow-lg">

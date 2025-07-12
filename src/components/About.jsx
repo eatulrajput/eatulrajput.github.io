@@ -3,7 +3,7 @@ import hoverProfileImage from "/hover-profile.webp";
 
 const About = () => {
     return (
-        <div id="about" className="py-16 px-6 bg-white text-gray-800">
+        <div id="about" className="py-16 px-6 bg-black text-gray-800">
             <div className="max-w-5xl mx-auto">
                 <div className="my-8">
   <hr className="border-t-2 border-zinc-300 opacity-60 w-full" />
@@ -17,7 +17,7 @@ const About = () => {
                 </div>
 
                 {/* Glassmorphism Container */}
-                <div className="flex flex-col md:flex-row items-center md:items-start gap-10 p-8 rounded-3xl shadow-xl bg-white backdrop-blur-lg border border-white/30">
+                <div className="flex flex-col md:flex-row items-center md:items-start gap-10 p-8 rounded-3xl shadow-xl bg-gradient-to-tl from-black to-blue-900 border-2 border-transparent hover:border-2 hover:border-blue-400 transition ease-in-out duration-1000 shadow-blue-900/50">
                     {/* Profile Image */}
                     <div className="relative w-1/2 h-1/2 rounded-full overflow-hidden shadow-lg border-2 border-blue-500 cursor-pointer">
                         <img
@@ -34,8 +34,8 @@ const About = () => {
 
                     {/* About Text */}
                     <div className="text-center md:text-left max-w-2xl">
-                        <p className="text-2xl leading-10 text-gray-700">
-                            Hi, I’m <span className="text-blue-600">Atul Rajput</span>! I’m a passionate student exploring the world of technology and innovation.
+                        <p className="text-2xl leading-10 text-gray-300">
+                            Hi, I’m <span className="text-blue-600">Atul Rajput</span> ! I’m a passionate student exploring the world of technology and innovation.
                             With a keen interest in learning and creating, I focus on acquiring the skills needed to transform ideas
                             into impactful projects. I’m driven by curiosity and a commitment to excellence, always striving to
                             grow personally and professionally.

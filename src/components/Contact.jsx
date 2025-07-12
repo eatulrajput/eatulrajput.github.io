@@ -1,77 +1,59 @@
-import ContactSign from "/contact.svg";
-import socialMedia from "/social-media.svg";
 const Contact = () => {
-    return (
-        <div id="contact" className="py-16 px-6 bg-blue-50 text-gray-800">
-            <div className="max-w-6xl mx-auto">
+  return (
+    <section id="contact" className="h-200 py-20 px-6 bg-black text-white">
+      <div className="max-w-4xl mx-auto text-center">
+        {/* Section Title */}
+        <h2 className="text-3xl md:text-4xl font-bold text-blue-500 flex items-center justify-center gap-3 mt-32">
+          <i className="fa-solid fa-handshake"></i> Get In Touch
+        </h2>
+        <p className="text-gray-400 text-lg mt-4">
+          Feel free to reach out via email or connect on LinkedIn.
+        </p>
 
-                {/* Section Title */}
-                <div className="text-center mb-10">
-                    <h2 className="text-3xl md:text-4xl font-semibold text-blue-600 flex items-center justify-center gap-3 mt-32">
-                        <i className="fa-solid fa-handshake "></i> Get In Touch
-                    </h2>
-                </div>
-
-                {/* Contact Section Grid */}
-                <div className="grid md:grid-cols-2 gap-10 items-center">
-
-                    {/* Left Section - Contact Form & Image */}
-                    <div className="flex flex-col items-center">
-                        <img
-                            src={ContactSign}
-                            alt="Contact Illustration"
-                            className="w-3xl mb-6"
-                        />
-
-
-
-
-                        <iframe
-                            className="w-full h-[600px] border-2 border-blue-300 rounded-lg shadow-md"
-                            src="https://docs.google.com/forms/d/e/1FAIpQLSfFaDSA_2XVpIo1gbO7fz6o7-bbUhNozNk0Ri8kjw626vZQKg/viewform?embedded=true"
-                            title="Contact Form"
-                        >
-                            Loading…
-                        </iframe>
-                    </div>
-
-                    {/* Right Section - Social Media Links */}
-                    <div className="flex flex-col items-center">
-                        <p className="text-2xl mb-4">Hey! Let's connect...</p>
-
-                        <div className="flex gap-4 text-blue-600 text-5xl md:flex-1/2 flex-wrap justify-evenly items-center">
-                            <a
-                                href="mailto:eatulrajput@gmail.com"
-                                className="hover:text-blue-800 transition hover:bg-blue-100 p-4 rounded-full"
-                            >
-                                <i className="fa-regular fa-envelope transition-transform duration-300 ease-in-out transform hover:scale-110"></i>
-                            </a>
-
-                            <a href="https://github.com/eatulrajput/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-800 transition hover:bg-blue-100 p-4 rounded-full">
-                                <i className="fa-brands fa-github transition-transform duration-300 ease-in-out transform hover:scale-110"></i>
-                            </a>
-                            <a href="https://discord.com/users/1140188543252172922" target="_blank" rel="noopener noreferrer" className="hover:text-blue-800 transition hover:bg-blue-100 p-4 rounded-full">
-                                <i className="fa-brands fa-discord transition-transform duration-300 ease-in-out transform hover:scale-110"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/eatulrajput/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-800 transition hover:bg-blue-100 p-4 rounded-full">
-                                <i className="fa-brands fa-linkedin-in transition-transform duration-300 ease-in-out transform hover:scale-110"></i>
-                            </a>
-                            <a href="https://medium.com/@eatulrajput" target="_blank" rel="noopener noreferrer" className="hover:text-blue-800 transition hover:bg-blue-100 p-4 rounded-full">
-                                <i className="fa-brands fa-medium transition-transform duration-300 ease-in-out transform hover:scale-110"></i>
-                            </a>
-                        </div>
-
-                        <img
-                            src={socialMedia}
-                            alt="Social Media Illustration"
-                            className="w-3xl mt-6"
-                        />
-                    </div>
-
-                </div>
-            </div>
+        {/* Social Icons */}
+        <div className="flex flex-wrap justify-center gap-6 text-5xl mt-10">
+          {[
+            {
+              href: "mailto:eatulrajput@gmail.com",
+              icon: "fa-regular fa-envelope",
+              label: "Email",
+            },
+            {
+              href: "https://github.com/eatulrajput/",
+              icon: "fa-brands fa-github",
+              label: "GitHub",
+            },
+            {
+              href: "https://discord.com/users/1140188543252172922",
+              icon: "fa-brands fa-discord",
+              label: "Discord",
+            },
+            {
+              href: "https://www.linkedin.com/in/eatulrajput/",
+              icon: "fa-brands fa-linkedin-in",
+              label: "LinkedIn",
+            },
+            {
+              href: "https://medium.com/@eatulrajput",
+              icon: "fa-brands fa-medium",
+              label: "Medium",
+            },
+          ].map((item, idx) => (
+            <a
+              key={idx}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              title={item.label}
+              className="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md hover:scale-110 hover:bg-gradient-to-tl from-black to-blue-900 transition-all duration-300 shadow-sm hover:shadow-blue-400/30"
+            >
+              <i className={item.icon}></i>
+            </a>
+          ))}
         </div>
-    );
+      </div>
+    </section>
+  );
 };
 
 export default Contact;
