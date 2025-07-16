@@ -25,7 +25,7 @@ const quotes = [
   },
 ];
 
-const MySpace = () => {
+const Nest = () => {
   useEffect(() => {
     window.scrollTo(0, 0); // <-- This line ensures top scroll
     AOS.init({
@@ -100,4 +100,4 @@ const MySpace = () => {
   );
 };
 
-export default MySpace;
+export default Nest;

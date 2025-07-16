@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import Blog from "./components/Blog";
-import MySpace from "./components/MySpace";
+import Nest from "./components/Nest";
 import Docs from "./components/Docs";
 import Git from "./components/docs/Git";
 import NotFound from "./components/NotFound"
@@ -30,7 +30,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/blog" element={<Blog />} />
-                <Route path="/my-space" element={<MySpace />} />
+                <Route path="/nest" element={<Nest />} />
                 <Route path="/docs" element={<Docs />} />
                 <Route path="/docs/git" element={<Git />} />
                 <Route path="*" element={<NotFound />} />

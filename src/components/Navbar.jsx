@@ -100,13 +100,13 @@ const Navbar = () => {
 
                     <li>
                         <Link
-                            to="/my-space"
-                            className={`px-4 py-2 rounded-l transition-colors duration-300 hover:bg-blue-600 hover:text-white hover:border hover:border-blue-600 ${location.pathname === "/my-space"
+                            to="/nest"
+                            className={`px-4 py-2 rounded-l transition-colors duration-300 hover:bg-blue-600 hover:text-white hover:border hover:border-blue-600 ${location.pathname === "/nest"
                                 ? "bg-blue-600 text-white font-semibold border border-blue-600"
                                 : ""
                                 }`}
                         >
-                            My Space
+                            Nest
                         </Link>
                     </li>
 
@@ -189,7 +189,8 @@ const Navbar = () => {
                         {/* Routed Pages */}
                         {[
                             { label: "Blog", path: "/blog" },
-                            { label: "My Space", path: "/my-space" },
+                            { label: "Nest", path: "/nest" },
+                            { label: "Docs", path: "/docs" },
                         ].map(({ label, path }) => (
                             <li key={path}>
                                 <Link
