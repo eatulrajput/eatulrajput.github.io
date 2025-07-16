@@ -84,6 +84,7 @@ const Navbar = () => {
                             )}
                         </li>
                     ))}
+
                     <li>
                         <Link
                             to="/blog"
@@ -96,6 +97,7 @@ const Navbar = () => {
                         </Link>
 
                     </li>
+
                     <li>
                         <Link
                             to="/my-space"
@@ -106,6 +108,19 @@ const Navbar = () => {
                         >
                             My Space
                         </Link>
+                    </li>
+
+                    <li>
+                        <Link
+                            to="/docs"
+                            className={`px-4 py-2 rounded-l transition-colors duration-300 hover:bg-blue-600 hover:text-white hover:border hover:border-blue-600 ${location.pathname === "/docs"
+                                ? "bg-blue-600 text-white font-semibold border border-blue-600"
+                                : ""
+                                }`}
+                        >
+                            Docs
+                        </Link>
+
                     </li>
                 </ul>
 
