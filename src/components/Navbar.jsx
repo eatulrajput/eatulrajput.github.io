@@ -53,7 +53,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <div className="logo">
                     <Link to="/">
-                        <img src={Logo} alt="Website Logo" className="h-20 rounded-full" />
+                        <p className="font-thin uppercase font-mono text-3xl">// DEVNEST //</p>
                     </Link>
                 </div>
 
