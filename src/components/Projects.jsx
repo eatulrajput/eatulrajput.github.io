@@ -8,59 +8,6 @@ import Masonry from "react-masonry-css";
 const projects = [
     {
         id: 1,
-        category: 'Frontend',
-        title: "Profile Card Template",
-        tech: "HTML, CSS, JavaScript",
-        desc: "This project is a profile card showcasing the basics of frontend development.",
-        liveLink: "https://eatulrajput-profile-card.netlify.app/",
-        codeLink: "https://github.com/eatulrajput/profile-card",
-        image: "card.webp",
-    },
-    {
-        id: 2,
-        category: 'Frontend',
-        title: "Stack Sync",
-        tech: "HTML, CSS",
-        desc: "This project is where I kept my all profile links.",
-        liveLink: "https://atulrajput.netlify.app/",
-        codeLink: "https://github.com/eatulrajput/profile-card-2",
-        image: "card.webp",
-    },
-    {
-        id: 3,
-        category: 'Frontend',
-        title: "Weather Website",
-        tech: "HTML, CSS, JavaScript, Rapid API",
-        desc: "Google Solution Challenge 2024 project: This project is a Weather website fetching data through weather API.",
-        liveLink: "https://eatulrajput-weather.netlify.app/",
-        codeLink: "https://github.com/eatulrajput/weather-website",
-        image: "weather.webp",
-    },
-
-    {
-        id: 4,
-        category: 'IoT',
-        title: "IIoT Group Project",
-        tech: "NodeMCU(ESP8266), Ultrasonic Sensor, Arduino IDE",
-        desc: "College project developed within team members.",
-        liveLink: "https://team-project1.netlify.app/",
-        codeLink: "https://github.com/eatulrajput/cyberphysics-in-iiot-project",
-        image: "card.webp",
-    },
-
-    {
-        id: 5,
-        category: 'Game Development',
-        title: "Break Out Game",
-        tech: "Java, Python",
-        desc: "College project developed within team members.",
-        liveLink: "https://break-out-game-project.netlify.app/",
-        codeLink: "https://github.com/eatulrajput/Break-Out-Game",
-        image: "card.webp",
-    },
-
-    {
-        id: 6,
         category: 'AI / ML',
         title: "Face Track",
         tech: "Python, OpenCV",
@@ -71,18 +18,7 @@ const projects = [
     },
 
     {
-        id: 7,
-        category: 'Hackathon',
-        title: "Community Mapping for Resilience",
-        tech: "NASA Earth Observations, JavaScript, Google Maps API",
-        desc: "NASA Space Apps Challenge 2024 team project",
-        liveLink: "https://event-horizon-team.netlify.app/",
-        codeLink: "https://github.com/Sahi1l-Kumar/dharavi-web-map",
-        image: "community.webp",
-    },
-
-    {
-        id: 8,
+        id: 2,
         category: 'AI / ML',
         title: "Coffee Chatbot",
         tech: "Python, Streamlit, Gemini",
@@ -93,7 +29,7 @@ const projects = [
     },
 
     {
-        id: 9,
+        id: 3,
         category: 'Full Stack',
         title: "Task Master",
         tech: "Python, Django",
@@ -104,7 +40,7 @@ const projects = [
     },
     
     {
-        id: 10,
+        id: 4,
         category: 'AI / ML',
         title: "Harmonybot",
         tech: "Python, Streamlit, Perspective API",
@@ -115,7 +51,7 @@ const projects = [
     },
 
     {
-        id: 11,
+        id: 5,
         category: 'AI / ML',
         title: "Finfy",
         tech: "Python, Flask, Logistic Regression",

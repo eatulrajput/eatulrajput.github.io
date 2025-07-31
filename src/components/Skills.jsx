@@ -2,16 +2,7 @@ import React from "react";
 
 // Skills data
 const skillsData = [
-    {
-        category: "Languages",
-        iconClass: "fa-brands fa-html5 text-orange-500",
-        name: "HTML",
-    },
-    {
-        category: "Languages",
-        iconClass: "fa-brands fa-css3 text-blue-500",
-        name: "CSS",
-    },
+    
     {
         category: "Languages",
         iconClass: "fa-brands fa-java text-red-600",
@@ -22,16 +13,7 @@ const skillsData = [
         iconClass: "fa-brands fa-python text-yellow-500",
         name: "Python",
     },
-    {
-        category: "Languages",
-        iconClass: "fa-brands fa-js text-yellow-400",
-        name: "JavaScript",
-    },
-    {
-        category: "Languages",
-        iconClass: "fa-solid fa-code text-gray-700",
-        name: "C Programming",
-    },
+    
     {
         category: "Languages",
         iconClass: "fa-solid fa-database text-blue-700",
@@ -59,11 +41,6 @@ const skillsData = [
     },
     {
         category: "Frameworks",
-        iconClass: "fa-brands fa-react text-blue-400",
-        name: "ReactJS",
-    },
-    {
-        category: "Frameworks",
         iconClass: "fa-solid fa-leaf text-green-600",
         name: "Django",
     },
@@ -71,6 +48,11 @@ const skillsData = [
         category: "Frameworks",
         iconClass: "fa-solid fa-fire text-red-500",
         name: "Flask",
+    },
+    {
+        category: "Frameworks",
+        iconClass:"fa-solid fa-bolt text-white",
+        name: "FastAPI",
     },
 ];
 

@@ -37,6 +37,9 @@ const Footer = () => {
             <a href="https://xvert.netlify.app/" className="hover:text-white transition">
               Xvert
             </a>
+            <a href="https://atulrajput.netlify.app/" className="hover:text-white transition">
+              StackSync
+            </a>
           </nav>
         </div>
 
@@ -57,7 +60,7 @@ const Footer = () => {
               href="https://linkedin.com/in/eatulrajput"
               target="_blank"
               rel="noreferrer"
-              className="hover:text-g transition"
+              className="hover:text-white transition"
               title="LinkedIn"
             >
               <i className="fab fa-linkedin-in"></i>

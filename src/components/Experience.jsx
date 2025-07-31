@@ -1,6 +1,17 @@
 import React from "react";
 
 const experiences = [
+
+  {
+    title: "Keploy API Fellowship 2025",
+    role: "API Fellow",
+    description:
+      "Learnt about Open Source, Licensing, Testing, GitHub Actions, API Development, also Introduced to LLM models and Built a Unit Tester based on LLM",
+    date: "June 2025 - July 2025",
+    image: "https://keploy.io/docs/img/keploy-logo-dark.svg",
+  },
+
+
   {
     title: "GirlScript Summer of Code 2024",
     role: "Open Source Contributor",
