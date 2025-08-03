@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Footer from "./Footer";
 import MediumFeed from "./MediumFeed";
+import Spline from "@splinetool/react-spline";
 
 const Blog = () => {
   useEffect(() => {
@@ -8,32 +9,31 @@ const Blog = () => {
   }, []);
 
   return (
-    <div className="bg-black min-h-screen flex flex-col text-black">
-      {/* Parallax Hero Section */}
-      <div className="relative h-[60vh] sm:h-[80vh] md:h-[100vh] overflow-hidden">
-        <div
-          className="absolute inset-0 bg-center bg-cover bg-fixed"
-          style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1498307833015-e7b400441eb8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80')",
-          }}
-        />
-        <div className="relative z-10 h-full flex items-center justify-center">
-          <h1 className="text-white text-4xl md:text-5xl font-bold text-center">
-            Blogs
-          </h1>
+    <div className="bg-black text-white min-h-screen flex flex-col">
+      {/* Hero Section */}
+      <section className="w-full grid grid-cols-1 md:grid-cols-2 items-center py-16 px-6 md:px-16 gap-10">
+        {/* Text Content */}
+        <div className="z-10 order-1 md:order-none text-center md:text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Blogs</h1>
+          <p className="text-base sm:text-lg text-gray-300 max-w-xl mx-auto md:mx-0">
+            Welcome to my blog where I share insights, tutorials, and stories
+            about backend development, machine learning, and building real-world
+            projects.
+          </p>
         </div>
-      </div>
 
-      {/* Main Content */}
-      <div className="flex-grow py-16 px-4">
-        <p className="text-lg text-gray-700 text-center max-w-2xl mx-auto mb-12">
-          Welcome to my blog where I share insights and tutorials.
-        </p>
+        {/* Spline Hero 3D Illustration */}
+        <div className="w-full h-[300px] sm:h-[400px] md:h-[500px]">
+          <Spline scene="https://prod.spline.design/tO6KM94EyYqZZTyJ/scene.splinecode" />
+        </div>
+      </section>
 
-        {/* Medium Blog Feed */}
-        <MediumFeed />
-      </div>
+      {/* Blog Feed */}
+      <main className="bg-black py-16 px-4">
+        <div className="max-w-4xl mx-auto">
+          <MediumFeed />
+        </div>
+      </main>
 
       {/* Footer */}
       <Footer />
