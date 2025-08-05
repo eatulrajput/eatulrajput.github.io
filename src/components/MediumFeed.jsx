@@ -5,7 +5,7 @@ const ArticleCard = ({ article }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
-    <div className="bg-gray-950 shadow-lg hover:shadow-xl transition rounded-xl overflow-hidden">
+    <div className="shadow-lg hover:shadow-xl transition rounded-xl overflow-hidden">
       <div className="relative h-70 overflow-hidden">
         <img
           src={article.imageUrl}
@@ -23,7 +23,7 @@ const ArticleCard = ({ article }) => {
       </div>
 
       <div className="p-6">
-        <p className="text-sm text-gray-400 mb-2">
+        <p className="text-sm text-emerald-300 mb-2">
           {new Date(article.pubDate).toLocaleDateString(undefined, {
             year: "numeric",
             month: "short",
@@ -36,7 +36,7 @@ const ArticleCard = ({ article }) => {
           href={article.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-2xl font-semibold text-blue-300 hover:underline block mb-2 uppercase"
+          className="text-xl font-semibold text-white hover:text-white/50 block mb-2 capitalize"
         >
           {article.title}
         </a>
@@ -97,41 +97,29 @@ const MediumFeed = () => {
   }, [visibleCount, articles.length]);
 
   return (
-    <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <h2 className="text-4xl font-bold text-center text-blue-600 mb-10">
-        Latest from Medium
-      </h2>
+    <div className="max-w-full mx-0 px-4 sm:px-6 lg:px-8 py-16">
 
-      <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2">
+      <div className="w-full flex justify-between items-center">
+        <h2 className="text-3xl font-medium text-left text-white mb-10">
+          Featured Blogs
+        </h2>
+        <a
+          href="https://medium.com/@eatulrajput"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-lg px-6 py-3 text-emerald-400 font-medium border-2 border-emerald-600 shadow hover:bg-white hover:text-black hover:border-white rounded-full transition mb-10"
+        >
+          View All
+        </a>
+      </div>
+
+      <div className="grid gap-20 sm:grid-cols-1 md:grid-cols-3">
         {articles.slice(0, visibleCount).map((article) => (
           <ArticleCard key={article.link} article={article} />
         ))}
       </div>
 
-      {/* Load More */}
-      {visibleCount < articles.length ? (
-        <div className="text-center mt-10">
-          <button
-            onClick={() =>
-              setVisibleCount((prev) => Math.min(prev + 5, articles.length))
-            }
-            className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow hover:bg-blue-700 transition"
-          >
-            Load More
-          </button>
-        </div>
-      ) : articles.length > 0 ? (
-        <div className="text-center mt-10">
-          <a
-            href="https://medium.com/@eatulrajput"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 bg-gray-800 text-white font-medium rounded-lg shadow hover:bg-gray-900 transition"
-          >
-            View All on Medium
-          </a>
-        </div>
-      ) : null}
+
     </div>
   );
 };

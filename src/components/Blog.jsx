@@ -30,7 +30,7 @@ const Blog = () => {
 
       {/* Blog Feed */}
       <main className="bg-black py-16 px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-full mx-auto">
           <MediumFeed />
         </div>
       </main>

@@ -49,7 +49,7 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-lg hover:shadow-blue-500/30 transition-all duration-300 group flex flex-col md:flex-row items-center md:items-start gap-6"
+              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-lg hover:border-blue-500 transition-all duration-300 group flex flex-col md:flex-row items-center md:items-start gap-6"
             >
               {/* Logo/Image */}
               <img

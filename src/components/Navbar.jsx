@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import Logo from "/logo.gif";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -48,10 +47,11 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-xl shadow-md z-50 h-28">
+        <nav className="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-xl shadow-md z-50 h-20 flex justify-center items-center">
+            
             <div className="container mx-auto flex justify-between items-center py-4 px-6">
                 {/* Logo */}
-                <div className="logo">
+                <div>
                     <Link to="/">
                         <p className="font-thin uppercase font-mono text-3xl">// DEVNEST //</p>
                     </Link>

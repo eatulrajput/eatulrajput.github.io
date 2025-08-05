@@ -15,7 +15,7 @@ const Education = () => {
         {/* Cards */}
         <div className="grid gap-10 md:grid-cols-2">
           {/* University */}
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-xl hover:shadow-blue-500/20 transition duration-300 ease-in-out group">
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-xl hover:border-blue-500 transition duration-300 ease-in-out group">
             <div className="flex flex-col items-center text-center md:flex-row md:text-left gap-6">
               <img
                 src={University}
@@ -33,7 +33,7 @@ const Education = () => {
           </div>
 
           {/* School */}
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-xl hover:shadow-blue-500/20 transition duration-300 ease-in-out group">
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 shadow-xl hover:border-blue-500 transition duration-300 ease-in-out group">
             <div className="flex flex-col items-center text-center md:flex-row md:text-left gap-6">
               <img
                 src={School}
