@@ -20,12 +20,12 @@ const projects = [
     {
         id: 2,
         category: 'AI / ML',
-        title: "Coffee Chatbot",
-        tech: "Python, Streamlit, Gemini",
+        title: "Coffee Bot",
+        tech: "Python, FastAPI, Gemini API",
         desc: "a conversational chatbot interface ",
-        liveLink: "https://coffeechatbot.streamlit.app/",
-        codeLink: "https://github.com/eatulrajput/coffee-chat-bot",
-        image: "coffeechatbot.webp",
+        liveLink: "https://eatulrajput.hashnode.dev/coffee-bot-from-gemini-api-in-streamlit-to-fastapi",
+        codeLink: "https://github.com/eatulrajput/coffeebot",
+        image: "coffeebot.webp",
     },
 
     {
