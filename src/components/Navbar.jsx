@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
@@ -46,9 +46,23 @@ const Navbar = () => {
         { label: "Contact", section: "contact" },
     ];
 
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+
+
+        // Cleanup on unmount
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [isOpen]);
+
     return (
         <nav className="fixed top-0 left-0 w-full bg-black/70 backdrop-blur-xl shadow-md z-50 h-20 flex justify-center items-center">
-            
+
             <div className="container mx-auto flex justify-between items-center py-4 px-6">
                 {/* Logo */}
                 <div>
@@ -146,7 +160,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="fixed top-0 left-0 w-full h-screen bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center text-white z-50">
+                <div className="fixed top-0 left-0 overflow-y-auto w-full h-screen bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center text-white z-50">
                     {/* Close Button */}
                     <button
                         aria-label="Close"
