@@ -8,19 +8,19 @@ const quotes = [
   {
     id: 1,
     author: "Bruce Lee",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTAXCUqjTzHINQbj5KTBAxzb4ajETP2COtmg&s",
+    image: "./people/p1.webp",
     quote: "Be water, my friend.",
   },
   {
     id: 2,
     author: "Albert Einstein",
-    image: "https://upload.wikimedia.org/wikipedia/commons/d/d3/Albert_Einstein_Head.jpg",
+    image: "./people/p2.webp",
     quote: "Imagination is more important than knowledge.",
   },
   {
     id: 3,
     author: "Florian Christl",
-    image: "florian.webp",
+    image: "./people/p3.webp",
     quote: "Music is the language of emotions.",
   },
 ];
@@ -74,6 +74,88 @@ const Nest = () => {
           ))}
         </div>
 
+        {/* Normal Style Gallery Grid */}
+        {/* Gallery Section */}
+        <div className="mt-28">
+          <h3 className="text-4xl font-bold text-center text-blue-400 mb-6">Visual Inspirations</h3>
+          <p className="text-center text-gray-400 text-lg mb-12">
+            A glimpse into the visuals that spark creativity and calm.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4" data-aos="fade-up">
+            {[
+              "./gallery/photo1.webp",
+              "./gallery/photo2.webp",
+              "./gallery/photo3.webp",
+              "./gallery/photo4.webp",
+              "./gallery/photo5.webp",
+              "./gallery/photo6.webp",
+              "./gallery/photo7.webp",
+              "./gallery/photo8.webp",
+              "./gallery/photo9.webp",
+              "./gallery/photo10.webp",
+
+
+
+            ].map((img, i) => (
+              <div
+                key={i}
+                className="overflow-hidden rounded-xl border border-blue-900 hover:border-blue-500 shadow-md transition-transform duration-300 hover:scale-105 hover:cursor-pointer"
+                data-aos="zoom-in"
+                data-aos-delay={i * 100}
+              >
+                <img
+                  src={img}
+                  alt={`Gallery ${i + 1}`}
+                  className="w-full h-100 object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Experiement: Unsplash Style Gallery Grid */}
+        {/* Gallery Section */}
+        {/* <div className="mt-28">
+          <h3 className="text-4xl font-bold text-center text-blue-400 mb-6">Visual Inspirations</h3>
+          <p className="text-center text-gray-400 text-lg mb-12">
+            A glimpse into the visuals that spark creativity and calm.
+          </p> */}
+
+        {/* Masonry-style grid */}
+        {/* <div
+            className="columns-1 sm:columns-2 md:columns-3 gap-4 max-w-7xl mx-auto px-4"
+            data-aos="fade-up"
+          >
+            {[
+              "./gallery/photo1.webp",
+              "./gallery/photo2.webp",
+              "./gallery/photo3.webp",
+              "./gallery/photo4.webp",
+              "./gallery/photo5.webp",
+              "./gallery/photo6.webp",
+              "./gallery/photo7.webp",
+              "./gallery/photo8.webp",
+              "./gallery/photo9.webp",
+              "./gallery/photo10.webp",
+            ].map((src, i) => (
+              <div
+                key={i}
+                className="mb-4 break-inside-avoid rounded-xl overflow-hidden border border-blue-900 hover:border-blue-500 shadow-md transition-transform duration-300 hover:scale-[1.03]"
+                data-aos="zoom-in"
+                data-aos-delay={i * 100}
+              >
+                <img
+                  src={src}
+                  alt={`Gallery ${i + 1}`}
+                  className="w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+                />
+              </div>
+            ))}
+          </div>
+        </div> */}
+
+        {/* Gallery ends here */}
 
         {/* Spotify Playlist Section */}
         <div className="max-w-3xl mx-auto text-center mt-20 mb-14 bg-gray-900 border border-blue-800 rounded-2xl p-6 shadow-lg">

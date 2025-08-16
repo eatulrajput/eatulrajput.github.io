@@ -99,43 +99,40 @@ const Navbar = () => {
                         </li>
                     ))}
 
-                    <li>
-                        <Link
-                            to="/blog"
-                            className={`px-4 py-2 rounded-l transition-colors duration-300 hover:bg-blue-600 hover:text-white hover:border hover:border-blue-600 ${location.pathname === "/blog"
-                                ? "bg-blue-600 text-white font-semibold border border-blue-600"
-                                : ""
-                                }`}
-                        >
-                            Blog
-                        </Link>
+                    {/* Drop Down menu */}
+                    <li className="relative group">
+                        <div className="flex items-center space-x-1 px-4 py-0 transition-colors duration-300 hover:bg-blue-600 hover:text-white hover:border hover:border-blue-600 rounded-l cursor-pointer">
+                            <span>More</span>
+                            <svg
+                                className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth={2}
+                                viewBox="0 0 24 24"
+                            >
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
 
+                        <ul className="absolute right-0 mt-2 w-40 bg-white/5 backdrop-blur-lg text-white rounded shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-opacity duration-300 z-50">
+                            {[
+                                { label: "Blog", path: "/blog" },
+                                { label: "Nest", path: "/nest" },
+                                { label: "Docs", path: "/docs" },
+                            ].map(({ label, path }) => (
+                                <li key={path}>
+                                    <Link
+                                        to={path}
+                                        className={`block px-4 py-2 hover:bg-white/5 transition ${location.pathname === path ? "font-semibold text-blue-600" : ""
+                                            }`}
+                                    >
+                                        {label}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
                     </li>
 
-                    <li>
-                        <Link
-                            to="/nest"
-                            className={`px-4 py-2 rounded-l transition-colors duration-300 hover:bg-blue-600 hover:text-white hover:border hover:border-blue-600 ${location.pathname === "/nest"
-                                ? "bg-blue-600 text-white font-semibold border border-blue-600"
-                                : ""
-                                }`}
-                        >
-                            Nest
-                        </Link>
-                    </li>
-
-                    <li>
-                        <Link
-                            to="/docs"
-                            className={`px-4 py-2 rounded-l transition-colors duration-300 hover:bg-blue-600 hover:text-white hover:border hover:border-blue-600 ${location.pathname === "/docs"
-                                ? "bg-blue-600 text-white font-semibold border border-blue-600"
-                                : ""
-                                }`}
-                        >
-                            Docs
-                        </Link>
-
-                    </li>
                 </ul>
 
                 {/* Mobile Menu Button */}
