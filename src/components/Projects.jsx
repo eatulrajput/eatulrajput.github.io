@@ -122,18 +122,18 @@ const Projects = () => {
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition text-sm"
+                      className="px-2 py-2 bg-gray-700 text-white rounded-xl hover:bg-gray-800 transition text-lg"
                     >
-                      Live <i className="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                     <i className="fa-solid fa-arrow-up-right-from-square ml-1"></i>
                     </a>
                   )}
                   <a
                     href={project.codeLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-800 transition text-sm"
+                    className="px-2 py-2 bg-gray-700 text-white rounded-xl hover:bg-gray-800 transition text-lg"
                   >
-                    Code <i className="fa-solid fa-code ml-1"></i>
+                   <i className="fa-solid fa-code ml-1"></i>
                   </a>
                 </div>
               </div>
