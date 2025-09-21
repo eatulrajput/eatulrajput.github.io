@@ -44,11 +44,16 @@ const Hero = () => {
                         href="https://drive.google.com/file/d/1n8qqVvLFb8JG5rjfwKGivNEM-Y_0o0Lt/view?usp=sharing"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="group inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white text-base md:text-lg font-medium rounded-full shadow-lg transition-all duration-300 hover:bg-gradient-to-tl from-black to-blue-900  border border-blue-600"
+                        className="group inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white text-base md:text-lg font-medium rounded-full shadow-lg transition-all duration-300 hover:bg-gradient-to-tl from-black to-blue-900  border border-blue-600 w-fit  ml-3 mr-8"
                     >
                         <i className="fa-solid fa-circle-chevron-down group-hover:translate-y-1 transition-transform duration-300"></i>
                         Resume
                     </a>
+
+
+                    <a class="group inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white text-base md:text-lg font-medium rounded-full shadow-lg transition-all duration-300 hover:bg-gradient-to-tl from-black to-blue-900  border border-blue-600 w-fit  ml-3 mr-8" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=eatulrajput" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square group-hover:-translate-y-1 transition-transform duration-300"></i>LinkedIn</a>
+
+
                 </div>
             </div>
 
