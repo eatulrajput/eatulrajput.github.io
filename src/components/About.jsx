@@ -1,5 +1,4 @@
-import profileImage from "/profile.webp";
-import hoverProfileImage from "/hover-profile.webp";
+import { User } from 'lucide-react';
 
 const About = () => {
     return (
@@ -12,7 +11,7 @@ const About = () => {
                 {/* Section Title */}
                 <div className="text-center mb-10">
                     <h2 className="text-3xl md:text-4xl font-semibold text-blue-600 flex items-center justify-center gap-3 mt-32">
-                        <i className="fa-regular fa-user"></i> About Me
+                        <User className="w-12 h-12"/> About Me
                     </h2>
                 </div>
 
@@ -21,12 +20,12 @@ const About = () => {
                     {/* Profile Image */}
                     <div className="relative w-1/2 h-1/2 rounded-full overflow-hidden shadow-lg border-2 border-blue-500 cursor-pointer">
                         <img
-                            src={profileImage}
+                            src="https://images.unsplash.com/photo-1577375729152-4c8b5fcda381"
                             alt="Profile Picture"
                             className="w-full h-full object-cover transition-all duration-2000 hover:opacity-0"
                         />
                         <img
-                            src={hoverProfileImage}
+                            src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61"
                             alt="Hover Profile Picture"
                             className="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-300 hover:opacity-100"
                         />
@@ -35,10 +34,8 @@ const About = () => {
                     {/* About Text */}
                     <div className="text-center md:text-left max-w-2xl">
                         <p className="text-2xl leading-10 text-gray-300">
-                            Hi, I’m <span className="text-blue-600">Atul Rajput</span> ! I’m a passionate student exploring the world of technology and innovation.
-                            With a keen interest in learning and creating, I focus on acquiring the skills needed to transform ideas
-                            into impactful projects. I’m driven by curiosity and a commitment to excellence, always striving to
-                            grow personally and professionally.
+                            Hi, I’m <span className="text-blue-600">Dev</span> ! lorem500 ipsum dolor sit amet, consectetur adipiscing elit.
+                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
                     </div>
                 </div>

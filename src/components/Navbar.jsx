@@ -67,7 +67,7 @@ const Navbar = () => {
                 {/* Logo */}
                 <div>
                     <Link to="/">
-                        <p className="font-thin uppercase font-mono text-3xl">// DEVNEST //</p>
+                        <p className="font-thin uppercase font-mono text-3xl text-white">// DEVNEST //</p>
                     </Link>
                 </div>
 

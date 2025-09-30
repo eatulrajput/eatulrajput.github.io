@@ -1,40 +1,90 @@
-# Personal Website Repository
+# Personal Website Template
 
-I began this project back in 2022 as a hobby, with the simple goal of establishing an online presence through a personal website. Initially, I built it using pure HTML and CSS, along with a bit of JavaScript. However, as I started to expand and maintain the site, I quickly ran into limitations — especially the repetitive work involved in managing similar sections across different pages. Every small update required manually editing multiple files, which was not scalable or efficient.
+![Screenshot](./public/Sample.png)
 
-That experience pushed me to explore better solutions, and that’s when I discovered React. It allowed me to break my site into reusable components and manage content more cleanly, without duplication. Since then, my website has been rebuilt using the React + Vite stack and Tailwind CSS for styling. It’s not just a portfolio — it’s been a personal learning journey in web development, and I continue to improve it as I grow as a developer.
+To see more screenshots look into screenshot folder.
 
+This project started as a hobby project in 2022 with the goal of creating a personal website. It was originally built using HTML, CSS, and some JavaScript. Over time, the need for a more scalable and maintainable structure led to rebuilding the site using modern technologies like React, Vite, and Tailwind CSS.
 
-## Technologies Used
+This project has served as a learning experience in modern front-end development, with a focus on reusable components, responsive design, and clean UI/UX.
 
-The website is built using:
+---
 
-- **React**: A JavaScript library for building user interfaces.
-- **Vite**: A build tool that provides a faster and leaner development experience for modern web projects.
-- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
-- **Illustrations**: Taken from Undraw.
-- **Website Design**: Just made while taking inspiration from other websites.
-- **Color Coding**: Primary Color is #3c77fc
+## 🛠️ Technologies Used
 
-## Website Structure
+- **React** – JavaScript library for building user interfaces.
+- **Vite** – Fast and lightweight development build tool.
+- **Tailwind CSS** – Utility-first CSS framework.
+- **Illustrations** – From [Undraw](https://undraw.co/).
+- **Icons & Animations** – Lucid Icons, React Icons, Spline.
+- **Color Palette** – Primary color: `#3c77fc`
+- **Unsplash** - For website Images
+---
 
-The website comprises several pages:
+## 🌐 Website Structure
 
-- **Home**: A page contains different sections as different components: Hero, About, Skills, Education, Experience, Projects, Contact.
-- **Blog**: A page where I am fetching recently posted 10 blogs on my Medium of profile.
-- **My Space**: A page, where I put my inspiration, and my favourite spotify playlist.
+The project includes the following pages and features:
 
-## Features to add:
+- **Home** – Contains multiple sections as separate components: Hero, About, Skills, Education, Experience, Projects, Contact.
+- **Blog** – Displays latest 10 blog posts from a Medium profile (replace with your own if desired).
+- **Nest** – An inspirational page that can include playlists, quotes, etc.
+- **Docs** – A page to write your own tutorials for sample, there is git and github tutorial.
+---
 
-- [ ] Dark Mode
-- [ ] Optimise Code
-- [ ] Optimise Images
-- [ ] Sticky Navigation
-- [ ] Navigation Active
+## 🚧 Features to Add (To-Do)
 
+- [X] Dark Mode
+- [X] Code Optimization
+- [X] Image Optimization
+- [X] Sticky Navigation
+- [X] Active Navigation Highlighting
 
-## Usage
+---
 
-You can visit the live website at [https://eatulrajput.github.io/](https://eatulrajput.github.io/) to learn more about me and explore my work. This website is for personal use and is not open for contributions.
+## 📦 Getting Started
 
-Thank you for visiting my personal website repository! 
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/eatulrajput/personal_website.git
+cd personal_website
+npm install
+npm run dev
+````
+
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## 🔄 Customization
+
+You can customize this template by editing:
+
+* Content in the components (inside `src/components`)
+* Styling with Tailwind utility classes
+* Blog fetch logic (API call to your own Medium or other platform)
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
+You are free to use, modify, and distribute it as you wish.
+
+---
+
+## 🙌 Contributions
+
+This repository is no longer maintained by the original creator, but feel free to:
+
+* Fork and customize it
+* Use it as inspiration for your own site
+* Share it with others
+
+---
+
+## 🧾 Credits
+
+This project was inspired by various portfolio sites and learning resources across the web.
+Design, structure, and content were put together with simplicity and reusability in mind.
+
