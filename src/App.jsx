@@ -7,7 +7,6 @@ import Nest from "./components/Nest";
 import Docs from "./components/Docs";
 import Git from "./components/docs/Git";
 import NotFound from "./components/NotFound"
-import GTagRouteTracker from './components/GTagRouteTracker';
 import LoadingSpinner from "./components/LoadingSpinner";
 
 function App() {
@@ -25,7 +24,6 @@ function App() {
 
     return (
         <Router>
-            <GTagRouteTracker />
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />

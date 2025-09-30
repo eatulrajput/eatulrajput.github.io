@@ -53,7 +53,8 @@ const MediumFeed = () => {
     const fetchMediumPosts = async () => {
       try {
         const response = await fetch(
-          "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@eatulrajput"
+          // I use rss2json to convert Medium's RSS feed to JSON, add yours medium username in the URL
+          "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed//@MediumStaff"
         );
         const data = await response.json();
 

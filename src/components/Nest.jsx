@@ -8,20 +8,20 @@ const quotes = [
   {
     id: 1,
     author: "Bruce Lee",
-    image: "./people/p1.webp",
+    image: "",
     quote: "Be water, my friend.",
   },
   {
     id: 2,
     author: "Albert Einstein",
-    image: "./people/p2.webp",
+    image: "",
     quote: "Imagination is more important than knowledge.",
   },
   {
     id: 3,
-    author: "Florian Christl",
-    image: "./people/p3.webp",
-    quote: "Music is the language of emotions.",
+    author: "Superman",
+    image: "",
+    quote: "Truth, justice, and the heroic way.",
   },
 ];
 
@@ -55,10 +55,12 @@ const Nest = () => {
               {/* Image with overlay */}
               <div className="relative h-60 overflow-hidden">
                 <img
-                  src={item.image}
+                  src={item.image || "./default.webp"}
                   alt={item.author}
+                  onError={(e) => (e.target.src = "./default.webp")}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-4">
                   <p className="text-white text-lg font-semibold">{item.author}</p>
                 </div>
@@ -84,16 +86,18 @@ const Nest = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-4" data-aos="fade-up">
             {[
-              "./gallery/photo1.webp",
-              "./gallery/photo2.webp",
-              "./gallery/photo3.webp",
-              "./gallery/photo4.webp",
-              "./gallery/photo5.webp",
-              "./gallery/photo6.webp",
-              "./gallery/photo7.webp",
-              "./gallery/photo8.webp",
-              "./gallery/photo9.webp",
-              "./gallery/photo10.webp",
+              "https://plus.unsplash.com/premium_photo-1690407617542-2f210cf20d7e",
+              "https://images.unsplash.com/photo-1621478374422-35206faeddfb",
+              "https://images.unsplash.com/photo-1640951613773-54706e06851d",
+              "https://images.unsplash.com/photo-1758754188934-4385ddd108f5",
+              "https://images.unsplash.com/photo-1468434453985-b1ca3b555f00",
+              "https://images.unsplash.com/photo-1757258632083-e9b8a5345047",
+              "https://images.unsplash.com/photo-1758703000157-bf17ffdedeea",
+              "https://images.unsplash.com/photo-1758644083602-15a9645a92a7",
+              "https://images.unsplash.com/photo-1574144611937-0df059b5ef3e",
+              "https://images.unsplash.com/photo-1593620659530-7f98c53de278",
+              "https://images.unsplash.com/photo-1527843812948-a8c2ddd2fb68",
+              "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
 
 
 
@@ -105,10 +109,12 @@ const Nest = () => {
                 data-aos-delay={i * 100}
               >
                 <img
-                  src={img}
+                  src={img || "./default.webp"}
                   alt={`Gallery ${i + 1}`}
+                  onError={(e) => (e.target.src = "./default.webp")}
                   className="w-full h-100 object-cover transition-transform duration-300 ease-in-out hover:scale-110"
                 />
+
               </div>
             ))}
           </div>
@@ -165,7 +171,7 @@ const Nest = () => {
           <p className="text-sm text-gray-400 mb-4 italic">Tune in to what fuels my focus and flow.</p>
           <iframe
             style={{ borderRadius: "12px" }}
-            src="https://open.spotify.com/embed/playlist/6c8GhTT6t2Oy19k1E2SJ4O?utm_source=generator&theme=0"
+            src="https://open.spotify.com/embed/album/21dGQu96FUFEMh5NiCAx9h?utm_source=generator&theme=0"
             width="100%"
             height="600"
             frameBorder="0"

@@ -2,64 +2,65 @@ import { useEffect } from "react";
 import AOS from "aos";
 import 'aos/dist/aos.css';
 import Masonry from "react-masonry-css";
+import { Presentation,ExternalLink, Terminal } from 'lucide-react';
 
 
 // Project Information
 const projects = [
-    {
-        id: 1,
-        category: 'AI / ML',
-        title: "Face Track",
-        tech: "Python, OpenCV",
-        desc: "It is a face recognition attendance system  designed to track student attendance...",
-        liveLink: "#",
-        codeLink: "https://github.com/eatulrajput/face-track",
-        image: "card.webp",
-    },
+  {
+    id: 1,
+    category: 'AI / ML',
+    title: "Project 1",
+    tech: "Python, OpenCV",
+    desc: "It is a face recognition attendance system  designed to track student attendance...",
+    liveLink: "#",
+    codeLink: "https://github.com/",
+    image: "",
+  },
 
-    {
-        id: 2,
-        category: 'AI / ML',
-        title: "Coffee Bot",
-        tech: "Python, FastAPI, Gemini API",
-        desc: "a conversational chatbot interface ",
-        liveLink: "https://eatulrajput.hashnode.dev/coffee-bot-from-gemini-api-in-streamlit-to-fastapi",
-        codeLink: "https://github.com/eatulrajput/coffeebot",
-        image: "coffeebot.webp",
-    },
+  {
+    id: 2,
+    category: 'AI / ML',
+    title: "Coffee Bot",
+    tech: "Python, FastAPI, Gemini API",
+    desc: "a conversational chatbot interface ",
+    liveLink: "#",
+    codeLink: "https://github.com/",
+    image: "",
+  },
 
-    {
-        id: 3,
-        category: 'Full Stack',
-        title: "Task Master",
-        tech: "Python, Django",
-        desc: "Taskmaster is a todo app made in Django",
-        liveLink: "",
-        codeLink: "https://github.com/eatulrajput/taskmaster",
-        image: "card.webp",
-    },
-    
-    {
-        id: 4,
-        category: 'AI / ML',
-        title: "Harmonybot",
-        tech: "Python, Streamlit, Perspective API",
-        desc: "An AI-powered tool developed to detect and mitigate offensive language",
-        liveLink: "https://offensive-lang-detection.streamlit.app/",
-        codeLink: "https://github.com/eatulrajput/offensive-lang-detection",
-        image: "harmonybot.webp",
-    },
+  {
+    id: 3,
+    category: 'Full Stack',
+    title: "Project 3",
+    tech: "Python, Django",
+    desc: "Taskmaster is a todo app made in Django",
+    liveLink: "#",
+    codeLink: "https://github.com/",
+    image: "",
+  },
 
-    {
-        id: 5,
-        category: 'AI / ML',
-        title: "Finfy",
-        tech: "Python, Flask, Logistic Regression",
-        desc: "Finfy is an AI-powered interface that checks the loan eligibility using machine learning",
-        liveLink: "https://finfy-app-04of.onrender.com/",
-        codeLink: "https://github.com/eatulrajput/finfy-app",
-        image: "minorproject.webp",
-    },
+  {
+    id: 4,
+    category: 'AI / ML',
+    title: "Project 4",
+    tech: "Python, Streamlit, Perspective API",
+    desc: "An AI-powered tool developed to detect and mitigate offensive language",
+    liveLink: "#",
+    codeLink: "https://github.com/#",
+    image: "",
+  },
+
+  {
+    id: 5,
+    category: 'AI / ML',
+    title: "Project 5",
+    tech: "Python, Flask, Logistic Regression",
+    desc: "Finfy is an AI-powered interface that checks the loan eligibility using machine learning",
+    liveLink: "#",
+    codeLink: "#",
+    image: "",
+  },
 ];
 
 const Projects = () => {
@@ -82,7 +83,7 @@ const Projects = () => {
         {/* Section Title */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-500 flex items-center justify-center gap-3 mt-32">
-            <i className="fa-solid fa-list-check"></i> My Projects
+            <Presentation className="w-12 h-12"/> My Projects
           </h2>
         </div>
 
@@ -102,7 +103,10 @@ const Projects = () => {
               {/* Project Image */}
               <div
                 className="h-60 w-full bg-cover bg-center rounded-t-2xl transform transition-transform duration-500 group-hover:scale-105 cursor-pointer"
-                style={{ backgroundImage: `url(${project.image})` }}
+                style={{
+                  backgroundImage: `url(${project.image || 'default.webp'})`
+                }}
+
               ></div>
 
               {/* Project Info */}
@@ -122,18 +126,18 @@ const Projects = () => {
                       href={project.liveLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition text-sm"
+                      className="px-2 py-2 bg-gray-700 text-white rounded-xl hover:bg-gray-800 transition text-lg"
                     >
-                      Live <i className="fa-solid fa-arrow-up-right-from-square ml-1"></i>
+                      <ExternalLink />
                     </a>
                   )}
                   <a
                     href={project.codeLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-gray-700 text-white rounded-md hover:bg-gray-800 transition text-sm"
+                    className="px-2 py-2 bg-gray-700 text-white rounded-xl hover:bg-gray-800 transition text-lg"
                   >
-                    Code <i className="fa-solid fa-code ml-1"></i>
+                    <Terminal />
                   </a>
                 </div>
               </div>

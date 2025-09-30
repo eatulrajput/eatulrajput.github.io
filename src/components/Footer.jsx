@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Linkedin, Github, Heart, ChevronUp } from 'lucide-react';
+
 
 const Footer = () => {
   const [year] = useState(new Date().getFullYear());
@@ -8,12 +10,6 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://unpkg.com/website-carbon-badges@1.1.3/b.min.js";
-    script.defer = true;
-    document.body.appendChild(script);
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,14 +27,14 @@ const Footer = () => {
         <div className="flex flex-col gap-4">
           <h3 className="text-3xl font-semibold text-white">Projects</h3>
           <nav className="flex flex-col gap-2 text-xl text-gray-400">
-            <a href="https://snappypass.netlify.app/" className="hover:text-white transition">
-              SnappyPass
+            <a href="#" className="hover:text-white transition">
+              Side Project
             </a>
-            <a href="https://xvert.netlify.app/" className="hover:text-white transition">
-              Xvert
+            <a href="#" className="hover:text-white transition">
+              Side Project
             </a>
-            <a href="https://atulrajput.netlify.app/" className="hover:text-white transition">
-              StackSync
+            <a href="#" className="hover:text-white transition">
+              Side Project
             </a>
           </nav>
         </div>
@@ -48,22 +44,22 @@ const Footer = () => {
           <h3 className="text-3xl font-semibold text-white">Connect</h3>
           <div className="flex gap-6 text-4xl text-gray-400">
             <a
-              href="https://github.com/eatulrajput"
+              href="#"
               target="_blank"
               rel="noreferrer"
               className="hover:text-white transition"
               title="GitHub"
             >
-              <i className="fab fa-github"></i>
+              <Github className="w-8 h-8" />
             </a>
             <a
-              href="https://linkedin.com/in/eatulrajput"
+              href="#"
               target="_blank"
               rel="noreferrer"
               className="hover:text-white transition"
               title="LinkedIn"
             >
-              <i className="fab fa-linkedin-in"></i>
+              <Linkedin className="w-8 h-8" />
             </a>
           </div>
         </div>
@@ -78,16 +74,16 @@ const Footer = () => {
       <div className="text-center space-y-2">
         <p className="text-2xl text-gray-400">
           Designed & Built by{" "}
-          <span className="text-white font-medium">Atul Rajput</span> with{" "}
-          <i className="fa-regular fa-heart text-blue-400 text-3xl animate-pulse"></i>
+          <span className="text-white font-medium">Your Name</span> with{" "}
+          <Heart className="inline w-8 h-8 text-blue-500 animate-pulse" />
         </p>
         <p className="text-xl text-gray-500">
           &copy; {year} | All Rights Reserved.
         </p>
 
         {/* Branding */}
-        <h1 className="text-[clamp(2.5rem,10vw,8rem)] font-bold bg-gradient-to-b from-blue-700 to-gray-950 bg-clip-text text-transparent text-center ">
-          @eatulrajput
+        <h1 className="text-[clamp(2.5rem,10vw,8rem)] font-bold bg-gradient-to-b from-blue-700 to-gray-950 bg-clip-text text-transparent text-center">
+          Dev
         </h1>
       </div>
 
@@ -95,10 +91,10 @@ const Footer = () => {
       {showButton && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-gradient-to-tl from-black to-blue-900 cursor-pointer transition duration-300"
+          className="fixed bottom-6 right-6 bg-blue-700 text-white p-3 rounded-full shadow-lg hover:bg-gradient-to-tl from-black to-blue-900 cursor-pointer transition duration-300"
           title="Back to Top"
         >
-          <i className="fas fa-chevron-up text-2xl"></i>
+          <ChevronUp className="w-6 h-6"/>
         </button>
       )}
     </footer>
